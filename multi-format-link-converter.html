@@ -1,0 +1,211 @@
+  <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Multi-Format Link Converter</title>
+    <link rel="stylesheet" href="multi-format-link-converter.css">
+    <link rel="stylesheet" href="multi-format-link-converter-footer-component.css">    
+  </head>
+  <body>
+    <!-- Skip to main content link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Homepage Navigation Bar -->
+    <header>
+      <nav role="navigation" aria-label="Main Navigation">
+        <div class="nav-container">
+          <a href="index.html" class="logo" aria-label="SEO Tools & Coding Resources">
+            <i class="fas fa-code"></i>
+            SEO Tools & Coding Resources
+          </a>
+          <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+            <i class="fas fa-bars"></i>
+          </button>
+          <ul id="nav-menu">
+            <li>
+              <a
+                href="https://shakeeb-sa.github.io/seo-tools-and-coding-resources/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Coding Resources section"
+                >Home
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://shakeeb-sa.github.io/seo-tools-and-coding-resources/#seo-tools"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Coding Resources section"
+                >SEO Tools
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://shakeeb-sa.github.io/all-about-coding/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Coding Resources section"
+                >Resources</a
+              >
+            </li>
+            <li><a href="#contact" aria-label="Contact section">Contact</a></li>
+          </ul>
+          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+    
+    <main id="main-content">
+      <!-- Page Title -->
+      <h1 id="editor-section">Multi-Format Link Converter</h1>
+      <!-- Button group for actions -->
+      <div class="button-group" role="toolbar" aria-label="Actions">
+        <button id="makeLinkBtn" aria-label="Make Hyperlink">
+          <i class="fas fa-link"></i> Make Hyperlink
+        </button>
+        <button id="clearBtn" aria-label="Clear Editor">
+          <i class="fas fa-eraser"></i> Clear
+        </button>
+        <button id="previewBtn" aria-label="Preview Links">
+          <i class="fas fa-eye"></i> Preview
+        </button>
+        <button id="downloadBtn" aria-label="Download Output">
+          <i class="fas fa-download"></i> Download
+        </button>
+        <div class="tooltip">
+          <button id="settingsBtn" aria-label="Settings">
+            <i class="fas fa-cog"></i> Settings
+          </button>
+          <span class="tooltiptext">Coming Soon</span>
+        </div>
+      </div>
+      <!-- Editable area with custom placeholder -->
+      <section id="editor-section">
+        <div id="editor" contenteditable="true" aria-label="Rich Text Editor" data-placeholder="Paste your content with links here..."></div>
+        <div class="char-counter" id="char-counter">0 characters</div>
+      </section>
+      <!-- Status message -->
+      <div id="statusMessage"></div>
+      <!-- Output area -->
+      <section id="output-section" aria-labelledby="output-label">
+        <h2 id="output-label">Converted Formats</h2>
+        <div class="output-tabs" role="tablist">
+          <button class="tab-button active" data-tab="html" role="tab" aria-selected="true" aria-controls="html-panel">HTML</button>
+          <button class="tab-button" data-tab="markdown" role="tab" aria-selected="false" aria-controls="markdown-panel">Markdown</button>
+          <button class="tab-button" data-tab="bbcode" role="tab" aria-selected="false" aria-controls="bbcode-panel">BBCode</button>
+          <button class="tab-button" data-tab="raw" role="tab" aria-selected="false" aria-controls="raw-panel">Raw Text</button>
+          <button class="tab-button" data-tab="refmd" role="tab" aria-selected="false" aria-controls="refmd-panel">For Classifieds (Mostly)</button>
+          <button class="tab-button" data-tab="json" role="tab" aria-selected="false" aria-controls="json-panel">JSON</button>
+          <button class="tab-button" data-tab="slack" role="tab" aria-selected="false" aria-controls="slack-panel">Slack</button>
+        </div>
+        <div id="output">
+          <div id="html-panel" class="tab-content active" role="tabpanel" aria-labelledby="html-tab">
+            <pre id="html" role="textbox" aria-label="HTML Output" tabindex="0">Click to copy<span class="copy-hint">Click to copy</span></pre>
+          </div>
+          <div id="markdown-panel" class="tab-content" role="tabpanel" aria-labelledby="markdown-tab">
+            <pre id="markdown" role="textbox" aria-label="Markdown Output" tabindex="0">Click to copy<span class="copy-hint">Click to copy</span></pre>
+          </div>
+          <div id="bbcode-panel" class="tab-content" role="tabpanel" aria-labelledby="bbcode-tab">
+            <pre id="bbcode" role="textbox" aria-label="BBCode Output" tabindex="0">Click to copy<span class="copy-hint">Click to copy</span></pre>
+          </div>
+          <div id="raw-panel" class="tab-content" role="tabpanel" aria-labelledby="raw-tab">
+            <pre id="raw" role="textbox" aria-label="Raw Text Output" tabindex="0">Click to copy<span class="copy-hint">Click to copy</span></pre>
+          </div>
+          <div id="refmd-panel" class="tab-content" role="tabpanel" aria-labelledby="refmd-tab">
+            <pre id="refmd" role="textbox" aria-label="Reference Markdown Output" tabindex="0">Click to copy<span class="copy-hint">Click to copy</span></pre>
+          </div>
+          <div id="json-panel" class="tab-content" role="tabpanel" aria-labelledby="json-tab">
+            <pre id="json" role="textbox" aria-label="JSON Output" tabindex="0">Click to copy<span class="copy-hint">Click to copy</span></pre>
+          </div>
+          <div id="slack-panel" class="tab-content" role="tabpanel" aria-labelledby="slack-tab">
+            <pre id="slack" role="textbox" aria-label="Slack Output" tabindex="0">Click to copy<span class="copy-hint">Click to copy</span></pre>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- History Panel -->
+    <div id="history-panel">
+      <div class="history-header">
+        <button id="clear-all-history" class="delete-history" style="margin-top:1rem;">Clear All History</button>
+        <h3>Conversion History</h3>
+        <button class="close-history" id="close-history" aria-label="Close history panel">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div id="history-list">
+        <p>No history yet. Convert some links to see them here.</p>
+      </div>
+    </div>
+    <!-- Preview Modal -->
+    <div class="preview-modal" id="preview-modal">
+      <div class="preview-content">
+        <button class="close-preview" id="close-preview" aria-label="Close preview">
+          <i class="fas fa-times"></i>
+        </button>
+        <h3>Link Preview</h3>
+        <div id="preview-content"></div>
+      </div>
+    </div>
+    <!-- Footer with contact info -->
+     <div class="footer-com">
+     <footer id="contact">
+      <div class="footer-container" role="contentinfo">
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <p>
+            <i class="fas fa-envelope"></i>
+            <a
+              href="mailto:shakeeb.sa.ahmed@gmail.com"
+              aria-label="Email Shakeeb"
+              >shakeeb.sa.ahmed@gmail.com</a
+            >
+          </p>
+          <p>
+            <i class="fab fa-github"></i>
+            <a
+              href="https://github.com/shakeeb-sa/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Github Profile"
+              >github.com/shakeeb-sa</a
+            >
+          </p>
+          <p>
+            <i class="fab fa-linkedin"></i>
+            <a
+              href="https://pk.linkedin.com/in/shakeeb-ahmed-034093370"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn Profile"
+              >linkedin.com/in/shakeeb-ahmed</a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; <span id="currentYear"></span> 2025 Created by Shakeeb Ahmed</p>
+      </div>
+    </footer>
+    </div> 
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.getElementById('menuToggle');
+        if (menuToggle) {
+          menuToggle.addEventListener('click', function() {
+            const navMenu = document.getElementById('nav-menu');
+            navMenu.classList.toggle('active');
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', !isExpanded);
+          });
+        }
+      });
+    </script>
+    
+    <script src="multi-format-link-converter.js"></script>
+  </body>
+</html>
