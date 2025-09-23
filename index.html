@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="SEO tools and coding tutorials platform. Free resources to enhance your SEO and programming skills." />
+    <title>SEO Tools & Coding Resources</title>
+    <link rel="stylesheet" href="homepage.css" />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header>
+      <nav role="navigation" aria-label="Main Navigation">
+        <div class="nav-container">
+          <a href="#hero" class="logo" aria-label="SEO Tools & Coding Resources">
+            <i class="fas fa-code"></i>
+            SEO Tools & Coding Resources
+          </a>
+          <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+            <i class="fas fa-bars"></i>
+          </button>
+          <ul id="nav-menu">
+            <li><a href="#hero" aria-label="Home section">Home</a></li>
+            <li>
+              <a href="#seo-tools" aria-label="SEO Tools section">SEO Tools</a>
+            </li>
+            <li>
+              <a href="#resource-tools" aria-label="Coding Resources section">Resources</a>
+            </li>
+            <li><a href="#contact" aria-label="Contact section">Contact</a></li>
+          </ul>
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main id="main-content">
+
+      <!-- Hero Section -->
+      <section class="hero" id="hero" aria-labelledby="hero-title">
+        <h1 id="hero-title">SEO Tools & Coding Resources</h1>
+        <p>
+          Your go-to resource for SEO tools and coding learning videos. Stay
+          tuned—more valuable content will be added regularly.
+        </p>
+        <div class="tutorials-title">Tutorials</div>
+        <div class="tutorials-descr">
+          Take a look at these tutorial videos for the tools here.
+        </div>
+       <a href="tutorials.html" target="_blank" class="custom-unique-button">
+  Watch Now
+</a>
+      </section>
+      
+      <!-- SEO Tools Section -->
+      <section id="seo-tools" aria-labelledby="seo-tools-heading">
+        <h2 id="seo-tools-heading">SEO Tools</h2>
+        <div class="tools-grid">
+
+          <!-- Tool Card 1 -->
+          <div class="tool-card">
+            <div class="tool-icon">
+              <i class="fas fa-link"></i>
+            </div>
+            <div class="tool-title">URL Path Separator</div>
+            <div class="tool-desc">
+              It's a handy tool that simplifies splitting and managing URL paths
+              by accurately identifying and separating each segment, making
+              navigation more efficient.
+            </div>
+<a href="url-path-separator.html" target="_blank" class="btn" aria-label="Try URL Path Separator" id="splitUrlBtn">
+  Try Now <i class="fas fa-arrow-right"></i>
+</a>
+          </div>
+
+          <!-- Tool Card 2 -->
+          <div class="tool-card">
+            <div class="tool-icon">
+              <i class="fas fa-exchange-alt"></i>
+            </div>
+            <div class="tool-title">Multi Format Link Converter</div>
+            <div class="tool-desc">
+              Easily convert all types of links, including BBCode, HTML, and
+              plain URLs.
+            </div>
+            <a href="multi-format-link-converter.html" target="_blank" class="btn" aria-label="Convert Links" id="convertLinksBtn">
+  Try Now <i class="fas fa-arrow-right"></i>
+</a>
+          </div>
+
+          <!-- Tool Card 3 -->
+          <div class="tool-card">
+            <div class="tool-icon">
+              <i class="fas fa-exchange-alt"></i>
+            </div>
+            <div class="tool-title">Guestbook Extractor Chrome Extension</div>
+            <div class="tool-desc">
+              A Chrome extension that automates scrolling through guest books, downloads backlinks, and removes duplicates for efficient link building.
+            </div>
+            <a href="guestbook-extractor-chrome-extension.html" target="_blank" rel="noopener noreferrer" class="btn" aria-label="Try URL Path Separator" id="splitUrlBtn">
+  Download Now <i class="fas fa-arrow-right"></i>
+</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Coding Resources Section -->
+      <section id="resource-tools" aria-labelledby="resource-tools-heading">
+        <h2 id="resource-tools-heading">Coding Resources</h2>
+        <div class="tools-grid">
+          <div class="tool-card">
+            <div class="tool-icon">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <div class="tool-title">All About Coding</div>
+            <div class="tool-desc">
+              Discover a comprehensive collection of coding tutorials, videos,
+              and resources from YouTube. Your go-to site for all things
+              coding—learn, explore, and master programming today!
+            </div>
+            <a href="all-about-coding.html" target="_blank" class="btn" aria-label="Explore Coding Resources" id="exploreCodingBtn">
+  Watch Now <i class="fas fa-play"></i>
+</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact">
+      <div class="footer-container" role="contentinfo">
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <p>
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:shakeeb.sa.ahmed@gmail.com" aria-label="Email Shakeeb">shakeeb.sa.ahmed@gmail.com</a>
+          </p>
+          <p>
+            <i class="fab fa-github"></i>
+            <a href="https://github.com/shakeeb-sa/" target="_blank" rel="noopener noreferrer" aria-label="Github Profile">github.com/shakeeb-sa</a>
+          </p>
+          <p>
+            <i class="fab fa-linkedin"></i>
+            <a href="https://pk.linkedin.com/in/shakeeb-ahmed-034093370" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">linkedin.com/in/shakeeb-ahmed</a>
+          </p>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; <span id="currentYear"></span> Created by Shakeeb Ahmed</p>
+      </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <div class="back-to-top" id="backToTop" aria-label="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </div>
+    <script src="homepage.js"></script>
+  </body>
+</html>
