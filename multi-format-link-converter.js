@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- GLOBAL STATE & ELEMENTS ---
   let activeSectionId = 1; 
-  let lastSelection = { range: null, sectionId: null }; // <-- FIX: To store the last user selection
+  let lastSelection = { range: null, sectionId: null };
   let debounceTimer;
   const statusMessage = document.getElementById('statusMessage');
 
@@ -68,6 +68,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const editor = document.getElementById(`editor-${sectionId}`);
     const outputSection = document.getElementById(`output-section-${sectionId}`);
     
+    if (!editor || !outputSection) return; // Guard clause
+
     let content = editor.innerHTML;
     if (editor.innerText.trim() === '') {
         outputSection.classList.remove('visible');
@@ -125,7 +127,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const tabContents = document.querySelectorAll(`#section-${sectionId} .tab-content`);
     const outputPres = document.querySelectorAll(`#section-${sectionId} pre`);
 
-    // --- FIX: Save the selection range whenever the user interacts with the editor ---
+    if (!editor) return; // Exit if section elements don't exist
+
+    // Save the selection range whenever the user interacts with the editor
     const saveSelection = () => {
         const selection = window.getSelection();
         if (selection.rangeCount > 0 && editor.contains(selection.anchorNode)) {
@@ -136,7 +140,6 @@ document.addEventListener('DOMContentLoaded', () => {
     editor.addEventListener('keyup', saveSelection);
     editor.addEventListener('mouseup', saveSelection);
     editor.addEventListener('focus', saveSelection);
-    // --- End of Fix ---
 
     // Set active section on focus for Clear/Preview/Download buttons
     editor.addEventListener('focus', () => {
@@ -170,8 +173,13 @@ document.addEventListener('DOMContentLoaded', () => {
     tabButtons.forEach(button => {
         button.addEventListener('click', () => {
             const tabId = button.getAttribute('data-tab');
-            tabButtons.forEach(btn => btn.classList.remove('active'));
+            tabButtons.forEach(btn => {
+              btn.classList.remove('active');
+              btn.setAttribute('aria-selected', 'false');
+            });
             button.classList.add('active');
+            button.setAttribute('aria-selected', 'true');
+
             tabContents.forEach(content => content.classList.remove('active'));
             document.getElementById(`${tabId}-panel-${sectionId}`).classList.add('active');
         });
@@ -184,7 +192,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- GLOBAL ACTION FUNCTIONS ---
   const makeLink = () => {
-    // --- FIX: Use the saved selection instead of the active section ID ---
     if (!lastSelection.range || !lastSelection.sectionId) {
         showStatus('Please select text in an editor first.', 'error');
         return;
@@ -207,7 +214,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Re-convert the content of the correct section
     convertContent(lastSelection.sectionId);
     showStatus('Hyperlink added.');
-    // --- End of Fix ---
   };
 
   const clearEditor = () => {
@@ -298,7 +304,13 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('currentYear').textContent = new Date().getFullYear();
 
   // --- INITIALIZE EVERYTHING ---
-  initializeConverterSection(1);
-  initializeConverterSection(2);
+  // Dynamically find and initialize all converter sections
+  document.querySelectorAll('.converter-section').forEach(section => {
+    const sectionId = parseInt(section.id.split('-')[1], 10);
+    if (sectionId) {
+      initializeConverterSection(sectionId);
+    }
+  });
+
   document.getElementById('editor-1').classList.add('active'); 
 });
