@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- PROJECT DATA & DYNAMIC LISTING ---
     const projectsList = [
-        { name: "SEO Tools & Coding Resources", description: "Online multiplayer game where players compete against each other to create the funniest AI-generated images.", image: "https://i.ibb.co/xKyck15q/SEO-Tools-Coding-Resources.jpg", link: "https://shakeeb-sa.github.io/", code: "https://github.com/shakeeb-sa/shakeeb-sa.github.io", slug: "artificial-unintelligence", type: "Personal Project" },
+        { name: "SEO Tools & Coding Resources", description: "Online multiplayer game where players compete against each other to create the funniest AI-generated images.", image: "https://i.ibb.co/xKyck15q/SEO-Tools-Coding-Resources.jpg", link: "https://shakeeb-sa.github.io/home", code: "https://github.com/shakeeb-sa/shakeeb-sa.github.io", slug: "artificial-unintelligence", type: "Personal Project" },
         { name: "URL Path Separator", description: "It's a handy tool that simplifies splitting and managing URL paths by accurately identifying and separating each segment, making navigation more efficient.", image: "https://i.ibb.co/5xBWW6mJ/URL-Path-Separator.png", link: "https://shakeeb-sa.github.io/url-path-separator.html", code: "https://github.com/shakeeb-sa/shakeeb-sa.github.io", slug: "alcohol101-plus", type: "Personal Project" },
         { name: "Multi Format Link Converter", description: "Easily convert all types of links, including BBCode, HTML, and plain URLs.", image: "https://i.ibb.co/Qw9c0Mf/Multi-Format-Link-Converter.jpg", link: "https://shakeeb-sa.github.io/multi-format-link-converter.html", code: "https://github.com/shakeeb-sa/shakeeb-sa.github.io", slug: "hayden-ai", type: "Personal Project" },
         { name: "Guestbook Extractor Chrome Extension", description: "A Chrome extension that automates scrolling through guest books, downloads backlinks, and removes duplicates for efficient link building.", image: "https://i.ibb.co/cMR4CKV/Guestbook-Extractor-Chrome-Extension.jpg", link: "https://shakeeb-sa.github.io/guestbook-extractor-chrome-extension.html", code: "https://github.com/shakeeb-sa/shakeeb-sa.github.io", slug: "responsibility-works", type: "Personal Project" },
@@ -214,4 +214,5 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     );
+
 });
