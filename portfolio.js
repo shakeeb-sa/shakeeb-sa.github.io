@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: "Multi Format Link Converter", description: "Easily convert all types of links, including BBCode, HTML, and plain URLs.", image: "https://i.ibb.co/fY2qxzXh/Multi-Format-Link-Converter.jpg", link: "https://shakeeb-sa.github.io/home/multi-format-link-converter.html", code: "https://github.com/shakeeb-sa/shakeeb-sa.github.io", slug: "hayden-ai", type: "Personal Project" },
         { name: "Guestbook Extractor Chrome Extension", description: "A Chrome extension that automates scrolling through guest books, downloads backlinks, and removes duplicates for efficient link building.", image: "https://i.ibb.co/zVXCs9X6/Guestbook-Extractor.jpg", link: "https://shakeeb-sa.github.io/home/guestbook-extractor-chrome-extension.html", code: "https://github.com/shakeeb-sa/home", slug: "responsibility-works", type: "Personal Project" },
         { name: "All About Coding", description: "Discover a comprehensive collection of coding tutorials, videos, and resources from YouTube. Your go-to site for all things coding—learn, explore, and master programming today!", image: "https://i.ibb.co/8DZNKr6B/All-About-Coding.jpg", link: "https://shakeeb-sa.github.io/home/all-about-coding.html", code: "https://github.com/shakeeb-sa/home", slug: "safe-drive", type: "Personal Project" },
-        { name: "Sha Fabrics", description: "SHA Fabrics is an e-commerce website dedicated to offering a wide selection of high-quality fabrics and apparel. The platform features an extensive range of products including stylish bedsheets, as well as fashionable dresses for both women and men. With a user-friendly interface, SHA Fabrics aims to provide customers with a seamless shopping experience, showcasing premium materials and trendy designs to meet diverse tastes and preferences. Whether you're looking to refresh your bedroom decor or update your wardrobe, SHA Fabrics has you covered with its versatile and fashionable offerings.", image: "https://i.ibb.co/4nQtqJbH/sha-fabrics.jpg", link: "http://sha-fabrics.github.io/", code: "https://github.com/sha-fabrics/sha-fabrics.github.io", slug: "virtual-bar", type: "Personal Project" },
+        { name: "Sha Fabrics", description: "SHA Fabrics is an e-commerce site offering high-quality fabrics, bedsheets, and stylish clothing for men and women. With a user-friendly design, it provides trendy, premium products to refresh your home or wardrobe effortlessly.", image: "https://i.ibb.co/4nQtqJbH/sha-fabrics.jpg", link: "http://sha-fabrics.github.io/", code: "https://github.com/sha-fabrics/sha-fabrics.github.io", slug: "virtual-bar", type: "Personal Project" },
     ];
 
     const projectContainer = document.querySelector('.project-listings-container');
@@ -216,6 +216,7 @@ document.addEventListener('DOMContentLoaded', () => {
     );
 
 });
+
 
 
 
