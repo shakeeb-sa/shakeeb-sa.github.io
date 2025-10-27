@@ -155,7 +155,6 @@ body, html {
     text-decoration: underline;
 }
 .nav .nav-list li a svg {
-    /* FIX: Switched to rem units so the icon size is not affected by the parent anchor's font-size. This is key to making them visible when we hide the text. */
     width: 1.4rem; 
     height: 1.4rem;
     flex-shrink: 0;
@@ -468,7 +467,6 @@ footer h2 {
         gap: 0; /* Remove gap since there's no text */
     }
 }
-
 
 /* --- Media Queries for Larger Screens --- */
 
