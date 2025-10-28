@@ -183,60 +183,187 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    // --- PROJECT DATA & DYNAMIC LISTING ---
-    const projectsList = [
-        { name: "Tools for Developers & SEOs", description: "A curated collection of free, powerful tools for developers and SEOs to streamline workflows and boost productivity.", image: "https://i.ibb.co/VctfddC1/Tools-for-Developers-SEOs.jpg", link: "https://shakeeb-sa.github.io/tools/", code: "https://github.com/shakeeb-sa/tools", slug: "artificial-unintelligence", type: "Personal Project" },
-        { name: "URL Path Separator", description: "It's a handy tool that simplifies splitting and managing URL paths by accurately identifying and separating each segment, making navigation more efficient.", image: "https://i.ibb.co/p68V2wRX/URL-Path-Separator.jpg", link: "https://shakeeb-sa.github.io/url-path-separator/", code: "https://github.com/shakeeb-sa/tools", slug: "alcohol101-plus", type: "Personal Project" },
-        { name: "Multi Format Link Converter", description: "Easily convert all types of links, including BBCode, HTML, and plain URLs.", image: "https://i.ibb.co/fY2qxzXh/Multi-Format-Link-Converter.jpg", link: "https://shakeeb-sa.github.io/multi-format-link-converter/", code: "https://github.com/shakeeb-sa/multi-format-link-converter", slug: "hayden-ai", type: "Personal Project" },
-        { name: "Guestbook Extractor Chrome Extension", description: "A Chrome extension that automates scrolling through guest books, downloads backlinks, and removes duplicates for efficient link building.", image: "https://i.ibb.co/zVXCs9X6/Guestbook-Extractor.jpg", link: "https://shakeeb-sa.github.io/guestbook-extractor-chrome-extension/", code: "https://github.com/shakeeb-sa/guestbook-extractor-chrome-extension", slug: "responsibility-works", type: "Personal Project" },
-        { name: "All About Coding", description: "Discover a comprehensive collection of coding tutorials, videos, and resources from YouTube. Your go-to site for all things coding—learn, explore, and master programming today!", image: "https://i.ibb.co/8DZNKr6B/All-About-Coding.jpg", link: "https://shakeeb-sa.github.io/all-about-coding/", code: "https://github.com/shakeeb-sa/all-about-coding", slug: "safe-drive", type: "Personal Project" },
-        { name: "Domain Checker", description: "A web tool that compares two URL lists, identifies unique and matching domains, and creates a detailed report. It streamlines URL data analysis efficiently.", image: "https://i.ibb.co/HpqZhZmQ/domain-checker.jpg", link: "https://shakeeb-sa.github.io/domain-checker/", code: "https://github.com/shakeeb-sa/domain-checker", slug: "safe-drive", type: "Personal Project" },
-        { name: "Sha Fabrics", description: "SHA Fabrics is an e-commerce site offering high-quality fabrics, bedsheets, and stylish clothing for men and women. With a user-friendly design, it provides trendy, premium products to refresh your home or wardrobe effortlessly.", image: "https://i.ibb.co/4nQtqJbH/sha-fabrics.jpg", link: "http://sha-fabrics.github.io/", code: "https://github.com/sha-fabrics/sha-fabrics.github.io", slug: "virtual-bar", type: "Personal Project" },
-    ];
+  // /portfolio.js:
 
-    const projectContainer = document.querySelector('.project-listings-container');
-    if (projectContainer) {
-        projectsList.forEach(project => {
-            const projectEl = document.createElement('div');
-            projectEl.className = 'project project-listing';
-            projectEl.id = project.slug;
+// --- PROJECT DATA & DYNAMIC LISTING ---
+const projectsList = [
+    { 
+        name: "Tools for Developers & SEOs", 
+        description: "A curated collection of free, powerful tools for developers and SEOs to streamline workflows and boost productivity.", 
+        image: "https://i.ibb.co/VctfddC1/Tools-for-Developers-SEOs.jpg", 
+        link: "https://shakeeb-sa.github.io/tools/", 
+        code: "https://github.com/shakeeb-sa/tools", 
+        slug: "artificial-unintelligence", 
+        type: "Personal Project",
+        // Add this languages array
+        languages: [
+            { name: 'JavaScript', percentage: 18.3 },
+            { name: 'HTML', percentage: 35.3},
+            { name: 'CSS', percentage: 46.4 }
+        ]
+    },
+    { 
+        name: "URL Path Separator", 
+        description: "It's a handy tool that simplifies splitting and managing URL paths by accurately identifying and separating each segment, making navigation more efficient.", 
+        image: "https://i.ibb.co/p68V2wRX/URL-Path-Separator.jpg", 
+        link: "https://shakeeb-sa.github.io/url-path-separator/", 
+        code: "https://github.com/shakeeb-sa/tools", 
+        slug: "alcohol101-plus", 
+        type: "Personal Project",
+        // Add this languages array
+        languages: [
+            { name: 'JavaScript', percentage: 43.3 },
+            { name: 'HTML', percentage: 21.3 },
+            { name: 'CSS', percentage: 35.4 }
+        ]
+    },
+    { 
+        name: "Multi Format Link Converter", 
+        description: "Easily convert all types of links, including BBCode, HTML, and plain URLs.", 
+        image: "https://i.ibb.co/fY2qxzXh/Multi-Format-Link-Converter.jpg", 
+        link: "https://shakeeb-sa.github.io/multi-format-link-converter/", 
+        code: "https://github.com/shakeeb-sa/multi-format-link-converter", 
+        slug: "hayden-ai", 
+        type: "Personal Project",
+        // Add this languages array
+        languages: [
+            { name: 'JavaScript', percentage: 35.3 },
+            { name: 'HTML', percentage: 32.9 },
+            { name: 'CSS', percentage: 31.8 }
+        ]
+    },
+    { 
+        name: "Guestbook Extractor Chrome Extension", 
+        description: "A Chrome extension that automates scrolling through guest books, downloads backlinks, and removes duplicates for efficient link building.", 
+        image: "https://i.ibb.co/zVXCs9X6/Guestbook-Extractor.jpg", 
+        link: "https://shakeeb-sa.github.io/guestbook-extractor-chrome-extension/", 
+        code: "https://github.com/shakeeb-sa/guestbook-extractor-chrome-extension", 
+        slug: "responsibility-works", 
+        type: "Personal Project",
+        // Add this languages array
+        languages: [
+            { name: 'JavaScript', percentage: 100 }
+        ]
+    },
+    { 
+        name: "All About Coding", 
+        description: "Discover a comprehensive collection of coding tutorials, videos, and resources from YouTube. Your go-to site for all things coding—learn, explore, and master programming today!", 
+        image: "https://i.ibb.co/8DZNKr6B/All-About-Coding.jpg", 
+        link: "https://shakeeb-sa.github.io/all-about-coding/", 
+        code: "https://github.com/shakeeb-sa/all-about-coding", 
+        slug: "safe-drive", 
+        type: "Personal Project",
+        // Add this languages array
+        languages: [
+            { name: 'CSS', percentage: 23.0 },
+            { name: 'HTML', percentage: 18.9 },
+            { name: 'JavaScript', percentage: 58.1 }
+        ]
+    },
+    { 
+        name: "Domain Checker", 
+        description: "A web tool that compares two URL lists, identifies unique and matching domains, and creates a detailed report. It streamlines URL data analysis efficiently.", 
+        image: "https://i.ibb.co/HpqZhZmQ/domain-checker.jpg", 
+        link: "https://shakeeb-sa.github.io/domain-checker/", 
+        code: "https://github.com/shakeeb-sa/domain-checker", 
+        slug: "safe-drive", 
+        type: "Personal Project",
+         // Add this languages array
+        languages: [
+            { name: 'JavaScript', percentage: 42.4 },
+            { name: 'HTML', percentage: 15.3 },
+            { name: 'CSS', percentage: 42.3 }
+        ]
+    },
+    { 
+        name: "Sha Fabrics", 
+        description: "SHA Fabrics is an e-commerce site offering high-quality fabrics, bedsheets, and stylish clothing for men and women. With a user-friendly design, it provides trendy, premium products to refresh your home or wardrobe effortlessly.", 
+        image: "https://i.ibb.co/4nQtqJbH/sha-fabrics.jpg", 
+        link: "http://sha-fabrics.github.io/", 
+        code: "https://github.com/sha-fabrics/sha-fabrics.github.io", 
+        slug: "virtual-bar", 
+        type: "Personal Project",
+        // Add this languages array
+        languages: [
+            { name: 'HTML', percentage: 26.8 },
+            { name: 'CSS', percentage: 14.5 },
+            { name: 'JavaScript', percentage: 58.7 }
+        ]
+    },
+];
 
-            const link = project.link ?? project.code;
-            const title = project.link ? `Open site of ${project.name}` : `View Code for ${project.name}`;
+const projectContainer = document.querySelector('.project-listings-container');
+if (projectContainer) {
+    projectsList.forEach(project => {
+        const projectEl = document.createElement('div');
+        projectEl.className = 'project project-listing';
+        projectEl.id = project.slug;
 
-            let buttonsHTML = '';
-            if (project.link) {
-                buttonsHTML += `<a href="${project.link}" title="Open site of ${project.name}" class="project-btn" target="_blank" rel="noopener noreferrer">Open Site</a>`;
-            }
-            if (project.code) {
-                buttonsHTML += `<a href="${project.code}" title="View Code for ${project.name}" class="project-btn" target="_blank" rel="noopener noreferrer">View Code</a>`;
-            }
-            
-            const descriptionHTML = project.description.split("\n").map(p => `<p>${p}</p>`).join('');
+        const link = project.link ?? project.code;
+        const title = project.link ? `Open site of ${project.name}` : `View Code for ${project.name}`;
 
-            projectEl.innerHTML = `
-                <div class="project-item-container">
-                    <a href="${link}" title="${title}" target="_blank" rel="noopener noreferrer">
-                        <picture>
-                            ${project.mobileImage ? `<source srcset="${project.mobileImage}" media="(max-width:967px)">` : ''}
-                            <img src="${project.image}" alt="${project.name}" class="project-image">
-                        </picture>
-                    </a>
-                    <div id="projectInfo" class="project-info">
-                        <a href="${link}" title="${title}" target="_blank" rel="noopener noreferrer">
-                            <h2 class="playful-hover">${project.name}</h2>
-                        </a>
-                        ${descriptionHTML}
-                        <p>${project.type}</p>
-                        <div class="project-btns">
-                            ${buttonsHTML}
+        let buttonsHTML = '';
+        if (project.link) {
+            buttonsHTML += `<a href="${project.link}" title="Open site of ${project.name}" class="project-btn" target="_blank" rel="noopener noreferrer">Open Site</a>`;
+        }
+        if (project.code) {
+            buttonsHTML += `<a href="${project.code}" title="View Code for ${project.name}" class="project-btn" target="_blank" rel="noopener noreferrer">View Code</a>`;
+        }
+        
+        const descriptionHTML = project.description.split("\n").map(p => `<p>${p}</p>`).join('');
+
+        // Generate the HTML for the languages section
+        let languagesHTML = '';
+        if (project.languages && project.languages.length > 0) {
+            const languageItems = project.languages.map(lang => {
+                // Create a CSS-friendly class name from the language name
+                const langClass = `lang-${lang.name.toLowerCase()}`;
+                
+                return `
+                    <div class="language-item">
+                        <span class="language-name">${lang.name}</span>
+                        <div class="language-bar-container">
+                            <div class="language-bar ${langClass}" style="width: ${lang.percentage}%;"></div>
                         </div>
+                        <span class="language-percentage">${lang.percentage}%</span>
                     </div>
+                `;
+            }).join('');
+
+            languagesHTML = `
+                <div class="project-languages">
+                    <h3>Languages</h3>
+                    ${languageItems}
                 </div>
             `;
-            projectContainer.appendChild(projectEl);
-        });
-    }
+        }
+        
+        projectEl.innerHTML = `
+            <div class="project-item-container">
+                <a href="${link}" title="${title}" target="_blank" rel="noopener noreferrer">
+                    <picture>
+                        ${project.mobileImage ? `<source srcset="${project.mobileImage}" media="(max-width:967px)">` : ''}
+                        <img src="${project.image}" alt="${project.name}" class="project-image">
+                    </picture>
+                </a>
+                <div id="projectInfo" class="project-info">
+                    <a href="${link}" title="${title}" target="_blank" rel="noopener noreferrer">
+                        <h2 class="playful-hover">${project.name}</h2>
+                    </a>
+                    ${descriptionHTML}
+                    <p>${project.type}</p>
+                    
+                    ${languagesHTML}
+
+                    <div class="project-btns">
+                        ${buttonsHTML}
+                    </div>
+                </div>
+            </div>
+        `;
+        projectContainer.appendChild(projectEl);
+    });
+}
 
     // --- SMOOTH SCROLLING WITH LENIS ---
     const lenis = new Lenis({
