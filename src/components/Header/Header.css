@@ -1,0 +1,82 @@
+/* src/components/Header/Header.css */
+
+.nav {
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    width: 90%;
+    max-width: 1536px;
+    margin: 0 auto;
+    font-weight: 700;
+    z-index: 2;
+}
+.nav .space-between {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav .logo {
+    color: var(--white);
+    cursor: pointer;
+    font-size: 1.2rem;
+    text-decoration: none;
+    user-select: none;
+    flex-shrink: 0;
+}
+.nav .nav-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem; /* Base gap for mobile */
+}
+.nav .nav-list li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav .nav-list li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-underline-offset: 0.25rem;
+    transition: color 0.2s;
+}
+.nav .nav-list li a:hover, .nav .nav-list li a:focus {
+    text-decoration: underline;
+}
+.nav .nav-list li a svg {
+    width: 1.4rem; 
+    height: 1.4rem;
+    flex-shrink: 0;
+}
+
+/* --- Media Queries for Smaller Screens (FIX for navigation) --- */
+@media (max-width: 420px) {
+    .nav .nav-list {
+        gap: 0.8rem; /* Add more space between icons */
+    }
+    .nav .nav-list li a {
+        font-size: 0; /* This hides the text label */
+        gap: 0; /* Remove gap since there's no text */
+    }
+}
+
+/* --- ADDED: Media queries for larger screens --- */
+@media (min-width: 768px) {
+    .nav { width: 75%; }
+    .nav .logo { font-size: 1.4rem; }
+    .nav .nav-list { gap: 1rem; }
+    .nav .nav-list li { padding: 0 16px; }
+    .nav .nav-list li:last-child { padding: 0 0 0 16px; }
+    .nav .nav-list li a { font-size: 1rem; }
+    .nav .nav-list li a svg { font-size: 1.75rem; width: auto; height: auto; }
+}

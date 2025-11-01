@@ -1,0 +1,30 @@
+/* src/components/About/About.css */
+
+.about-container {
+    position: relative;
+    width: 90%;
+    margin: 5rem auto;
+    max-width: 1536px;
+    z-index: 10;
+}
+.about-container h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+.about-container p {
+    font-size: 1rem;
+    line-height: 1.8;
+    max-width: 65ch; /* Limits the width for better readability */
+}
+
+.about-container p + p {
+    margin-top: 1rem;
+}
+
+/* --- ADDED: Media queries for larger screens --- */
+@media (min-width: 768px) {
+    .about-container { width: 75%; margin: 8rem auto; }
+    .about-container h2 { font-size: 3rem; margin-bottom: 3rem; }
+    .about-container p { font-size: 1.2rem; }
+}

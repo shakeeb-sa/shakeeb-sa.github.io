@@ -1,0 +1,87 @@
+/* src/styles/global.css */
+
+/* --- Google Fonts Import --- */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+/* --- Meyer's Reset + Josh W Comeau's CSS Reset --- */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { display: block; }
+body { line-height: 1; }
+ol,ul { list-style: none; }
+blockquote,q { quotes: none; }
+blockquote:before,blockquote:after,q:before,q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+*,*::before,*::after { box-sizing: border-box; }
+* { margin: 0; }
+body { -webkit-font-smoothing: antialiased; }
+img,picture,video,canvas,svg { display: block; max-width: 100%; }
+input,button,textarea,select { font: inherit; }
+p,h1,h2,h3,h4,h5,h6 { overflow-wrap: break-word; }
+#root,#__next { isolation: isolate; }
+
+/* --- Global Variables and Styles --- */
+:root {
+    --black: #121212;
+    --white: #fff;
+    --font: 'Raleway', sans-serif;
+}
+
+body, html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background: var(--black);
+    color: var(--white);
+    font-family: var(--font);
+    overflow-x: hidden;
+    width: 100%;
+}
+
+*::selection {
+    color: black;
+    background-color: white;
+}
+
+/* --- Common Utility Styles --- */
+.hidden-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+.hidden-text:focus {
+    clip: auto;
+    height: auto;
+    overflow: auto;
+    position: absolute;
+    width: auto;
+}
+.playful {
+    transition: all 0.4s cubic-bezier(0.15, 0.75, 0.45, 0.95) 0s;
+    animation: 10s ease 0s infinite alternate none running rainbow;
+}
+.playful-hover {
+    transition: all 0.4s cubic-bezier(0.15, 0.75, 0.45, 0.95) 0s;
+}
+.playful-hover:hover, .playful-hover:focus {
+    animation: 10s ease 0s infinite alternate none running rainbow;
+}
+
+@keyframes rainbow {
+    0% { color: rgb(240, 77, 255); }
+    25% { color: rgb(255, 77, 77); }
+    50% { color: rgb(255, 197, 77); }
+    75% { color: rgb(106, 237, 118); }
+    100% { color: rgb(0, 153, 255); }
+}
+
+/* --- THE CONFLICTING create-react-app STYLES HAVE BEEN REMOVED --- */

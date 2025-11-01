@@ -1,0 +1,67 @@
+/* src/components/Skills/Skills.css */
+
+.my-skills {
+    position: relative;
+    width: 90%;
+    margin: 5rem auto;
+    max-width: 1536px;
+    z-index: 10;
+}
+.my-skills h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    gap: 1rem;
+    justify-content: center;
+}
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background-color: #1a1a1a;
+    border-radius: 1rem;
+    border: 1px solid #333;
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: help; /* Indicates more info is available on hover */
+}
+.skill-item:hover {
+    transform: translateY(-8px);
+    border-color: var(--white);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
+}
+.skill-item svg {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.skill-item:hover svg {
+    transform: translateY(-5px) rotate(-10deg);
+}
+.skill-item p {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #ccc;
+    transition: color 0.3s ease;
+}
+.skill-item:hover p {
+    color: var(--white);
+}
+
+/* --- ADDED: Media queries for larger screens --- */
+@media (min-width: 768px) {
+    .my-skills { width: 75%; margin: 8rem auto; }
+    .my-skills h2 { font-size: 3rem; margin-bottom: 3rem; }
+    .skills-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 2rem; }
+    .skill-item svg { width: 40px; height: 40px; }
+    .skill-item p { font-size: 0.875rem; }
+}
