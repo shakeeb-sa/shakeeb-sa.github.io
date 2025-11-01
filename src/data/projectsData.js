@@ -1,10 +1,17 @@
-// src/data/projectsData.js
+// Import each project image at the top of the file
+import toolsForDevsSeosImage from '../assets/images/tools-for-devs-seos.jpg';
+import urlPathSeparatorImage from '../assets/images/url-path-separator.jpg';
+import multiFormatLinkConverterImage from '../assets/images/multi-format-link-converter.jpg';
+import guestbookExtractorImage from '../assets/images/guestbook-extractor.jpg';
+import allAboutCodingImage from '../assets/images/all-about-coding.jpg';
+import domainCheckerImage from '../assets/images/domain-checker.jpg';
+import shaFabricsImage from '../assets/images/sha-fabrics.jpg';
 
 const projectsData = [
     {
         name: "Tools for Developers & SEOs",
         description: "A curated collection of free, powerful tools for developers and SEOs to streamline workflows and boost productivity.",
-        image: "/src/assets/images/tools-for-devs-seos.jpg", // Path updated
+        image: toolsForDevsSeosImage, // Use the imported variable
         link: "https://shakeeb-sa.github.io/tools/",
         code: "https://github.com/shakeeb-sa/tools",
         slug: "tools-for-devs",
@@ -18,7 +25,7 @@ const projectsData = [
     {
         name: "URL Path Separator",
         description: "It's a handy tool that simplifies splitting and managing URL paths by accurately identifying and separating each segment, making navigation more efficient.",
-        image: "/src/assets/images/url-path-separator.jpg", // Path updated
+        image: urlPathSeparatorImage, // Use the imported variable
         link: "https://shakeeb-sa.github.io/url-path-separator/",
         code: "https://github.com/shakeeb-sa/tools",
         slug: "url-separator",
@@ -32,7 +39,7 @@ const projectsData = [
     {
         name: "Multi Format Link Converter",
         description: "Easily convert all types of links, including BBCode, HTML, and plain URLs.",
-        image: "/src/assets/images/multi-format-link-converter.jpg", // Path updated
+        image: multiFormatLinkConverterImage, // Use the imported variable
         link: "https://shakeeb-sa.github.io/multi-format-link-converter/",
         code: "https://github.com/shakeeb-sa/multi-format-link-converter",
         slug: "link-converter",
@@ -46,7 +53,7 @@ const projectsData = [
     {
         name: "Guestbook Extractor Chrome Extension",
         description: "A Chrome extension that automates scrolling through guest books, downloads backlinks, and removes duplicates for efficient link building.",
-        image: "/src/assets/images/guestbook-extractor.jpg", // Path updated
+        image: guestbookExtractorImage, // Use the imported variable
         link: "https://shakeeb-sa.github.io/guestbook-extractor-chrome-extension/",
         code: "https://github.com/shakeeb-sa/guestbook-extractor-chrome-extension",
         slug: "guestbook-extractor",
@@ -58,7 +65,7 @@ const projectsData = [
     {
         name: "All About Coding",
         description: "Discover a comprehensive collection of coding tutorials, videos, and resources from YouTube. Your go-to site for all things coding—learn, explore, and master programming today!",
-        image: "/src/assets/images/all-about-coding.jpg", // Path updated
+        image: allAboutCodingImage, // Use the imported variable
         link: "https://shakeeb-sa.github.io/all-about-coding/",
         code: "https://github.com/shakeeb-sa/all-about-coding",
         slug: "all-about-coding",
@@ -72,7 +79,7 @@ const projectsData = [
     {
         name: "Domain Checker",
         description: "A web tool that compares two URL lists, identifies unique and matching domains, and creates a detailed report. It streamlines URL data analysis efficiently.",
-        image: "/src/assets/images/domain-checker.jpg", // Path updated
+        image: domainCheckerImage, // Use the imported variable
         link: "https://shakeeb-sa.github.io/domain-checker/",
         code: "https://github.com/shakeeb-sa/domain-checker",
         slug: "domain-checker",
@@ -86,7 +93,7 @@ const projectsData = [
    {
     name: "Sha Fabrics",
     description: "SHA Fabrics is an e-commerce site offering high-quality fabrics, bedsheets, and stylish clothing for men and women. With a user-friendly design, it provides trendy, premium products to refresh your home or wardrobe effortlessly.",
-    image: "/src/assets/images/sha-fabrics.jpg",
+    image: shaFabricsImage, // Use the imported variable
     link: "http://sha-fabrics.github.io/",
     code: "https://github.com/sha-fabrics/sha-fabrics.github.io",
     slug: "sha-fabrics",
@@ -94,7 +101,6 @@ const projectsData = [
     languages: [
         { name: 'HTML', percentage: 26.8 },
         { name: 'CSS', percentage: 14.5 },
-        // This is the line to fix
         { name: 'JavaScript', percentage: 58.7 } 
     ]
 },
