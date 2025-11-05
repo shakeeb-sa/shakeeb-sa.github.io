@@ -85,3 +85,15 @@ body, html {
 }
 
 /* --- THE CONFLICTING create-react-app STYLES HAVE BEEN REMOVED --- */
+/* Add this to src/components/Footer/Footer.css or your global CSS */
+
+.footer-spacer {
+  height: 4rem;
+  background: transparent;
+}
+
+@media (min-width: 768px) {
+  .footer-spacer {
+    height: 6rem;
+  }
+}

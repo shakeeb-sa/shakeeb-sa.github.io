@@ -3,34 +3,36 @@
 footer {
     min-height: 80vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    justify-content: center;     /* Only vertical centering */
     padding: 2rem 0;
+    margin-top: 4rem;            /* Fallback gap */
+    text-align: center;
 }
+
 footer h2 {
     color: var(--white);
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 2rem;
-    text-align: center;
 }
+
 .footer-links {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
     gap: 1rem;
     margin: 0;
     padding: 0;
     list-style-type: none;
 }
+
 .footer-links li {
     padding: 0 8px;
 }
+
 .footer-links li a {
     display: flex;
-    justify-content: center;
     align-items: center;
     gap: 0.5rem;
     color: var(--white);
@@ -39,30 +41,39 @@ footer h2 {
     font-size: 1rem;
     text-underline-offset: 0.25rem;
 }
-.footer-links li a:hover, .footer-links li a:focus {
+
+.footer-links li a:hover,
+.footer-links li a:focus {
     text-decoration: underline;
 }
+
 .footer-links li a svg {
     font-size: 1.5rem;
 }
 
-/* --- ADDED: Responsive styles for larger screens --- */
+/* Responsive */
 @media (min-width: 768px) {
     footer {
         min-height: 100vh;
+        margin-top: 6rem;
     }
+
     footer h2 {
         font-size: 4rem;
     }
+
     .footer-links {
         flex-wrap: nowrap;
     }
+
     .footer-links li {
         padding: 0 32px;
     }
+
     .footer-links li a {
         font-size: 1.5rem;
     }
+
     .footer-links li a svg {
         font-size: 2rem;
     }
