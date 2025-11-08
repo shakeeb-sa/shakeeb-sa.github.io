@@ -6,6 +6,11 @@ import guestbookExtractorImage from '../assets/images/guestbook-extractor.jpg';
 import allAboutCodingImage from '../assets/images/all-about-coding.jpg';
 import domainCheckerImage from '../assets/images/domain-checker.jpg';
 import shaFabricsImage from '../assets/images/sha-fabrics.jpg';
+import codeChunker from '../assets/images/code-chunker.jpg'
+import metaScraper from '../assets/images/meta-scraper.jpg'
+import devSeoTools from '../assets/images/devseo-tools.jpg'
+import liveCssEditor from '../assets/images/live-css-editor.jpg'
+
 
 const projectsData = [
     {
@@ -90,6 +95,60 @@ const projectsData = [
             { name: 'HTML', percentage: 15.3 },
             { name: 'CSS', percentage: 42.3 },
             { name: 'JavaScript', percentage: 42.4 }
+        ]
+    },
+    {
+        name: "Code Chunker",
+        description: "Paste your large code file below. Choose how you want to split it, and get copy-paste-ready chunks for your AI assistant.",
+        image: codeChunker,
+        link: "https://shakeeb-sa.github.io/code-chunker/",
+        code: "https://github.com/sha-fabrics/sha-fabrics.github.io",
+        slug: "code-chunker",
+        type: "Personal Project",
+        languages: [
+            { name: 'HTML', percentage: 100 },
+        ]
+    },
+    {
+        name: "Meta Scraper",
+        description: "Easily bulk scrape meta titles and descriptions from a list of URLs. Paste your list to get instant results, then export to TXT, DOCX, or Excel (.xlsx). A fast, free tool for SEOs and marketers.",
+        image: metaScraper,
+        link: "https://meta-scraper-three.vercel.app/",
+        code: "https://github.com/shakeeb-sa/meta-scraper",
+        slug: "meta-scraper",
+        type: "Personal Project",
+        languages: [
+            { name: 'HTML', percentage: 9.3 },
+            { name: 'CSS', percentage: 16.2 },
+            { name: 'JavaScript', percentage: 74.5 }
+        ]
+    },
+    {
+        name: "DevSeo Tools",
+        description: "A free and simple SEO analysis tool. Get an instant on-page report covering your meta tags, headings, word count, image SEO, and structured data in seconds.",
+        image: devSeoTools,
+        link: "https://devseo-tools-fresh.vercel.app/",
+        code: "https://github.com/shakeeb-sa/devseo-tools",
+        slug: "devseo-tools",
+        type: "Personal Project",
+        languages: [
+            { name: 'HTML', percentage: 45.7 },
+            { name: 'CSS', percentage: 25.3 },
+            { name: 'JavaScript', percentage: 29.0 }
+        ]
+    },
+        {
+        name: "Live CSS Editor",
+        description: "A live CSS editor for Chrome. Visually edit any webpage by clicking and resizing elements. Instantly generates the required CSS with unique selectors, ready to copy with one click.",
+        image: liveCssEditor,
+        link: "https://github.com/shakeeb-sa/Live-css-editor",
+        code: "https://github.com/shakeeb-sa/Live-css-editor",
+        slug: "sha-fabrics",
+        type: "Personal Project",
+        languages: [
+            { name: 'HTML', percentage: 11.3 },
+            { name: 'CSS', percentage: 11.9 },
+            { name: 'JavaScript', percentage: 78.8 }
         ]
     },
     {
