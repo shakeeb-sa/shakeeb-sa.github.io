@@ -20,6 +20,7 @@
     justify-content: center;
 }
 .skill-item {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,7 +32,7 @@
     border: 1px solid #333;
     text-align: center;
     transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-    cursor: help; /* Indicates more info is available on hover */
+    cursor: help;
 }
 .skill-item:hover {
     transform: translateY(-8px);
@@ -57,11 +58,84 @@
     color: var(--white);
 }
 
-/* --- ADDED: Media queries for larger screens --- */
 @media (min-width: 768px) {
     .my-skills { width: 75%; margin: 8rem auto; }
     .my-skills h2 { font-size: 3rem; margin-bottom: 3rem; }
     .skills-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 2rem; }
     .skill-item svg { width: 40px; height: 40px; }
     .skill-item p { font-size: 0.875rem; }
+}
+
+
+/* --- ENHANCED CUSTOM TOOLTIP STYLES --- */
+
+/* The main tooltip box */
+.skill-item::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    
+    /* ENHANCED: Start slightly lower for the pop-up effect */
+    transform: translate(-50%, 10px); 
+
+    /* Styling */
+    background-color: var(--white);
+    color: var(--black);
+    font-size: 0.8rem;
+    line-height: 1.4;
+    font-weight: 700;
+    padding: 0.5rem 0.8rem;
+    border-radius: 8px;
+    margin-bottom: 15px; /* Increased margin to make space for the arrow */
+    width: max-content;
+    max-width: 200px;
+    text-align: center;
+    z-index: 1; /* Ensure it's on top */
+    
+    /* ENHANCED: Add a subtle shadow for depth */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+
+    /* Initial state (hidden) */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    
+    /* ENHANCED: Smoother transition with a slight delay */
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-delay: 0.1s;
+}
+
+/* The tooltip arrow */
+.skill-item::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%, 10px); /* Match the pop-up effect */
+    
+    /* Create the triangle using borders */
+    border: 6px solid transparent;
+    border-top-color: var(--white);
+    
+    /* Positioning */
+    margin-bottom: 3px;
+    z-index: 2; /* Place arrow on top of the box */
+
+    /* Initial state (hidden) */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    
+    /* Match the transition of the main box */
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-delay: 0.1s;
+}
+
+/* Show the tooltip and arrow on hover */
+.skill-item:hover::after,
+.skill-item:hover::before {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0); /* ENHANCED: Move to final position */
 }

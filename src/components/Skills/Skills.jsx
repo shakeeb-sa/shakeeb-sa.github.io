@@ -13,7 +13,7 @@ function Skills() {
           <div 
             key={skill.name} 
             className="skill-item" 
-            title={skill.description} // This creates the hover tooltip!
+            data-tooltip={skill.description} // MODIFIED: Changed 'title' to 'data-tooltip'
           >
             <div dangerouslySetInnerHTML={{ __html: skill.svg }} />
             <p>{skill.name}</p>
