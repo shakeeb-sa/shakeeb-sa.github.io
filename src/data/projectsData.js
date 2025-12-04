@@ -51,13 +51,14 @@ const projectsData = [
         name: "Guestbook Extractor Chrome Extension",
         description: "A Chrome extension that automates scrolling through guest books, downloads backlinks, and removes duplicates for efficient link building.",
         image: guestbookExtractorImage,
-        link: "https://shakeeb-sa.github.io/guestbook-extractor-chrome-extension/",
-        code: "https://github.com/shakeeb-sa/guestbook-extractor-chrome-extension",
+        link: "https://github.com/shakeeb-sa/guestbook-extractor-extension",
+        code: "https://github.com/shakeeb-sa/guestbook-extractor-extension",
         slug: "guestbook-extractor",
         type: "Personal Project",
         category: "Chrome Extension", // <-- Updated category
         languages: [
-            { name: 'JavaScript', percentage: 100 }
+            { name: 'HTML', percentage: 11.5 },
+            { name: 'JavaScript', percentage: 88.5 }
         ]
     },
     {
