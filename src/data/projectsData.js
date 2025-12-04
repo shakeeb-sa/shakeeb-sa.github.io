@@ -10,6 +10,10 @@ import codeChunker from '../assets/images/code-chunker.jpg'
 import metaScraper from '../assets/images/meta-scraper.jpg'
 import devSeoTools from '../assets/images/devseo-tools.jpg'
 import liveCssEditor from '../assets/images/live-css-editor.jpg'
+import LinkBuildingAutomator from '../assets/images/link-building-automator.jpg'
+import LinkBuildingExecutionGenerator from '../assets/images/link-building-execution-generator.jpg'
+
+
 
 
 const projectsData = [
@@ -72,6 +76,21 @@ const projectsData = [
         ]
     },
     {
+        name: "Link Building Automator",
+        description: "Lightning LinkBuilder is a Chrome extension that automates form-filling, profile creation, and outreach for link builders using smart data injection and AI-powered field detection. It supports real/fake data, intelligent dropdown sequencing, one-click submissions, and domain collision alerts via its Watchtower feature.",
+        image: LinkBuildingAutomator,
+        link: "https://github.com/shakeeb-sa/link-building-automator",
+        code: "https://github.com/shakeeb-sa/link-building-automator",
+        slug: "link-building-automator",
+        type: "Personal Project",
+        category: "Chrome Extension", // <-- Updated category
+        languages: [
+            { name: 'HTML', percentage: 14.1 },
+            { name: 'CSS', percentage: 0.5 },
+            { name: 'JavaScript', percentage: 85.4 }
+        ]
+    },
+    {
         name: "Tools for Developers & SEOs",
         description: "A curated collection of free, powerful tools for developers and SEOs to streamline workflows and boost productivity.",
         image: toolsForDevsSeosImage,
@@ -114,6 +133,21 @@ const projectsData = [
             { name: 'HTML', percentage: 32.9 },
             { name: 'CSS', percentage: 31.8 },
             { name: 'JavaScript', percentage: 35.3 }
+        ]
+    },
+    {
+        name: "Link Building Execution Generator",
+        description: "Link Building Execution Generator is a web-based tool that transforms raw outreach data from Excel into a prioritized, ready-to-execute link-building plan. It intelligently categorizes activities like Guest Blogging, Web 2.0, DA 50+, and Classifieds, then sorts them by strategic importance.",
+        image: LinkBuildingExecutionGenerator,
+        link: "https://shakeeb-sa.github.io/link-building-execution-generator/",
+        code: "https://github.com/shakeeb-sa/link-building-execution-generator",
+        slug: "link-building-execution-generator",
+        type: "Personal Project",
+        category: "Frontend",
+        languages: [
+            { name: 'HTML', percentage: 15 },
+            { name: 'CSS', percentage: 20 },
+            { name: 'JavaScript', percentage: 65 }
         ]
     },
     {
