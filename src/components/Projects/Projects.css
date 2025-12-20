@@ -204,3 +204,173 @@
         margin-bottom: 3rem;
     }
 }
+/* src/components/Projects/Projects.css */
+
+.project-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* --- WRAPPER --- */
+.code-counter-wrapper {
+    position: relative;
+    width: 120px; /* Wider to accommodate satellites */
+    height: 120px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+/* --- SVG DONUT --- */
+.code-donut-svg {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    transform: rotate(0deg); /* Initial state */
+    filter: drop-shadow(0 0 5px rgba(0,0,0,0.5));
+}
+
+.code-counter-content {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.counter-number {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--white);
+    text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.counter-label {
+    font-size: 0.6rem;
+    font-weight: 700;
+    color: #888;
+    text-transform: uppercase;
+}
+
+/* --- SATELLITE BADGES (The Automatic Popups) --- */
+.satellite-badge {
+    position: absolute;
+    background: rgba(18, 18, 18, 0.9);
+    border: 1px solid #333;
+    padding: 4px 8px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    white-space: nowrap;
+    backdrop-filter: blur(4px);
+    
+    /* Ensure they don't block clicks on the link behind them */
+    pointer-events: none; 
+}
+
+.badge-name {
+    font-size: 0.6rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 2px;
+}
+
+.badge-lines {
+    font-size: 0.65rem;
+    color: #fff;
+    font-weight: 400;
+}
+
+/* --- POSITIONS FOR 3 SATELLITES --- */
+/* Top Right */
+.badge-pos-0 {
+    top: -5px;
+    right: -15px;
+}
+
+/* Top Left */
+.badge-pos-1 {
+    top: -5px;
+    left: -15px;
+}
+
+/* Bottom Center */
+.badge-pos-2 {
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media (min-width: 768px) {
+    .code-counter-wrapper { width: 140px; height: 140px; }
+    .code-donut-svg { width: 100px; height: 100px; }
+    .counter-number { font-size: 1.5rem; }
+    
+    .badge-pos-0 { right: -10px; }
+    .badge-pos-1 { left: -10px; }
+}
+
+
+/* src/components/Projects/Projects.css */
+
+/* Update the wrapper to show a help cursor */
+.code-counter-wrapper {
+    cursor: help; /* Tells user this is interactive */
+}
+
+/* --- TOOLTIP STYLES (The Popup) --- */
+
+/* The text box */
+.code-counter-wrapper::after {
+    content: attr(data-tooltip); /* Pulls text from the attribute */
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%, 10px); 
+    background-color: #333;
+    color: var(--white);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.5rem 0.8rem;
+    border-radius: 6px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    z-index: 10;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* The little arrow pointing down */
+.code-counter-wrapper::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%, 10px);
+    border: 6px solid transparent;
+    border-top-color: #333;
+    margin-bottom: -12px; /* Pulls arrow down to connect */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+/* Reveal on Hover */
+.code-counter-wrapper:hover::after,
+.code-counter-wrapper:hover::before {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -10px); /* Moves up slightly */
+}

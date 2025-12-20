@@ -5,8 +5,9 @@ import projectsData from '../../data/projectsData';
 import './Projects.css';
 
 // Helper component to avoid repeating the project listing code
+import CodeCounter from './CodeCounter'; // Import the new component
+
 const ProjectItem = ({ project }) => {
-  // Determine the primary link for the image and title
   const primaryLink = project.link ?? project.code;
   const linkTitle = project.link ? `Open site for ${project.name}` : `View code for ${project.name}`;
 
@@ -18,26 +19,54 @@ const ProjectItem = ({ project }) => {
         </a>
 
         <div id="projectInfo" className="project-info">
-          <a href={primaryLink} title={linkTitle} target="_blank" rel="noopener noreferrer">
-            <h3 className="playful-hover">{project.name}</h3>
-          </a>
-          <p>{project.description}</p>
-          <p>{project.type}</p>
+          
+          {/* 1. Header Row: Title on Left, Circle on Right */}
+          <div className="project-header-row">
+            <div>
+                <a href={primaryLink} title={linkTitle} target="_blank" rel="noopener noreferrer">
+                <h3 className="playful-hover">{project.name}</h3>
+                </a>
+                <p style={{marginTop: '0.5rem'}}>{project.type}</p>
+            </div>
+            
+            {/* 2. The Animated Circle (Only shows if totalLines exists) */}
+{/* OLD LINE: */}
+{/* {project.totalLines && <CodeCounter totalLines={project.totalLines} />} */}
 
-          {/* Conditionally render the languages section */}
+{/* NEW LINE: Pass both totalLines AND languages */}
+{project.totalLines && (
+  <CodeCounter 
+    totalLines={project.totalLines} 
+    languages={project.languages} 
+  />
+)}
+          </div>
+
+          <p style={{marginTop: '1rem'}}>{project.description}</p>
+
+          {/* 3. Updated Languages Section with Line Counts */}
           {project.languages && project.languages.length > 0 && (
             <div className="project-languages">
-              <h4>Languages</h4>
+              <h4>Complexity Breakdown</h4>
               {project.languages.map(lang => (
                 <div key={lang.name} className="language-item">
-                  <span className="language-name">{lang.name}</span>
+                  
+                  {/* Text Header: "HTML" ........ "395 Lines" */}
+                  <div className="language-header">
+                    <span className="language-name-text">{lang.name}</span>
+                    <span className="language-lines-text">
+                        {lang.lines ? `${lang.lines} lines` : `${lang.percentage}%`}
+                    </span>
+                  </div>
+
+                  {/* The Colored Bar */}
                   <div className="language-bar-container">
                     <div
                       className={`language-bar lang-${lang.name.toLowerCase().replace(/\s+/g, '-')}`}
                       style={{ width: `${lang.percentage}%` }}
                     ></div>
                   </div>
-                  <span className="language-percentage">{lang.percentage}%</span>
+                  
                 </div>
               ))}
             </div>
