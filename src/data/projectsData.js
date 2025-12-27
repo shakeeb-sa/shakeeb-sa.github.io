@@ -12,6 +12,8 @@ import devSeoTools from "../assets/images/devseo-tools.jpg";
 import liveCssEditor from "../assets/images/live-css-editor.jpg";
 import LinkBuildingAutomator from "../assets/images/link-building-automator.jpg";
 import LinkBuildingExecutionGenerator from "../assets/images/link-building-execution-generator.jpg";
+import CinemaDownloader from "../assets/images/cinema-downloader.jpg";
+import DevTube from "../assets/images/dev-tube.jpg";
 
 const projectsData = [
   {
@@ -105,39 +107,57 @@ const projectsData = [
     ],
   },
   {
-    name: "Tools for Developers & SEOs",
+    name: "Cinema Downloader",
     description:
-      "A curated collection of free, powerful tools for developers and SEOs to streamline workflows and boost productivity.",
-    image: toolsForDevsSeosImage,
-    link: "https://shakeeb-sa.github.io/tools/",
-    code: "https://github.com/shakeeb-sa/tools",
-    slug: "tools-for-devs",
+      "Can't download that video? This extension sniffs out hidden streams, grabs the source, and reassembles the video file for you. Includes a 'Force Scan' mode for stubborn players.",
+    image: CinemaDownloader,
+    link: "https://github.com/shakeeb-sa/cinema-downloader/",
+    code: "https://github.com/shakeeb-sa/cinema-downloader/",
+    slug: "cinema-downloader",
     type: "Personal Project",
-    totalLines: "305",
-    category: "Frontend",
-    languages: [
-      // 2. ADD "lines" property to each language
-      { name: "HTML", percentage: 35.3, lines: "101" },
-      { name: "CSS", percentage: 46.4, lines: "122 " },
-      { name: "JavaScript", percentage: 18.3, lines: "82" },
-    ],
-  },
-  {
-    name: "URL Path Separator",
-    description:
-      "It's a handy tool that simplifies splitting and managing URL paths by accurately identifying and separating each segment, making navigation more efficient.",
-    image: urlPathSeparatorImage,
-    link: "https://shakeeb-sa.github.io/url-path-separator/",
-    code: "https://github.com/shakeeb-sa/url-path-separator",
-    slug: "url-separator",
-    type: "Personal Project",
-    totalLines: "1130",
-    category: "Frontend",
+    totalLines: "1066",
+    category: "Chrome Extension",
     languages: [
       // 2. ADD "lines" property to each language
       { name: "HTML", percentage: 21.3, lines: "182" },
-      { name: "CSS", percentage: 35.4, lines: "466 " },
-      { name: "JavaScript", percentage: 43.3, lines: "482" },
+      { name: "CSS", percentage: 0, lines: "0 " },
+      { name: "JavaScript", percentage: 78.7, lines: "884" },
+    ],
+  },
+  {
+    name: "Dev Tube",
+    description:
+      "Discover a comprehensive collection of coding tutorials, videos, and resources from YouTube. Your go-to site for all things coding—learn, explore, and master programming today!",
+    image: DevTube,
+    link: "https://shakeeb-sa.github.io/dev-tube/",
+    code: "https://github.com/shakeeb-sa/dev-tube",
+    slug: "dev-tube",
+    type: "Personal Project",
+    totalLines: "1702",
+    category: "Frontend",
+    languages: [
+      // 2. ADD "lines" property to each language
+      { name: "HTML", percentage: 0, lines: "0" },
+      { name: "CSS", percentage: 0, lines: "0 " },
+      { name: "JavaScript", percentage: 98.6, lines: "1702" },
+    ],
+  },
+  {
+    name: "Sha Fabrics",
+    description:
+      "SHA Fabrics is an e-commerce site offering high-quality fabrics, bedsheets, and stylish clothing for men and women. With a user-friendly design, it provides trendy, premium products to refresh your home or wardrobe effortlessly.",
+    image: shaFabricsImage,
+    link: "http://sha-fabrics.github.io/",
+    code: "https://github.com/sha-fabrics/sha-fabrics.github.io",
+    slug: "sha-fabrics",
+    type: "Personal Project",
+    totalLines: "5812",
+    category: "Frontend",
+    languages: [
+      // 2. ADD "lines" property to each language
+      { name: "HTML", percentage: 26.8, lines: "2122" },
+      { name: "CSS", percentage: 14.5, lines: "1499 " },
+      { name: "JavaScript", percentage: 58.7, lines: "2191" },
     ],
   },
   {
@@ -177,21 +197,39 @@ const projectsData = [
     ],
   },
   {
-    name: "All About Coding",
+    name: "Tools for Developers & SEOs",
     description:
-      "Discover a comprehensive collection of coding tutorials, videos, and resources from YouTube. Your go-to site for all things coding—learn, explore, and master programming today!",
-    image: allAboutCodingImage,
-    link: "https://shakeeb-sa.github.io/all-about-coding/",
-    code: "https://github.com/shakeeb-sa/all-about-coding",
-    slug: "all-about-coding",
+      "A curated collection of free, powerful tools for developers and SEOs to streamline workflows and boost productivity.",
+    image: toolsForDevsSeosImage,
+    link: "https://shakeeb-sa.github.io/tools/",
+    code: "https://github.com/shakeeb-sa/tools",
+    slug: "tools-for-devs",
     type: "Personal Project",
-    totalLines: "1839",
+    totalLines: "305",
     category: "Frontend",
     languages: [
       // 2. ADD "lines" property to each language
-      { name: "HTML", percentage: 18.9, lines: "171" },
-      { name: "CSS", percentage: 23, lines: "567 " },
-      { name: "JavaScript", percentage: 58.1, lines: "1101" },
+      { name: "HTML", percentage: 35.3, lines: "101" },
+      { name: "CSS", percentage: 46.4, lines: "122 " },
+      { name: "JavaScript", percentage: 18.3, lines: "82" },
+    ],
+  },
+  {
+    name: "URL Path Separator",
+    description:
+      "It's a handy tool that simplifies splitting and managing URL paths by accurately identifying and separating each segment, making navigation more efficient.",
+    image: urlPathSeparatorImage,
+    link: "https://shakeeb-sa.github.io/url-path-separator/",
+    code: "https://github.com/shakeeb-sa/url-path-separator",
+    slug: "url-separator",
+    type: "Personal Project",
+    totalLines: "1130",
+    category: "Frontend",
+    languages: [
+      // 2. ADD "lines" property to each language
+      { name: "HTML", percentage: 21.3, lines: "182" },
+      { name: "CSS", percentage: 35.4, lines: "466 " },
+      { name: "JavaScript", percentage: 43.3, lines: "482" },
     ],
   },
   {
@@ -228,24 +266,6 @@ const projectsData = [
       { name: "HTML", percentage: 35, lines: "209" },
       { name: "CSS", percentage: 35, lines: "204 " },
       { name: "JavaScript", percentage: 30, lines: "150" },
-    ],
-  },
-  {
-    name: "Sha Fabrics",
-    description:
-      "SHA Fabrics is an e-commerce site offering high-quality fabrics, bedsheets, and stylish clothing for men and women. With a user-friendly design, it provides trendy, premium products to refresh your home or wardrobe effortlessly.",
-    image: shaFabricsImage,
-    link: "http://sha-fabrics.github.io/",
-    code: "https://github.com/sha-fabrics/sha-fabrics.github.io",
-    slug: "sha-fabrics",
-    type: "Personal Project",
-    totalLines: "5812",
-    category: "Frontend",
-    languages: [
-      // 2. ADD "lines" property to each language
-      { name: "HTML", percentage: 26.8, lines: "2122" },
-      { name: "CSS", percentage: 14.5, lines: "1499 " },
-      { name: "JavaScript", percentage: 58.7, lines: "2191" },
     ],
   },
 ];
