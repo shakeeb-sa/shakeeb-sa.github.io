@@ -46,8 +46,7 @@ function App() {
           <Projects />
         </main>
 
-        {/* SPACER DIV – PUSHES FOOTER DOWN */}
-        <div className="footer-spacer"></div>
+        {/* --- SPACER REMOVED! --- */}
 
         <Footer />
       </div>

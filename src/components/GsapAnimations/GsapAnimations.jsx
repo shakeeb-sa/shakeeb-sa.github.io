@@ -4,13 +4,10 @@ import { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-// This component doesn't render anything. It just runs the GSAP animations.
 function GsapAnimations({ isIntroComplete }) {
   useEffect(() => {
-    // Don't run animations if the intro isn't complete
     if (!isIntroComplete) return;
 
-    // Register the plugin
     gsap.registerPlugin(ScrollTrigger);
 
     const mm = gsap.matchMedia();
@@ -25,9 +22,9 @@ function GsapAnimations({ isIntroComplete }) {
       (context) => {
         const { isDesktop, reduceMotion } = context.conditions;
 
-        // --- Initial Page-Load Animations (after intro) ---
         if (!reduceMotion) {
-          const introTl = gsap.timeline({ delay: 0.2 }); // Small delay after intro
+          // Intro Animations
+          const introTl = gsap.timeline({ delay: 0.2 });
           introTl
             .from("#title", { duration: 0.5, y: 100, opacity: 0, ease: "power3.out" })
             .from("#portraitContainer", { duration: 0.5, y: 100, opacity: 0, ease: "power3.out" }, "-=0.3")
@@ -35,9 +32,8 @@ function GsapAnimations({ isIntroComplete }) {
             .from("#aboutContainer", { duration: 0.5, y: 100, opacity: 0, ease: "power3.out" }, "-=0.3");
         }
 
-        // --- Scroll-Triggered Animations ---
         if (!reduceMotion) {
-          // Animate Skills Section
+          // Skills
           gsap.from(".skill-item", {
             scrollTrigger: {
               trigger: ".my-skills",
@@ -51,9 +47,8 @@ function GsapAnimations({ isIntroComplete }) {
             ease: "power3.out",
           });
 
-          // Animate Projects Section
+          // Projects
           const projects = gsap.utils.toArray(".project-listing");
-          
           projects.forEach((project) => {
             const tlProject = gsap.timeline({
               scrollTrigger: {
@@ -73,32 +68,41 @@ function GsapAnimations({ isIntroComplete }) {
             }
           });
 
-          // Animate Footer Section
+          // --- FIXED FOOTER ANIMATION ---
+          // 1. Removed scrub (prevents it from sticking to scrollbar)
+          // 2. Changed start to "top 75%" (triggers when footer is mostly in view)
           const tlFooter = gsap.timeline({
             scrollTrigger: {
               trigger: "footer",
-              start: "top center",
-              end: "top top",
-              scrub: 1,
+              start: "top 75%", 
+              toggleActions: "play none none reverse",
             },
           });
 
           tlFooter
-            .from("footer h2", { y: 100, opacity: 0, duration: 0.6 })
-            .from("footer #footerLinks", { y: 100, opacity: 0, duration: 0.6 }, "<");
+            .from("footer h2", { 
+                y: 50, 
+                opacity: 0, 
+                duration: 0.8, 
+                ease: "power3.out" 
+            })
+            .from("footer #footerLinks", { 
+                y: 50, 
+                opacity: 0, 
+                duration: 0.8, 
+                ease: "power3.out" 
+            }, "-=0.6");
         }
         
-        // Return a cleanup function
         return () => {
-          // This kills all animations and ScrollTriggers created in this context
           gsap.killTweensOf(".skill-item, .project-listing, footer h2, footer #footerLinks, #title, #portraitContainer, #jobTitle, #aboutContainer");
         }
       }
     );
 
-  }, [isIntroComplete]); // This effect depends on the intro being complete
+  }, [isIntroComplete]);
 
-  return null; // This component renders nothing
+  return null;
 }
 
 export default GsapAnimations;
