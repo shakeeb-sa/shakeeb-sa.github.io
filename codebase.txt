@@ -1,0 +1,2366 @@
+This file is a merged representation of the entire codebase, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of the entire repository's contents.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+.gitignore
+eslint.config.js
+index.html
+package.json
+public/vite.svg
+README.md
+src/App.jsx
+src/assets/images/all-about-coding.jpg
+src/assets/images/cinema-downloader.jpg
+src/assets/images/code-chunker.jpg
+src/assets/images/dev-tube.jpg
+src/assets/images/devseo-tools.jpg
+src/assets/images/domain-checker.jpg
+src/assets/images/guestbook-extractor.jpg
+src/assets/images/link-building-automator.jpg
+src/assets/images/link-building-execution-generator.jpg
+src/assets/images/live-css-editor.jpg
+src/assets/images/meta-scraper.jpg
+src/assets/images/multi-format-link-converter.jpg
+src/assets/images/portrait.jpg
+src/assets/images/sha-fabrics.jpg
+src/assets/images/tools-for-devs-seos.jpg
+src/assets/images/url-path-separator.jpg
+src/assets/react.svg
+src/components/about/About.css
+src/components/about/About.jsx
+src/components/Footer/Footer.css
+src/components/Footer/Footer.jsx
+src/components/GsapAnimations/GsapAnimations.jsx
+src/components/Header/Header.css
+src/components/Header/Header.jsx
+src/components/Hero/Hero.css
+src/components/Hero/Hero.jsx
+src/components/IntroOverlay/IntroOverlay.css
+src/components/IntroOverlay/IntroOverlay.jsx
+src/components/Projects/CodeCounter.jsx
+src/components/Projects/Projects.css
+src/components/Projects/Projects.jsx
+src/components/Skills/Skills.css
+src/components/Skills/Skills.jsx
+src/data/projectsData.js
+src/data/skillsData.js
+src/hooks/useSmoothScroll.js
+src/main.jsx
+src/styles/global.css
+vite.config.js
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path=".gitignore">
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+</file>
+
+<file path="eslint.config.js">
+import js from '@eslint/js'
+import globals from 'globals'
+import reactHooks from 'eslint-plugin-react-hooks'
+import reactRefresh from 'eslint-plugin-react-refresh'
+import { defineConfig, globalIgnores } from 'eslint/config'
+
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{js,jsx}'],
+    extends: [
+      js.configs.recommended,
+      reactHooks.configs['recommended-latest'],
+      reactRefresh.configs.vite,
+    ],
+    languageOptions: {
+      ecmaVersion: 2020,
+      globals: globals.browser,
+      parserOptions: {
+        ecmaVersion: 'latest',
+        ecmaFeatures: { jsx: true },
+        sourceType: 'module',
+      },
+    },
+    rules: {
+      'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+    },
+  },
+])
+</file>
+
+<file path="index.html">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vite-project</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
+</file>
+
+<file path="public/vite.svg">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--logos" width="31.88" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 257"><defs><linearGradient id="IconifyId1813088fe1fbc01fb466" x1="-.828%" x2="57.636%" y1="7.652%" y2="78.411%"><stop offset="0%" stop-color="#41D1FF"></stop><stop offset="100%" stop-color="#BD34FE"></stop></linearGradient><linearGradient id="IconifyId1813088fe1fbc01fb467" x1="43.376%" x2="50.316%" y1="2.242%" y2="89.03%"><stop offset="0%" stop-color="#FFEA83"></stop><stop offset="8.333%" stop-color="#FFDD35"></stop><stop offset="100%" stop-color="#FFA800"></stop></linearGradient></defs><path fill="url(#IconifyId1813088fe1fbc01fb466)" d="M255.153 37.938L134.897 252.976c-2.483 4.44-8.862 4.466-11.382.048L.875 37.958c-2.746-4.814 1.371-10.646 6.827-9.67l120.385 21.517a6.537 6.537 0 0 0 2.322-.004l117.867-21.483c5.438-.991 9.574 4.796 6.877 9.62Z"></path><path fill="url(#IconifyId1813088fe1fbc01fb467)" d="M185.432.063L96.44 17.501a3.268 3.268 0 0 0-2.634 3.014l-5.474 92.456a3.268 3.268 0 0 0 3.997 3.378l24.777-5.718c2.318-.535 4.413 1.507 3.936 3.838l-7.361 36.047c-.495 2.426 1.782 4.5 4.151 3.78l15.304-4.649c2.372-.72 4.652 1.36 4.15 3.788l-11.698 56.621c-.732 3.542 3.979 5.473 5.943 2.437l1.313-2.028l72.516-144.72c1.215-2.423-.88-5.186-3.54-4.672l-25.505 4.922c-2.396.462-4.435-1.77-3.759-4.114l16.646-57.705c.677-2.35-1.37-4.583-3.769-4.113Z"></path></svg>
+</file>
+
+<file path="README.md">
+# React + Vite
+
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## React Compiler
+
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+</file>
+
+<file path="src/assets/react.svg">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--logos" width="35.93" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 228"><path fill="#00D8FF" d="M210.483 73.824a171.49 171.49 0 0 0-8.24-2.597c.465-1.9.893-3.777 1.273-5.621c6.238-30.281 2.16-54.676-11.769-62.708c-13.355-7.7-35.196.329-57.254 19.526a171.23 171.23 0 0 0-6.375 5.848a155.866 155.866 0 0 0-4.241-3.917C100.759 3.829 77.587-4.822 63.673 3.233C50.33 10.957 46.379 33.89 51.995 62.588a170.974 170.974 0 0 0 1.892 8.48c-3.28.932-6.445 1.924-9.474 2.98C17.309 83.498 0 98.307 0 113.668c0 15.865 18.582 31.778 46.812 41.427a145.52 145.52 0 0 0 6.921 2.165a167.467 167.467 0 0 0-2.01 9.138c-5.354 28.2-1.173 50.591 12.134 58.266c13.744 7.926 36.812-.22 59.273-19.855a145.567 145.567 0 0 0 5.342-4.923a168.064 168.064 0 0 0 6.92 6.314c21.758 18.722 43.246 26.282 56.54 18.586c13.731-7.949 18.194-32.003 12.4-61.268a145.016 145.016 0 0 0-1.535-6.842c1.62-.48 3.21-.974 4.76-1.488c29.348-9.723 48.443-25.443 48.443-41.52c0-15.417-17.868-30.326-45.517-39.844Zm-6.365 70.984c-1.4.463-2.836.91-4.3 1.345c-3.24-10.257-7.612-21.163-12.963-32.432c5.106-11 9.31-21.767 12.459-31.957c2.619.758 5.16 1.557 7.61 2.4c23.69 8.156 38.14 20.213 38.14 29.504c0 9.896-15.606 22.743-40.946 31.14Zm-10.514 20.834c2.562 12.94 2.927 24.64 1.23 33.787c-1.524 8.219-4.59 13.698-8.382 15.893c-8.067 4.67-25.32-1.4-43.927-17.412a156.726 156.726 0 0 1-6.437-5.87c7.214-7.889 14.423-17.06 21.459-27.246c12.376-1.098 24.068-2.894 34.671-5.345a134.17 134.17 0 0 1 1.386 6.193ZM87.276 214.515c-7.882 2.783-14.16 2.863-17.955.675c-8.075-4.657-11.432-22.636-6.853-46.752a156.923 156.923 0 0 1 1.869-8.499c10.486 2.32 22.093 3.988 34.498 4.994c7.084 9.967 14.501 19.128 21.976 27.15a134.668 134.668 0 0 1-4.877 4.492c-9.933 8.682-19.886 14.842-28.658 17.94ZM50.35 144.747c-12.483-4.267-22.792-9.812-29.858-15.863c-6.35-5.437-9.555-10.836-9.555-15.216c0-9.322 13.897-21.212 37.076-29.293c2.813-.98 5.757-1.905 8.812-2.773c3.204 10.42 7.406 21.315 12.477 32.332c-5.137 11.18-9.399 22.249-12.634 32.792a134.718 134.718 0 0 1-6.318-1.979Zm12.378-84.26c-4.811-24.587-1.616-43.134 6.425-47.789c8.564-4.958 27.502 2.111 47.463 19.835a144.318 144.318 0 0 1 3.841 3.545c-7.438 7.987-14.787 17.08-21.808 26.988c-12.04 1.116-23.565 2.908-34.161 5.309a160.342 160.342 0 0 1-1.76-7.887Zm110.427 27.268a347.8 347.8 0 0 0-7.785-12.803c8.168 1.033 15.994 2.404 23.343 4.08c-2.206 7.072-4.956 14.465-8.193 22.045a381.151 381.151 0 0 0-7.365-13.322Zm-45.032-43.861c5.044 5.465 10.096 11.566 15.065 18.186a322.04 322.04 0 0 0-30.257-.006c4.974-6.559 10.069-12.652 15.192-18.18ZM82.802 87.83a323.167 323.167 0 0 0-7.227 13.238c-3.184-7.553-5.909-14.98-8.134-22.152c7.304-1.634 15.093-2.97 23.209-3.984a321.524 321.524 0 0 0-7.848 12.897Zm8.081 65.352c-8.385-.936-16.291-2.203-23.593-3.793c2.26-7.3 5.045-14.885 8.298-22.6a321.187 321.187 0 0 0 7.257 13.246c2.594 4.48 5.28 8.868 8.038 13.147Zm37.542 31.03c-5.184-5.592-10.354-11.779-15.403-18.433c4.902.192 9.899.29 14.978.29c5.218 0 10.376-.117 15.453-.343c-4.985 6.774-10.018 12.97-15.028 18.486Zm52.198-57.817c3.422 7.8 6.306 15.345 8.596 22.52c-7.422 1.694-15.436 3.058-23.88 4.071a382.417 382.417 0 0 0 7.859-13.026a347.403 347.403 0 0 0 7.425-13.565Zm-16.898 8.101a358.557 358.557 0 0 1-12.281 19.815a329.4 329.4 0 0 1-23.444.823c-7.967 0-15.716-.248-23.178-.732a310.202 310.202 0 0 1-12.513-19.846h.001a307.41 307.41 0 0 1-10.923-20.627a310.278 310.278 0 0 1 10.89-20.637l-.001.001a307.318 307.318 0 0 1 12.413-19.761c7.613-.576 15.42-.876 23.31-.876H128c7.926 0 15.743.303 23.354.883a329.357 329.357 0 0 1 12.335 19.695a358.489 358.489 0 0 1 11.036 20.54a329.472 329.472 0 0 1-11 20.722Zm22.56-122.124c8.572 4.944 11.906 24.881 6.52 51.026c-.344 1.668-.73 3.367-1.15 5.09c-10.622-2.452-22.155-4.275-34.23-5.408c-7.034-10.017-14.323-19.124-21.64-27.008a160.789 160.789 0 0 1 5.888-5.4c18.9-16.447 36.564-22.941 44.612-18.3ZM128 90.808c12.625 0 22.86 10.235 22.86 22.86s-10.235 22.86-22.86 22.86s-22.86-10.235-22.86-22.86s10.235-22.86 22.86-22.86Z"></path></svg>
+</file>
+
+<file path="src/components/about/About.css">
+/* src/components/About/About.css */
+
+.about-container {
+    position: relative;
+    width: 90%;
+    margin: 5rem auto;
+    max-width: 1536px;
+    z-index: 10;
+}
+.about-container h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+.about-container p {
+    font-size: 1rem;
+    line-height: 1.8;
+    max-width: 65ch; /* Limits the width for better readability */
+}
+
+.about-container p + p {
+    margin-top: 1rem;
+}
+
+/* --- ADDED: Media queries for larger screens --- */
+@media (min-width: 768px) {
+    .about-container { width: 75%; margin: 8rem auto; }
+    .about-container h2 { font-size: 3rem; margin-bottom: 3rem; }
+    .about-container p { font-size: 1.2rem; }
+}
+</file>
+
+<file path="src/components/Footer/Footer.jsx">
+// src/components/Footer/Footer.jsx
+
+import React from 'react';
+import './Footer.css';
+
+function Footer() {
+  return (
+    <footer>
+      <h2>Connect with Me</h2>
+      <ul id="footerLinks" className="footer-links">
+        <li>
+          <a href="https://wa.me/03448551018" target="_blank" rel="noopener noreferrer" title="Contact Shakeeb on WhatsApp">
+            WhatsApp
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em" viewBox="0 0 24 24">
+              <path fill="currentColor" d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01m-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18l-3.12.82l.83-3.04l-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24c2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.22 8.23m4.52-6.16c-.25-.12-1.47-.72-1.69-.81c-.23-.08-.39-.12-.56.12c-.17.25-.64.81-.78.97c-.14.17-.29.19-.54.06c-.25-.12-1.05-.39-1.99-1.23c-.74-.66-1.23-1.47-1.38-1.72c-.14-.25-.02-.38.11-.51c.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31c-.22.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74c.59.26 1.05.41 1.41.52c.59.19 1.13.16 1.56.1c.48-.07 1.47-.6 1.67-1.18c.21-.58.21-1.07.14-1.18s-.22-.16-.47-.28" />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="http://github.com/shakeeb-sa" target="_blank" rel="noopener noreferrer" title="Go to Shakeeb's GitHub">
+            GitHub
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em" viewBox="0 0 24 24">
+              <path fill="currentColor" d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2" />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://pk.linkedin.com/in/shakeeb-ahmed-034093370" target="_blank" rel="noopener noreferrer" title="Connect with Shakeeb on LinkedIn">
+            LinkedIn
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em" viewBox="0 0 24 24">
+              <path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z" />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:shakeeb.sa.ahmed@gmail.com" title="Send an email to Shakeeb">
+            Email
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em" viewBox="0 0 36 36">
+              <path fill="currentColor" d="M32 6H4a2 2 0 0 0-2 2v20a2 2 0 0 0 2 2h28a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2m-1.54 22H5.66l7-7.24l-1.44-1.39L4 26.84V9.52l12.43 12.37a2 2 0 0 0 2.82 0L32 9.21v17.5l-7.36-7.36l-1.41 1.41ZM5.31 8h25.07L17.84 20.47Z" className="clr-i-outline clr-i-outline-path-1" />
+              <path fill="none" d="M0 0h36v36H0z" />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </footer>
+  );
+}
+
+export default Footer;
+</file>
+
+<file path="src/components/GsapAnimations/GsapAnimations.jsx">
+// src/components/GsapAnimations/GsapAnimations.jsx
+
+import { useEffect } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+// This component doesn't render anything. It just runs the GSAP animations.
+function GsapAnimations({ isIntroComplete }) {
+  useEffect(() => {
+    // Don't run animations if the intro isn't complete
+    if (!isIntroComplete) return;
+
+    // Register the plugin
+    gsap.registerPlugin(ScrollTrigger);
+
+    const mm = gsap.matchMedia();
+    const breakPoint = 768;
+
+    mm.add(
+      {
+        isDesktop: `(min-width: ${breakPoint}px)`,
+        isMobile: `(max-width: ${breakPoint - 1}px)`,
+        reduceMotion: "(prefers-reduced-motion: reduce)",
+      },
+      (context) => {
+        const { isDesktop, reduceMotion } = context.conditions;
+
+        // --- Initial Page-Load Animations (after intro) ---
+        if (!reduceMotion) {
+          const introTl = gsap.timeline({ delay: 0.2 }); // Small delay after intro
+          introTl
+            .from("#title", { duration: 0.5, y: 100, opacity: 0, ease: "power3.out" })
+            .from("#portraitContainer", { duration: 0.5, y: 100, opacity: 0, ease: "power3.out" }, "-=0.3")
+            .from("#jobTitle", { duration: 0.5, y: 100, opacity: 0, ease: "power3.out" }, "-=0.3")
+            .from("#aboutContainer", { duration: 0.5, y: 100, opacity: 0, ease: "power3.out" }, "-=0.3");
+        }
+
+        // --- Scroll-Triggered Animations ---
+        if (!reduceMotion) {
+          // Animate Skills Section
+          gsap.from(".skill-item", {
+            scrollTrigger: {
+              trigger: ".my-skills",
+              start: "top 85%",
+              once: true,
+            },
+            opacity: 0,
+            y: 20,
+            duration: 0.6,
+            stagger: 0.1,
+            ease: "power3.out",
+          });
+
+          // Animate Projects Section
+          const projects = gsap.utils.toArray(".project-listing");
+          
+          projects.forEach((project) => {
+            const tlProject = gsap.timeline({
+              scrollTrigger: {
+                trigger: project,
+                start: isDesktop ? "top bottom" : "top 80%",
+                end: "center center",
+                scrub: 1,
+              },
+            });
+            const projectImage = project.querySelector(".project-image");
+            const projectInfo = project.querySelector("#projectInfo");
+
+            if (isDesktop) {
+              tlProject.from(projectImage, { x: -300, opacity: 0 }).from(projectInfo, { x: 300, opacity: 0 }, "<");
+            } else {
+              tlProject.from(projectImage, { y: 100, opacity: 0 }).from(projectInfo, { y: 100, opacity: 0 }, "<");
+            }
+          });
+
+          // Animate Footer Section
+          const tlFooter = gsap.timeline({
+            scrollTrigger: {
+              trigger: "footer",
+              start: "top center",
+              end: "top top",
+              scrub: 1,
+            },
+          });
+
+          tlFooter
+            .from("footer h2", { y: 100, opacity: 0, duration: 0.6 })
+            .from("footer #footerLinks", { y: 100, opacity: 0, duration: 0.6 }, "<");
+        }
+        
+        // Return a cleanup function
+        return () => {
+          // This kills all animations and ScrollTriggers created in this context
+          gsap.killTweensOf(".skill-item, .project-listing, footer h2, footer #footerLinks, #title, #portraitContainer, #jobTitle, #aboutContainer");
+        }
+      }
+    );
+
+  }, [isIntroComplete]); // This effect depends on the intro being complete
+
+  return null; // This component renders nothing
+}
+
+export default GsapAnimations;
+</file>
+
+<file path="src/components/Header/Header.css">
+/* src/components/Header/Header.css */
+
+.nav {
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    width: 90%;
+    max-width: 1536px;
+    margin: 0 auto;
+    font-weight: 700;
+    z-index: 2;
+}
+.nav .space-between {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav .logo {
+    color: var(--white);
+    cursor: pointer;
+    font-size: 1.2rem;
+    text-decoration: none;
+    user-select: none;
+    flex-shrink: 0;
+}
+.nav .nav-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem; /* Base gap for mobile */
+}
+.nav .nav-list li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav .nav-list li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-underline-offset: 0.25rem;
+    transition: color 0.2s;
+}
+.nav .nav-list li a:hover, .nav .nav-list li a:focus {
+    text-decoration: underline;
+}
+.nav .nav-list li a svg {
+    width: 1.4rem; 
+    height: 1.4rem;
+    flex-shrink: 0;
+}
+
+/* --- Media Queries for Smaller Screens (FIX for navigation) --- */
+@media (max-width: 420px) {
+    .nav .nav-list {
+        gap: 0.8rem; /* Add more space between icons */
+    }
+    .nav .nav-list li a {
+        font-size: 0; /* This hides the text label */
+        gap: 0; /* Remove gap since there's no text */
+    }
+}
+
+/* --- ADDED: Media queries for larger screens --- */
+@media (min-width: 768px) {
+    .nav { width: 75%; }
+    .nav .logo { font-size: 1.4rem; }
+    .nav .nav-list { gap: 1rem; }
+    .nav .nav-list li { padding: 0 16px; }
+    .nav .nav-list li:last-child { padding: 0 0 0 16px; }
+    .nav .nav-list li a { font-size: 1rem; }
+    .nav .nav-list li a svg { font-size: 1.75rem; width: auto; height: auto; }
+}
+</file>
+
+<file path="src/components/Header/Header.jsx">
+// src/components/Header/Header.jsx
+
+import React from 'react';
+import './Header.css'; // Import the component's specific styles
+
+function Header() {
+  return (
+    <header>
+      <nav className="nav">
+        <div className="space-between">
+          <a href="/" className="logo" rel="home">
+            <span aria-hidden="true">Shakeeb Ahmed</span>
+            <span className="hidden-text">Shakeeb Ahmed - Homepage</span>
+          </a>
+          <ul className="nav-list">
+            <li>
+              <a href="https://wa.me/03448551018" target="_blank" rel="noopener noreferrer" title="Contact Shakeeb on WhatsApp">
+                WhatsApp
+                <svg xmlns="http://www.w3.org/2000/svg" width="1.1em" height="1.1em" viewBox="0 0 24 24">
+                  <path fill="currentColor" d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01m-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18l-3.12.82l.83-3.04l-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24c2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.22 8.23m4.52-6.16c-.25-.12-1.47-.72-1.69-.81c-.23-.08-.39-.12-.56.12c-.17.25-.64.81-.78.97c-.14.17-.29.19-.54.06c-.25-.12-1.05-.39-1.99-1.23c-.74-.66-1.23-1.47-1.38-1.72c-.14-.25-.02-.38.11-.51c.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31c-.22.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74c.59.26 1.05.41 1.41.52c.59.19 1.13.16 1.56.1c.48-.07 1.47-.6 1.67-1.18c.21-.58.21-1.07.14-1.18s-.22-.16-.47-.28" />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="http://github.com/shakeeb-sa" target="_blank" rel="noopener noreferrer" title="Go to Shakeeb's GitHub">
+                GitHub
+                <svg xmlns="http://www.w3.org/2000/svg" width="1.1em" height="1.1em" viewBox="0 0 24 24">
+                  <path fill="currentColor" d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2" />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://pk.linkedin.com/in/shakeeb-ahmed-034093370" target="_blank" rel="noopener noreferrer" title="Connect with Shakeeb on LinkedIn">
+                LinkedIn
+                <svg xmlns="http://www.w3.org/2000/svg" width="1.1em" height="1.1em" viewBox="0 0 24 24">
+                  <path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z" />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:shakeeb.sa.ahmed@gmail.com" title="Send an email to Shakeeb">
+                Email
+                <svg xmlns="http://www.w3.org/2000/svg" width="1.1em" height="1.1em" viewBox="0 0 36 36">
+                  <path fill="currentColor" d="M32 6H4a2 2 0 0 0-2 2v20a2 2 0 0 0 2 2h28a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2m-1.54 22H5.66l7-7.24l-1.44-1.39L4 26.84V9.52l12.43 12.37a2 2 0 0 0 2.82 0L32 9.21v17.5l-7.36-7.36l-1.41 1.41ZM5.31 8h25.07L17.84 20.47Z" className="clr-i-outline clr-i-outline-path-1" />
+                  <path fill="none" d="M0 0h36v36H0z" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+  );
+}
+
+export default Header;
+</file>
+
+<file path="src/components/Hero/Hero.css">
+/* src/components/Hero/Hero.css */
+
+.hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 90%;
+    max-width: 1536px;
+    margin: 3rem auto;
+}
+.hero .cta {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column-reverse;
+    gap: 2.5rem;
+    margin-bottom: 1.25rem;
+}
+.hero .title {
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+.hero .portrait-container {
+    width: 100%;
+    max-width: 150px;
+}
+.hero .portrait {
+    position: relative;
+    width: 100%;
+    object-fit: contain;
+    height: 100%;
+    border-radius: 2rem;
+    box-shadow: 1rem 1rem white;
+    filter: grayscale(100%) contrast(110%);
+    clip-path: circle(100%);
+    transition: box-shadow 0.3s ease, clip-path 0.3s ease, filter 0.3s ease;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .hero .portrait-container:hover .portrait {
+        box-shadow: 0px 0px white;
+        clip-path: circle(50%);
+        filter: none;
+        animation: bounceImage 600ms cubic-bezier(0.33, 1, 0.68, 1) infinite alternate;
+    }
+}
+.hero .job-title {
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+@keyframes bounceImage {
+    from { transform: translateY(0px) rotateX(20deg); }
+    to { transform: translateY(-30px) rotateX(0deg); }
+}
+
+/* --- ADDED: Media queries for larger screens --- */
+@media (min-width: 768px) {
+    .hero { width: 75%; margin: 8rem auto; }
+    .hero .cta { flex-direction: row; align-items: center; gap: 4rem; }
+    .hero .title { font-size: 4rem; }
+    .hero .portrait-container { max-width: 200px; }
+    .hero .portrait { box-shadow: 1.5rem 1.5rem white; }
+    .hero .job-title { font-size: 1.2rem; }
+}
+
+@media (min-width: 1280px) {
+    .hero .title { font-size: 6rem; margin-right: 2rem; }
+    .hero .portrait-container { max-width: 300px; }
+}
+
+@media (min-width: 1536px) {
+    .hero .title { font-size: 7.5rem; margin-right: 3rem; }
+    .hero .portrait-container { max-width: 400px; }
+    .hero .job-title { font-size: 1.4rem; }
+}
+</file>
+
+<file path="src/components/Hero/Hero.jsx">
+// src/components/Hero/Hero.jsx
+
+import React from 'react';
+import './Hero.css'; // Import the component's styles
+import portraitImage from '../../assets/images/portrait.jpg'; // Import the local image
+
+function Hero() {
+  return (
+    <section className="hero">
+      <div className="cta">
+        <div> {/* Added a div wrapper for better flexbox control on larger screens */}
+            <h1 className="hidden-text">Shakeeb Ahmed</h1>
+            <h2 id="title" className="title">
+              I create <span className="playful">playful</span> experiences.
+            </h2>
+        </div>
+        <div id="portraitContainer" className="portrait-container">
+          <img src={portraitImage} alt="Portrait of Shakeeb Ahmed" className="portrait" />
+        </div>
+      </div>
+      <p id="jobTitle" className="job-title">Self-Taught Web Developer</p>
+    </section>
+  );
+}
+
+export default Hero;
+</file>
+
+<file path="src/components/IntroOverlay/IntroOverlay.css">
+/* src/components/IntroOverlay/IntroOverlay.css */
+
+.intro-overlay {
+    background: var(--white);
+    position: fixed;
+    min-height: 100vh;
+    min-height: 100dvh; /* dvh is for dynamic viewport height on mobile */
+    width: 100%;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-overlay .ball {
+    position: absolute;
+    top: -50vh; /* Start off-screen */
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background: var(--black);
+}
+</file>
+
+<file path="src/components/IntroOverlay/IntroOverlay.jsx">
+// src/components/IntroOverlay/IntroOverlay.jsx
+
+import React, { useRef, useEffect } from 'react';
+import gsap from 'gsap';
+import './IntroOverlay.css';
+
+function IntroOverlay({ onComplete }) {
+  // These refs get a direct reference to the HTML elements
+  const overlayRef = useRef(null);
+  const ballRef = useRef(null);
+
+  // This useEffect runs the animation when the component first appears
+  useEffect(() => {
+    // We added this log for debugging. It's good to keep for now.
+    console.log("Intro Animation Started.");
+
+    // This is the GSAP animation timeline
+    const tl = gsap.timeline({
+      onComplete: onComplete, // This calls the function from App.jsx when the animation is finished
+    });
+
+    // The animation steps
+    tl.to(ballRef.current, {
+      duration: 2,
+      y: "100vh",
+      ease: "bounce.out",
+    })
+    .to(ballRef.current, {
+      duration: 1,
+      delay: 0.2,
+      scale: 75,
+      ease: "power3.out",
+    });
+
+  }, [onComplete]); // The empty array means this effect runs only once
+
+  // This is the HTML that gets rendered
+  return (
+    <div className="intro-overlay" ref={overlayRef}>
+      <div className="ball" ref={ballRef}></div>
+    </div>
+  );
+}
+
+export default IntroOverlay;
+</file>
+
+<file path="src/components/Projects/CodeCounter.jsx">
+// src/components/Projects/CodeCounter.jsx
+import React, { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
+// Color Map for your specific languages
+const getColor = (name) => {
+  const n = name.toLowerCase();
+  if (n.includes('html')) return '#e34f26'; // Orange
+  if (n.includes('css')) return '#1572b6';  // Blue
+  if (n.includes('java')) return '#f7df1e'; // Yellow
+  if (n.includes('react')) return '#61dafb'; // Light Blue
+  return '#ffffff'; // Default White
+};
+
+const CodeCounter = ({ totalLines, languages }) => {
+  const wrapperRef = useRef(null);
+  const counterRef = useRef(null);
+  const svgRef = useRef(null);
+
+  useEffect(() => {
+    const wrapper = wrapperRef.current;
+    const counter = counterRef.current;
+    const svgCircles = svgRef.current.querySelectorAll('circle');
+    const badges = wrapper.querySelectorAll('.satellite-badge');
+
+    // Clean number for animation
+    const endValue = parseInt(totalLines.replace(/,/g, ''), 10);
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: wrapper,
+        start: "top 85%",
+        toggleActions: "play none none reverse"
+      }
+    });
+
+    // 1. Animate the Center Number
+    tl.fromTo(counter, 
+      { innerText: 0 }, 
+      {
+        innerText: endValue,
+        duration: 2,
+        ease: "power2.out",
+        snap: { innerText: 1 },
+        onUpdate: function() {
+          counter.innerText = Math.ceil(this.targets()[0].innerText).toLocaleString();
+        }
+      },
+      "start"
+    );
+
+    // 2. Animate the SVG Segments (The Donut Chart)
+    if (svgCircles.length > 0) {
+        tl.fromTo(svgCircles, 
+            { strokeDashoffset: 283 }, // 283 is approx circumference of r=45
+            { 
+                strokeDashoffset: (i, target) => target.dataset.offset,
+                duration: 1.5,
+                ease: "circ.out",
+                stagger: 0.2
+            },
+            "start"
+        );
+    }
+
+    // 3. Pop out the Satellite Badges (Automatic, no hover)
+    tl.fromTo(badges,
+        { scale: 0, opacity: 0 },
+        { scale: 1, opacity: 1, duration: 0.5, ease: "back.out(1.7)", stagger: 0.2 },
+        "-=1" // Start slightly before circle finishes
+    );
+
+  }, [totalLines]);
+
+  // --- SVG MATH ---
+  // Circle Radius = 45. Circumference = 2 * PI * 45 ≈ 283
+  const circumference = 283;
+  let currentOffset = 0;
+
+  // Sort languages by percentage (High to Low) and take top 3 to avoid clutter
+  const topLanguages = [...languages].sort((a, b) => b.percentage - a.percentage).slice(0, 3);
+
+  return (
+    <div className="code-counter-wrapper" ref={wrapperRef}>
+        
+        {/* THE MULTI-COLORED DONUT CHART */}
+        <svg className="code-donut-svg" width="100" height="100" viewBox="0 0 100 100" ref={svgRef}>
+            {/* Background Circle (Grey track) */}
+            <circle cx="50" cy="50" r="45" fill="none" stroke="#222" strokeWidth="6" />
+            
+            {/* Colored Segments */}
+            {topLanguages.map((lang, index) => {
+                const strokeLength = (lang.percentage / 100) * circumference;
+                const dashArray = `${strokeLength} ${circumference}`;
+                const dashOffset = -currentOffset; // Negative to rotate clockwise
+                
+                // Save offset for next segment
+                currentOffset += strokeLength;
+
+                return (
+                    <circle
+                        key={index}
+                        cx="50"
+                        cy="50"
+                        r="45"
+                        fill="none"
+                        stroke={getColor(lang.name)}
+                        strokeWidth="6"
+                        strokeDasharray={dashArray}
+                        data-offset={dashOffset} // Passed to GSAP
+                        transform="rotate(-90 50 50)" // Start at top
+                        strokeLinecap="round"
+                    />
+                );
+            })}
+        </svg>
+
+        {/* CENTER TEXT */}
+        <div className="code-counter-content">
+            <span className="counter-number" ref={counterRef}>0</span>
+            <span className="counter-label">Lines</span>
+        </div>
+
+        {/* SATELLITE POPUPS (Badges) */}
+        {topLanguages.map((lang, index) => (
+            <div key={lang.name} className={`satellite-badge badge-pos-${index}`}>
+                <span className="badge-name" style={{ color: getColor(lang.name) }}>{lang.name}</span>
+                <span className="badge-lines">{lang.lines}</span>
+            </div>
+        ))}
+
+    </div>
+  );
+};
+
+export default CodeCounter;
+</file>
+
+<file path="src/hooks/useSmoothScroll.js">
+// src/hooks/useSmoothScroll.js
+
+import { useEffect } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Lenis from 'lenis';
+
+// This is the critical step that makes ScrollTrigger available to GSAP
+gsap.registerPlugin(ScrollTrigger);
+
+function useSmoothScroll() {
+  useEffect(() => {
+    // Initialize Lenis for smooth scrolling
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    });
+
+    // Sync GSAP's ScrollTrigger with Lenis's scrolling
+    lenis.on('scroll', ScrollTrigger.update);
+
+    gsap.ticker.add((time) => {
+      lenis.raf(time * 1000);
+    });
+
+    gsap.ticker.lagSmoothing(0);
+
+    // This is a cleanup function that runs when the component unmounts
+    return () => {
+      lenis.destroy();
+      gsap.ticker.remove((time) => {
+        lenis.raf(time * 1000);
+      });
+    };
+  }, []); // The empty dependency array ensures this runs only once
+
+  return null; // A hook that only produces side effects doesn't need to return anything
+}
+
+export default useSmoothScroll;
+</file>
+
+<file path="src/main.jsx">
+// src/main.jsx
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App.jsx'; // We will create this file next
+
+// Import global styles
+import './styles/global.css';
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+);
+</file>
+
+<file path="src/App.jsx">
+// src/App.jsx
+
+import React, { useState } from 'react';
+
+// Hooks and Components
+import useSmoothScroll from './hooks/useSmoothScroll';
+import Header from './components/Header/Header';
+import Hero from './components/Hero/Hero';
+import About from './components/About/About';
+import Skills from './components/Skills/Skills';
+import Projects from './components/Projects/Projects';
+import Footer from './components/Footer/Footer';
+import IntroOverlay from './components/IntroOverlay/IntroOverlay';
+import GsapAnimations from './components/GsapAnimations/GsapAnimations';
+
+const hasIntroBeenPlayed = sessionStorage.getItem('introPlayed');
+
+function App() {
+  const [isIntroComplete, setIntroComplete] = useState(!!hasIntroBeenPlayed);
+
+  // Call the custom hook to enable smooth scrolling
+  useSmoothScroll();
+
+  const handleIntroComplete = () => {
+    setIntroComplete(true);
+    sessionStorage.setItem('introPlayed', 'true');
+  };
+
+  return (
+    <>
+      {/* Conditionally render the IntroOverlay */}
+      {!isIntroComplete && <IntroOverlay onComplete={handleIntroComplete} />}
+      
+      {/* Pass the state to the animations component */}
+      <GsapAnimations isIntroComplete={isIntroComplete} />
+
+      <div 
+        id="afterAnimation" 
+        style={{ opacity: isIntroComplete ? 1 : 0 }}
+      >
+        <Header />
+        <main>
+          <Hero />
+          <About />
+          <Skills />
+          <Projects />
+        </main>
+
+        {/* SPACER DIV – PUSHES FOOTER DOWN */}
+        <div className="footer-spacer"></div>
+
+        <Footer />
+      </div>
+    </>
+  );
+}
+
+export default App;
+</file>
+
+<file path="src/components/about/About.jsx">
+// src/components/About/About.jsx
+
+import React from 'react';
+import './About.css';
+
+function About() {
+  return (
+    <section id="aboutContainer" className="about-container">
+      <h2></h2>
+      <p>
+      </p>
+      <p>
+      </p>
+    </section>
+  );
+}
+
+export default About;
+</file>
+
+<file path="src/components/Footer/Footer.css">
+/* src/components/Footer/Footer.css */
+
+footer {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;     /* Only vertical centering */
+    padding: 2rem 0;
+    margin-top: 4rem;            /* Fallback gap */
+    text-align: center;
+}
+
+footer h2 {
+    color: var(--white);
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.footer-links li {
+    padding: 0 8px;
+}
+
+.footer-links li a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    text-underline-offset: 0.25rem;
+}
+
+.footer-links li a:hover,
+.footer-links li a:focus {
+    text-decoration: underline;
+}
+
+.footer-links li a svg {
+    font-size: 1.5rem;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    footer {
+        min-height: 100vh;
+        margin-top: 6rem;
+    }
+
+    footer h2 {
+        font-size: 4rem;
+    }
+
+    .footer-links {
+        flex-wrap: nowrap;
+    }
+
+    .footer-links li {
+        padding: 0 32px;
+    }
+
+    .footer-links li a {
+        font-size: 1.5rem;
+    }
+
+    .footer-links li a svg {
+        font-size: 2rem;
+    }
+}
+</file>
+
+<file path="src/components/Skills/Skills.css">
+/* src/components/Skills/Skills.css */
+
+.my-skills {
+    position: relative;
+    width: 90%;
+    margin: 5rem auto;
+    max-width: 1536px;
+    z-index: 10;
+}
+.my-skills h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    gap: 1rem;
+    justify-content: center;
+}
+.skill-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background-color: #1a1a1a;
+    border-radius: 1rem;
+    border: 1px solid #333;
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: help;
+}
+.skill-item:hover {
+    transform: translateY(-8px);
+    border-color: var(--white);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
+}
+.skill-item svg {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.skill-item:hover svg {
+    transform: translateY(-5px) rotate(-10deg);
+}
+.skill-item p {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #ccc;
+    transition: color 0.3s ease;
+}
+.skill-item:hover p {
+    color: var(--white);
+}
+
+@media (min-width: 768px) {
+    .my-skills { width: 75%; margin: 8rem auto; }
+    .my-skills h2 { font-size: 3rem; margin-bottom: 3rem; }
+    .skills-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 2rem; }
+    .skill-item svg { width: 40px; height: 40px; }
+    .skill-item p { font-size: 0.875rem; }
+}
+
+
+/* --- ENHANCED CUSTOM TOOLTIP STYLES --- */
+
+/* The main tooltip box */
+.skill-item::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    
+    /* ENHANCED: Start slightly lower for the pop-up effect */
+    transform: translate(-50%, 10px); 
+
+    /* Styling */
+    background-color: var(--white);
+    color: var(--black);
+    font-size: 0.8rem;
+    line-height: 1.4;
+    font-weight: 700;
+    padding: 0.5rem 0.8rem;
+    border-radius: 8px;
+    margin-bottom: 15px; /* Increased margin to make space for the arrow */
+    width: max-content;
+    max-width: 200px;
+    text-align: center;
+    z-index: 1; /* Ensure it's on top */
+    
+    /* ENHANCED: Add a subtle shadow for depth */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+
+    /* Initial state (hidden) */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    
+    /* ENHANCED: Smoother transition with a slight delay */
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-delay: 0.1s;
+}
+
+/* The tooltip arrow */
+.skill-item::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%, 10px); /* Match the pop-up effect */
+    
+    /* Create the triangle using borders */
+    border: 6px solid transparent;
+    border-top-color: var(--white);
+    
+    /* Positioning */
+    margin-bottom: 3px;
+    z-index: 2; /* Place arrow on top of the box */
+
+    /* Initial state (hidden) */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    
+    /* Match the transition of the main box */
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-delay: 0.1s;
+}
+
+/* Show the tooltip and arrow on hover */
+.skill-item:hover::after,
+.skill-item:hover::before {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0); /* ENHANCED: Move to final position */
+}
+</file>
+
+<file path="src/components/Skills/Skills.jsx">
+// src/components/Skills/Skills.jsx
+
+import React from 'react';
+import skillsData from '../../data/skillsData'; // Import the data
+import './Skills.css'; // Import the styles
+
+function Skills() {
+  return (
+    <section className="my-skills">
+      <h2>Skills and Tools</h2>
+      <div className="skills-grid">
+        {skillsData.map((skill) => (
+          <div 
+            key={skill.name} 
+            className="skill-item" 
+            data-tooltip={skill.description} // MODIFIED: Changed 'title' to 'data-tooltip'
+          >
+            <div dangerouslySetInnerHTML={{ __html: skill.svg }} />
+            <p>{skill.name}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+export default Skills;
+</file>
+
+<file path="src/styles/global.css">
+/* src/styles/global.css */
+
+/* --- Google Fonts Import --- */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+/* --- Meyer's Reset + Josh W Comeau's CSS Reset --- */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { display: block; }
+body { line-height: 1; }
+ol,ul { list-style: none; }
+blockquote,q { quotes: none; }
+blockquote:before,blockquote:after,q:before,q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+*,*::before,*::after { box-sizing: border-box; }
+* { margin: 0; }
+body { -webkit-font-smoothing: antialiased; }
+img,picture,video,canvas,svg { display: block; max-width: 100%; }
+input,button,textarea,select { font: inherit; }
+p,h1,h2,h3,h4,h5,h6 { overflow-wrap: break-word; }
+#root,#__next { isolation: isolate; }
+
+/* --- Global Variables and Styles --- */
+:root {
+    --black: #121212;
+    --white: #fff;
+    --font: 'Raleway', sans-serif;
+}
+
+body, html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background: var(--black);
+    color: var(--white);
+    font-family: var(--font);
+    overflow-x: hidden;
+    width: 100%;
+}
+
+*::selection {
+    color: black;
+    background-color: white;
+}
+
+/* --- Common Utility Styles --- */
+.hidden-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+.hidden-text:focus {
+    clip: auto;
+    height: auto;
+    overflow: auto;
+    position: absolute;
+    width: auto;
+}
+.playful {
+    transition: all 0.4s cubic-bezier(0.15, 0.75, 0.45, 0.95) 0s;
+    animation: 10s ease 0s infinite alternate none running rainbow;
+}
+.playful-hover {
+    transition: all 0.4s cubic-bezier(0.15, 0.75, 0.45, 0.95) 0s;
+}
+.playful-hover:hover, .playful-hover:focus {
+    animation: 10s ease 0s infinite alternate none running rainbow;
+}
+
+@keyframes rainbow {
+    0% { color: rgb(240, 77, 255); }
+    25% { color: rgb(255, 77, 77); }
+    50% { color: rgb(255, 197, 77); }
+    75% { color: rgb(106, 237, 118); }
+    100% { color: rgb(0, 153, 255); }
+}
+
+/* --- THE CONFLICTING create-react-app STYLES HAVE BEEN REMOVED --- */
+/* Add this to src/components/Footer/Footer.css or your global CSS */
+
+.footer-spacer {
+  height: 4rem;
+  background: transparent;
+}
+
+@media (min-width: 768px) {
+  .footer-spacer {
+    height: 6rem;
+  }
+}
+</file>
+
+<file path="package.json">
+{
+  "name": "vite-project",
+  "private": true,
+  "version": "0.0.0",
+  "homepage": "https://shakeeb-sa.github.io",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "gsap": "^3.13.0",
+    "lenis": "^1.3.13",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.36.0",
+    "@types/react": "^19.1.16",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^5.0.4",
+    "eslint": "^9.36.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.22",
+    "gh-pages": "^6.3.0",
+    "globals": "^16.4.0",
+    "vite": "^7.1.7"
+  }
+}
+</file>
+
+<file path="src/components/Projects/Projects.css">
+/* src/components/Projects/Projects.css */
+
+.project-container {
+    position: relative;
+    margin-top: 5rem;
+}
+.project-title-container {
+    width: 90%;
+    max-width: 1536px;
+    margin: 0 auto;
+}
+.project-container h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 2.5rem;
+}
+.project-listings-container {
+    display: grid;
+    gap: 5rem;
+    width: 100%; /* Will be controlled by parent */
+    margin: 0 auto;
+}
+.project-listing {
+    position: relative;
+    width: 100%;
+}
+.project-item-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.project-info {
+    text-align: left;
+    width: 100%;
+}
+.project-info a {
+    display: block;
+    color: var(--white);
+    text-decoration: none;
+}
+
+/* MODIFIED: Changed h2 to h3 */
+.project-info h3 {
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+.project-info p {
+    margin-top: 1rem;
+    line-height: 1.5;
+    font-size: 0.875rem;
+    font-weight: 300;
+}
+.project-info p:last-of-type {
+    margin-bottom: 1.5rem;
+    text-decoration: underline;
+    text-underline-offset: 0.25rem;
+}
+.project-btns {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+}
+.project-btns .project-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    height: 45px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    background: white;
+    color: var(--black);
+    font-weight: 700;
+    font-size: 0.875rem;
+    padding: 0 20px;
+    width: auto;
+    transition: 150ms transform ease;
+    will-change: transform;
+}
+.project-btn:hover, .project-btn:focus {
+    transform: scale(1.05);
+}
+.project-btn:active {
+    transform: scale(0.95);
+}
+.project-listing a {
+    display: block;
+    width: 100%;
+}
+.project-image {
+    display: block;
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+.project-image:hover, .project-image:focus {
+    box-shadow: 0 0 0 3px var(--black), 0 0 0 6px white;
+}
+
+/* --- Styles for the language bars --- */
+.project-languages {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+/* MODIFIED: Changed h3 to h4 */
+.project-languages h4 {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+    color: #ccc;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.language-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+.language-name {
+    font-size: 0.8rem;
+    width: 80px; /* Aligns the bars */
+    flex-shrink: 0;
+    color: #ccc;
+}
+.language-bar-container {
+    flex-grow: 1;
+    height: 8px;
+    background-color: #333;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.language-bar {
+    height: 100%;
+    background-color: var(--white);
+    border-radius: 4px;
+    transition: width 0.5s ease-out;
+}
+.language-percentage {
+    font-size: 0.8rem;
+    color: #aaa;
+    min-width: 35px;
+    text-align: right;
+}
+
+/* Language Specific Colors */
+.lang-javascript { background-color: #f7df1e; }
+.lang-html { background-color: #e34f26; }
+.lang-css { background-color: #1572b6; }
+
+/* --- Media queries for larger screens --- */
+@media (min-width: 768px) {
+    .project-title-container { width: 75%; }
+    .project-container h2 { font-size: 3rem; margin-bottom: 3rem; }
+    .project-listings-container { gap: 8rem; }
+    .project-item-container { flex-direction: row; gap: 2.5rem; }
+    .project-info { max-width: 350px; }
+    /* MODIFIED: Changed h2 to h3 */
+    .project-info h3 { font-size: 2rem; }
+    .project-info p { font-size: 1rem; line-height: 1.6; }
+    .project-btns { justify-content: flex-start; }
+    .project-btn { font-size: 1rem; height: 50px; }
+    .project-image { border-radius: 20px; }
+}
+
+/* --- NEW STYLES FOR PROJECT CATEGORIES --- */
+.project-category-section {
+    width: 90%;
+    max-width: 1536px;
+    margin: 5rem auto 0;
+}
+
+/* Style for the category titles like "Full-Stack Applications" */
+.project-category-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #444;
+}
+
+/* Ensure the main projects container has no top margin */
+.project-container > .project-category-section:first-of-type {
+    margin-top: 0;
+}
+
+/* Responsive styles for the new category titles */
+@media (min-width: 768px) {
+    .project-category-section {
+        width: 75%;
+    }
+    .project-category-title {
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+    }
+}
+/* src/components/Projects/Projects.css */
+
+.project-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* --- WRAPPER --- */
+.code-counter-wrapper {
+    position: relative;
+    width: 120px; /* Wider to accommodate satellites */
+    height: 120px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+/* --- SVG DONUT --- */
+.code-donut-svg {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    transform: rotate(0deg); /* Initial state */
+    filter: drop-shadow(0 0 5px rgba(0,0,0,0.5));
+}
+
+.code-counter-content {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.counter-number {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--white);
+    text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.counter-label {
+    font-size: 0.6rem;
+    font-weight: 700;
+    color: #888;
+    text-transform: uppercase;
+}
+
+/* --- SATELLITE BADGES (The Automatic Popups) --- */
+.satellite-badge {
+    position: absolute;
+    background: rgba(18, 18, 18, 0.9);
+    border: 1px solid #333;
+    padding: 4px 8px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    white-space: nowrap;
+    backdrop-filter: blur(4px);
+    
+    /* Ensure they don't block clicks on the link behind them */
+    pointer-events: none; 
+}
+
+.badge-name {
+    font-size: 0.6rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 2px;
+}
+
+.badge-lines {
+    font-size: 0.65rem;
+    color: #fff;
+    font-weight: 400;
+}
+
+/* --- POSITIONS FOR 3 SATELLITES --- */
+/* Top Right */
+.badge-pos-0 {
+    top: -5px;
+    right: -15px;
+}
+
+/* Top Left */
+.badge-pos-1 {
+    top: -5px;
+    left: -15px;
+}
+
+/* Bottom Center */
+.badge-pos-2 {
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media (min-width: 768px) {
+    .code-counter-wrapper { width: 140px; height: 140px; }
+    .code-donut-svg { width: 100px; height: 100px; }
+    .counter-number { font-size: 1.5rem; }
+    
+    .badge-pos-0 { right: -10px; }
+    .badge-pos-1 { left: -10px; }
+}
+
+
+/* src/components/Projects/Projects.css */
+
+/* Update the wrapper to show a help cursor */
+.code-counter-wrapper {
+    cursor: help; /* Tells user this is interactive */
+}
+
+/* --- TOOLTIP STYLES (The Popup) --- */
+
+/* The text box */
+.code-counter-wrapper::after {
+    content: attr(data-tooltip); /* Pulls text from the attribute */
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%, 10px); 
+    background-color: #333;
+    color: var(--white);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.5rem 0.8rem;
+    border-radius: 6px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    z-index: 10;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* The little arrow pointing down */
+.code-counter-wrapper::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%, 10px);
+    border: 6px solid transparent;
+    border-top-color: #333;
+    margin-bottom: -12px; /* Pulls arrow down to connect */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+/* Reveal on Hover */
+.code-counter-wrapper:hover::after,
+.code-counter-wrapper:hover::before {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -10px); /* Moves up slightly */
+}
+</file>
+
+<file path="src/components/Projects/Projects.jsx">
+// src/components/Projects/Projects.jsx
+
+import React from 'react';
+import projectsData from '../../data/projectsData';
+import './Projects.css';
+
+// Helper component to avoid repeating the project listing code
+import CodeCounter from './CodeCounter'; // Import the new component
+
+const ProjectItem = ({ project }) => {
+  const primaryLink = project.link ?? project.code;
+  const linkTitle = project.link ? `Open site for ${project.name}` : `View code for ${project.name}`;
+
+  return (
+    <div className="project-listing" id={project.slug}>
+      <div className="project-item-container">
+        <a href={primaryLink} title={linkTitle} target="_blank" rel="noopener noreferrer">
+          <img src={project.image} alt={project.name} className="project-image" />
+        </a>
+
+        <div id="projectInfo" className="project-info">
+          
+          {/* 1. Header Row: Title on Left, Circle on Right */}
+          <div className="project-header-row">
+            <div>
+                <a href={primaryLink} title={linkTitle} target="_blank" rel="noopener noreferrer">
+                <h3 className="playful-hover">{project.name}</h3>
+                </a>
+                <p style={{marginTop: '0.5rem'}}>{project.type}</p>
+            </div>
+            
+            {/* 2. The Animated Circle (Only shows if totalLines exists) */}
+{/* OLD LINE: */}
+{/* {project.totalLines && <CodeCounter totalLines={project.totalLines} />} */}
+
+{/* NEW LINE: Pass both totalLines AND languages */}
+{project.totalLines && (
+  <CodeCounter 
+    totalLines={project.totalLines} 
+    languages={project.languages} 
+  />
+)}
+          </div>
+
+          <p style={{marginTop: '1rem'}}>{project.description}</p>
+
+          {/* 3. Updated Languages Section with Line Counts */}
+          {project.languages && project.languages.length > 0 && (
+            <div className="project-languages">
+              <h4>Complexity Breakdown</h4>
+              {project.languages.map(lang => (
+                <div key={lang.name} className="language-item">
+                  
+                  {/* Text Header: "HTML" ........ "395 Lines" */}
+                  <div className="language-header">
+                    <span className="language-name-text">{lang.name}</span>
+                    <span className="language-lines-text">
+                        {lang.lines ? `${lang.lines} lines` : `${lang.percentage}%`}
+                    </span>
+                  </div>
+
+                  {/* The Colored Bar */}
+                  <div className="language-bar-container">
+                    <div
+                      className={`language-bar lang-${lang.name.toLowerCase().replace(/\s+/g, '-')}`}
+                      style={{ width: `${lang.percentage}%` }}
+                    ></div>
+                  </div>
+                  
+                </div>
+              ))}
+            </div>
+          )}
+
+          <div className="project-btns">
+            {project.link && (
+              <a href={project.link} title={`Open site for ${project.name}`} className="project-btn" target="_blank" rel="noopener noreferrer">
+                Open Site
+              </a>
+            )}
+            {project.code && (
+              <a href={project.code} title={`View code for ${project.name}`} className="project-btn" target="_blank" rel="noopener noreferrer">
+                View Code
+              </a>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+function Projects() {
+  // Filter projects into three separate arrays based on the category
+  const fullStackProjects = projectsData.filter(p => p.category === 'Full-Stack');
+  const chromeExtensionProjects = projectsData.filter(p => p.category === 'Chrome Extension');
+  const frontendProjects = projectsData.filter(p => p.category === 'Frontend');
+
+  return (
+    <section className="project-container" id="projects">
+      <div className="project-title-container">
+        <h2>My Projects</h2>
+      </div>
+
+      {/* Section 1: Full-Stack Projects */}
+      {fullStackProjects.length > 0 && (
+        <div className="project-category-section">
+          <h2 className="project-category-title">Full-Stack Applications</h2>
+          <div className="project-listings-container">
+            {fullStackProjects.map(project => (
+              <ProjectItem key={project.slug} project={project} />
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Section 2: Chrome Extensions */}
+      {chromeExtensionProjects.length > 0 && (
+        <div className="project-category-section">
+          <h2 className="project-category-title">Chrome Extensions</h2>
+          <div className="project-listings-container">
+            {chromeExtensionProjects.map(project => (
+              <ProjectItem key={project.slug} project={project} />
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Section 3: Frontend Projects */}
+      {frontendProjects.length > 0 && (
+        <div className="project-category-section">
+          <h2 className="project-category-title">Frontend & UI Projects</h2>
+          <div className="project-listings-container">
+            {frontendProjects.map(project => (
+              <ProjectItem key={project.slug} project={project} />
+            ))}
+          </div>
+        </div>
+      )}
+    </section>
+  );
+}
+
+export default Projects;
+</file>
+
+<file path="src/data/skillsData.js">
+// src/data/skillsData.js
+
+const skillsData = [
+  {
+            name: 'HTML',
+            svg: `<svg viewBox="0 0 452 520"><path fill="#e34f26" d="M41 460L0 0h451l-41 460-185 52" /><path fill="#ef652a" d="M226 472l149-41 35-394H226" /><path fill="#ecedee" d="M226 208h-75l-5-58h80V94H84l15 171h127zm0 147l-64-17-4-45h-56l7 89 117 32z" /><path fill="#fff" d="M226 265h69l-7 73-62 17v59l115-32 16-174H226zm0-171v56h136l5-56z" /></svg>`,
+            description: 'HTML (HyperText Markup Language) is the standard markup language for creating web pages and web applications. It forms the structure of a webpage, defining elements like headings, paragraphs, links, and images.'
+        },
+        {
+            name: 'CSS',
+            svg: `<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><title>file_type_css</title><polygon points="5.902 27.201 3.656 2 28.344 2 26.095 27.197 15.985 30 5.902 27.201" style="fill:#1572b6" /><polygon points="16 27.858 24.17 25.593 26.092 4.061 16 4.061 16 27.858" style="fill:#33a9dc" /><polygon points="16 13.191 20.09 13.191 20.372 10.026 16 10.026 16 6.935 16.011 6.935 23.75 6.935 23.676 7.764 22.917 16.282 16 16.282 16 13.191" style="fill:#fff" /><polygon points="16.019 21.218 16.005 21.222 12.563 20.292 12.343 17.827 10.67 17.827 9.24 17.827 9.673 22.68 16.004 24.438 16.019 24.434 16.019 21.218" style="fill:#ebebeb" /><polygon points="19.827 16.151 19.455 20.29 16.008 21.22 16.008 24.436 22.344 22.68 22.391 22.158 22.928 16.151 19.827 16.151" style="fill:#fff" /><polygon points="16.011 6.935 16.011 8.855 16.011 10.018 16.011 10.026 8.555 10.026 8.555 10.026 8.545 10.026 8.483 9.331 8.342 7.764 8.268 6.935 16.011 6.935" style="fill:#ebebeb" /><polygon points="16 13.191 16 15.111 16 16.274 16 16.282 12.611 16.282 12.611 16.282 12.601 16.282 12.539 15.587 12.399 14.02 12.325 13.191 16 13.191" style="fill:#ebebeb" /></svg>`,
+            description: 'CSS (Cascading Style Sheets) is a stylesheet language used to describe the presentation of a document written in HTML. It controls layout, colors, fonts, and responsive design for all screen sizes.'
+        },
+        {
+            name: 'JavaScript',
+            svg: `<svg viewBox="0 0 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid"><g><path d="M0,0 L256,0 L256,256 L0,256 L0,0 Z" fill="#F7DF1E"></path><path d="M67.311746,213.932292 L86.902654,202.076241 C90.6821079,208.777346 94.1202286,214.447137 102.367086,214.447137 C110.272203,214.447137 115.256076,211.354819 115.256076,199.326883 L115.256076,117.528787 L139.313575,117.528787 L139.313575,199.666997 C139.313575,224.584333 124.707759,235.925943 103.3984,235.925943 C84.1532952,235.925943 72.9819429,225.958603 67.3113397,213.93026" fill="#000000"></path><path d="M152.380952,211.354413 L171.969422,200.0128 C177.125994,208.433981 183.827911,214.619835 195.684368,214.619835 C205.652521,214.619835 212.009041,209.635962 212.009041,202.762159 C212.009041,194.513676 205.479416,191.592025 194.481168,186.78207 L188.468419,184.202565 C171.111213,176.81473 159.597308,167.53534 159.597308,147.944838 C159.597308,129.901308 173.344508,116.153295 194.825752,116.153295 C210.119924,116.153295 221.117765,121.48094 229.021663,135.400432 L210.29059,147.428775 C206.166146,140.040127 201.699556,137.119289 194.826159,137.119289 C187.78047,137.119289 183.312254,141.587098 183.312254,147.428775 C183.312254,154.646349 187.78047,157.568406 198.089956,162.036622 L204.103924,164.614095 C224.553448,173.378641 236.067352,182.313448 236.067352,202.418387 C236.067352,224.071924 219.055137,235.927975 196.200432,235.927975 C173.860978,235.927975 159.425829,225.274311 152.381359,211.354413" fill="#000000"></path></g></svg>`,
+            description: 'JavaScript (JS) is a versatile, high-level programming language primarily known for enabling interactive and dynamic content on web pages. It is a core technology of the World Wide Web, alongside HTML and CSS.'
+        },
+                {
+            name: 'Node JS',
+            svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="#8bc34a" d="M16 20.003v2h4a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-2v-2h4v-2h-4a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2v2Z" /><path fill="#8bc34a" d="m16 3.003l-12 7v14l4 2h6v-13.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v11.5H8l-2-1.034V11.15l10-5.833l10 5.833v11.703l-10 5.833l-1.745-1.022L13 29.253l3 1.75l12-7v-14Z" /></svg>`,
+            description: "Node.js is a JavaScript runtime built on Chrome's V8 engine that allows developers to run JavaScript on the server. It enables building scalable network applications with non-blocking I/O operations."
+        },
+                { 
+            name: 'React', 
+            svg: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.6789 15.9759C18.6789 14.5415 17.4796 13.3785 16 13.3785C14.5206 13.3785 13.3211 14.5415 13.3211 15.9759C13.3211 17.4105 14.5206 18.5734 16 18.5734C17.4796 18.5734 18.6789 17.4105 18.6789 15.9759Z" fill="#53C1DE" /><path fill-rule="evenodd" clip-rule="evenodd" d="M24.7004 11.1537C25.2661 8.92478 25.9772 4.79148 23.4704 3.39016C20.9753 1.99495 17.7284 4.66843 16.0139 6.27318C14.3044 4.68442 10.9663 2.02237 8.46163 3.42814C5.96751 4.82803 6.73664 8.8928 7.3149 11.1357C4.98831 11.7764 1 13.1564 1 15.9759C1 18.7874 4.98416 20.2888 7.29698 20.9289C6.71658 23.1842 5.98596 27.1909 8.48327 28.5877C10.9973 29.9932 14.325 27.3945 16.0554 25.7722C17.7809 27.3864 20.9966 30.0021 23.4922 28.6014C25.9956 27.1963 25.3436 23.1184 24.7653 20.8625C27.0073 20.221 31 18.7523 31 15.9759C31 13.1835 26.9903 11.7923 24.7004 11.1537ZM24.4162 19.667C24.0365 18.5016 23.524 17.2623 22.8971 15.9821C23.4955 14.7321 23.9881 13.5088 24.3572 12.3509C26.0359 12.8228 29.7185 13.9013 29.7185 15.9759C29.7185 18.07 26.1846 19.1587 24.4162 19.667ZM22.85 27.526C20.988 28.571 18.2221 26.0696 16.9478 24.8809C17.7932 23.9844 18.638 22.9422 19.4625 21.7849C20.9129 21.6602 22.283 21.4562 23.5256 21.1777C23.9326 22.7734 24.7202 26.4763 22.85 27.526ZM9.12362 27.5111C7.26143 26.47 8.11258 22.8946 8.53957 21.2333C9.76834 21.4969 11.1286 21.6865 12.5824 21.8008C13.4123 22.9332 14.2816 23.9741 15.1576 24.8857C14.0753 25.9008 10.9945 28.557 9.12362 27.5111ZM2.28149 15.9759C2.28149 13.874 5.94207 12.8033 7.65904 12.3326C8.03451 13.5165 8.52695 14.7544 9.12123 16.0062C8.51925 17.2766 8.01977 18.5341 7.64085 19.732C6.00369 19.2776 2.28149 18.0791 2.28149 15.9759ZM9.1037 4.50354C10.9735 3.45416 13.8747 6.00983 15.1159 7.16013C14.2444 8.06754 13.3831 9.1006 12.5603 10.2265C11.1494 10.3533 9.79875 10.5569 8.55709 10.8297C8.09125 9.02071 7.23592 5.55179 9.1037 4.50354ZM20.3793 11.5771C21.3365 11.6942 22.2536 11.85 23.1147 12.0406C22.8562 12.844 22.534 13.6841 22.1545 14.5453C21.6044 13.5333 21.0139 12.5416 20.3793 11.5771ZM16.0143 8.0481C16.6054 8.66897 17.1974 9.3623 17.7798 10.1145C16.5985 10.0603 15.4153 10.0601 14.234 10.1137C14.8169 9.36848 15.414 8.67618 16.0143 8.0481ZM9.8565 14.5444C9.48329 13.6862 9.16398 12.8424 8.90322 12.0275C9.75918 11.8418 10.672 11.69 11.623 11.5748C10.9866 12.5372 10.3971 13.5285 9.8565 14.5444ZM11.6503 20.4657C10.6679 20.3594 9.74126 20.2153 8.88556 20.0347C9.15044 19.2055 9.47678 18.3435 9.85796 17.4668C10.406 18.4933 11.0045 19.4942 11.6503 20.4657ZM16.0498 23.9915C15.4424 23.356 14.8365 22.6531 14.2448 21.8971C15.4328 21.9423 16.6231 21.9424 17.811 21.891C17.2268 22.6608 16.6369 23.3647 16.0498 23.9915ZM22.1667 17.4222C22.5677 18.3084 22.9057 19.1657 23.1742 19.9809C22.3043 20.1734 21.3652 20.3284 20.3757 20.4435C21.015 19.4607 21.6149 18.4536 22.1667 17.4222ZM18.7473 20.5941C16.9301 20.72 15.1016 20.7186 13.2838 20.6044C12.2509 19.1415 11.3314 17.603 10.5377 16.0058C11.3276 14.4119 12.2404 12.8764 13.2684 11.4158C15.0875 11.2825 16.9178 11.2821 18.7369 11.4166C19.7561 12.8771 20.6675 14.4086 21.4757 15.9881C20.6771 17.5812 19.7595 19.1198 18.7473 20.5941ZM22.8303 4.4666C24.7006 5.51254 23.8681 9.22726 23.4595 10.8426C22.2149 10.5641 20.8633 10.3569 19.4483 10.2281C18.6239 9.09004 17.7698 8.05518 16.9124 7.15949C18.1695 5.98441 20.9781 3.43089 22.8303 4.4666Z" fill="#53C1DE" /></svg>`, 
+            description: 'React is a JavaScript library for building user interfaces, particularly single-page applications.' 
+        },
+                        { 
+            name: 'Vite', 
+            svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 128 128"><defs><linearGradient id="SVGdskgcebC" x1="6" x2="235" y1="33" y2="344" gradientTransform="translate(0 .937)scale(.3122)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#41d1ff"/><stop offset="1" stop-color="#bd34fe"/></linearGradient><linearGradient id="SVGNm6vSb3t" x1="194.651" x2="236.076" y1="8.818" y2="292.989" gradientTransform="translate(0 .937)scale(.3122)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffea83"/><stop offset=".083" stop-color="#ffdd35"/><stop offset="1" stop-color="#ffa800"/></linearGradient></defs><path fill="url(#SVGdskgcebC)" d="M124.766 19.52L67.324 122.238c-1.187 2.121-4.234 2.133-5.437.024L3.305 19.532c-1.313-2.302.652-5.087 3.261-4.622L64.07 25.187a3.1 3.1 0 0 0 1.11 0l56.3-10.261c2.598-.473 4.575 2.289 3.286 4.594m0 0"/><path fill="url(#SVGNm6vSb3t)" d="M91.46 1.43L48.954 9.758a1.56 1.56 0 0 0-1.258 1.437l-2.617 44.168a1.563 1.563 0 0 0 1.91 1.614l11.836-2.735a1.562 1.562 0 0 1 1.88 1.836l-3.517 17.219a1.562 1.562 0 0 0 1.985 1.805l7.308-2.223c1.133-.344 2.223.652 1.985 1.812l-5.59 27.047c-.348 1.692 1.902 2.614 2.84 1.164l.625-.968l34.64-69.13c.582-1.16-.421-2.48-1.69-2.234l-12.185 2.352a1.558 1.558 0 0 1-1.793-1.965l7.95-27.562A1.56 1.56 0 0 0 91.46 1.43m0 0"/></svg>`, 
+            description: 'Vite is a blazing fast frontend build tool powering the next generation of web applications.' 
+        },
+        {
+            name: 'WordPress',
+            svg: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="14" fill="#028CB0" /><path d="M6.45538 16C6.45538 19.7823 8.65538 23.04 11.8369 24.5885L7.28462 12.1162C6.73798 13.338 6.45541 14.6615 6.45538 16ZM16 25.5446C17.1085 25.5446 18.1746 25.35 19.1731 25.0031L19.1054 24.8762L16.1692 16.8377L13.3092 25.1554C14.1554 25.4092 15.0608 25.5446 16 25.5446ZM17.3115 11.5238L20.7638 21.7877L21.72 18.6062C22.1262 17.2862 22.4392 16.3385 22.4392 15.5177C22.4392 14.3331 22.0162 13.5208 21.6608 12.8946C21.17 12.0992 20.7215 11.4308 20.7215 10.6523C20.7215 9.77231 21.3815 8.96 22.3292 8.96H22.4477C20.689 7.34546 18.3874 6.45141 16 6.45538C14.4192 6.45509 12.8632 6.84777 11.4718 7.59809C10.0805 8.34842 8.89746 9.43285 8.02923 10.7538L8.63846 10.7708C9.63692 10.7708 11.1769 10.6438 11.1769 10.6438C11.7015 10.6185 11.7608 11.3715 11.2446 11.4308C11.2446 11.4308 10.7285 11.4985 10.1446 11.5238L13.6308 21.8638L15.7208 15.6023L14.2315 11.5238C13.898 11.5054 13.565 11.4772 13.2331 11.4392C12.7169 11.4054 12.7762 10.6185 13.2923 10.6438C13.2923 10.6438 14.8662 10.7708 15.8054 10.7708C16.8038 10.7708 18.3438 10.6438 18.3438 10.6438C18.86 10.6185 18.9277 11.3715 18.4115 11.4308C18.4115 11.4308 17.8954 11.49 17.3115 11.5238ZM20.7977 24.25C22.2416 23.4104 23.4399 22.2066 24.2729 20.7589C25.1059 19.3112 25.5444 17.6703 25.5446 16C25.5446 14.3415 25.1215 12.7846 24.3769 11.4223C24.5281 12.9211 24.3012 14.4339 23.7169 15.8223L20.7977 24.25ZM16 27C13.0826 27 10.2847 25.8411 8.22183 23.7782C6.15893 21.7153 5 18.9174 5 16C5 13.0826 6.15893 10.2847 8.22183 8.22183C10.2847 6.15893 13.0826 5 16 5C18.9174 5 21.7153 6.15893 23.7782 8.22183C25.8411 10.2847 27 13.0826 27 16C27 18.9174 25.8411 21.7153 23.7782 23.7782C21.7153 25.8411 18.9174 27 16 27Z" fill="white" /></svg>`,
+            description: 'WordPress is a free and open-source content management system (CMS) based on PHP and MySQL. It powers over 40% of all websites on the internet, offering flexibility through themes and plugins.'
+        },
+        {
+            name: 'Python',
+            svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#0288d1" d="M9.86 2A2.86 2.86 0 0 0 7 4.86v1.68h4.29c.39 0 .71.57.71.96H4.86A2.86 2.86 0 0 0 2 10.36v3.781a2.86 2.86 0 0 0 2.86 2.86h1.18v-2.68a2.85 2.85 0 0 1 2.85-2.86h5.25c1.58 0 2.86-1.271 2.86-2.851V4.86A2.86 2.86 0 0 0 14.14 2zm-.72 1.61c.4 0 .72.12.72.71s-.32.891-.72.891c-.39 0-.71-.3-.71-.89s.32-.711.71-.711" /><path fill="#fdd835" d="M17.959 7v2.68a2.85 2.85 0 0 1-2.85 2.859H9.86A2.85 2.85 0 0 0 7 15.389v3.75a2.86 2.86 0 0 0 2.86 2.86h4.28A2.86 2.86 0 0 0 17 19.14v-1.68h-4.291c-.39 0-.709-.57-.709-.96h7.14A2.86 2.86 0 0 0 22 13.64V9.86A2.86 2.86 0 0 0 19.14 7zM8.32 11.513l-.004.004l.038-.004zm6.54 7.276c.39 0 .71.3.71.89a.71.71 0 0 1-.71.71c-.4 0-.72-.12-.72-.71s.32-.89.72-.89" /></svg>`,
+            description: "Python is a high-level, interpreted programming language known for its readability and versatility. It's widely used in web development, data science, artificial intelligence, automation, and scientific computing."
+        },
+        {
+            name: 'VS Code',
+            svg: `<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><title>file_type_vscode</title><path d="M29.01,5.03,23.244,2.254a1.742,1.742,0,0,0-1.989.338L2.38,19.8A1.166,1.166,0,0,0,2.3,21.447c.025.027.05.053.077.077l1.541,1.4a1.165,1.165,0,0,0,1.489.066L28.142,5.75A1.158,1.158,0,0,1,30,6.672V6.605A1.748,1.748,0,0,0,29.01,5.03Z" style="fill:#0065a9" /><path d="M29.01,26.97l-5.766,2.777a1.745,1.745,0,0,1-1.989-.338L2.38,12.2A1.166,1.166,0,0,1,2.3,10.553c.025-.027.05-.053.077-.077l1.541-1.4A1.165,1.165,0,0,1,5.41,9.01L28.142,26.25A1.158,1.158,0,0,0,30,25.328V25.4A1.749,1.749,0,0,1,29.01,26.97Z" style="fill:#007acc" /><path d="M23.244,29.747a1.745,1.745,0,0,1-1.989-.338A1.025,1.025,0,0,0,23,28.684V3.316a1.024,1.024,0,0,0-1.749-.724,1.744,1.744,0,0,1,1.989-.339l5.765,2.772A1.748,1.748,0,0,1,30,6.6V25.4a1.748,1.748,0,0,1-.991,1.576Z" style="fill:#1f9cf0" /></svg>`,
+            description: 'Visual Studio Code (VS Code) is a free, open-source code editor developed by Microsoft. It features intelligent code completion, debugging, version control integration, and a vast ecosystem of extensions.'
+        },
+                { 
+            name: 'GitHub', 
+            svg: `<svg fill="#FFFFFF" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1"><path d="M12,2.2467A10.00042,10.00042,0,0,0,8.83752,21.73419c.5.08752.6875-.21247.6875-.475,0-.23749-.01251-1.025-.01251-1.86249C7,19.85919,6.35,18.78423,6.15,18.22173A3.636,3.636,0,0,0,5.125,16.8092c-.35-.1875-.85-.65-.01251-.66248A2.00117,2.00117,0,0,1,6.65,17.17169a2.13742,2.13742,0,0,0,2.91248.825A2.10376,2.10376,0,0,1,10.2,16.65923c-2.225-.25-4.55-1.11254-4.55-4.9375a3.89187,3.89187,0,0,1,1.025-2.6875,3.59373,3.59373,0,0,1,.1-2.65s.83747-.26251,2.75,1.025a9.42747,9.42747,0,0,1,5,0c1.91248-1.3,2.75-1.025,2.75-1.025a3.59323,3.59323,0,0,1,.1,2.65,3.869,3.869,0,0,1,1.025,2.6875c0,3.83747-2.33752,4.6875-4.5625,4.9375a2.36814,2.36814,0,0,1,.675,1.85c0,1.33752-.01251,2.41248-.01251,2.75,0,.26251.1875.575.6875.475A10.0053,10.0053,0,0,0,12,2.2467Z" /></svg>`, 
+            description: 'GitHub is a web-based platform for version control and collaboration using Git.' 
+        },
+        { 
+            name: 'Vercel', 
+            svg: `<svg width="24px" height="24px" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg" fill="white">
+  <title>Vercel icon</title>
+  <path d="M24 22.525H0l12-21.05 12 21.05z"/>
+</svg>`, 
+            description: 'Vercel is a platform for deploying, hosting, and managing modern web applications with ease, offering seamless integration, fast performance, and scalable infrastructure for developers.' 
+        },
+        { 
+            name: 'Git', 
+            svg: `<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><title>file_type_git</title><path d="M29.472,14.753,17.247,2.528a1.8,1.8,0,0,0-2.55,0L12.158,5.067l3.22,3.22a2.141,2.141,0,0,1,2.712,2.73l3.1,3.1a2.143,2.143,0,1,1-1.285,1.21l-2.895-2.895v7.617a2.141,2.141,0,1,1-1.764-.062V12.3a2.146,2.146,0,0,1-1.165-2.814L10.911,6.314,2.528,14.7a1.8,1.8,0,0,0,0,2.551L14.753,29.472a1.8,1.8,0,0,0,2.55,0L29.472,17.3a1.8,1.8,0,0,0,0-2.551" style="fill:#dd4c35" /><path d="M12.158,5.067l3.22,3.22a2.141,2.141,0,0,1,2.712,2.73l3.1,3.1a2.143,2.143,0,1,1-1.285,1.21l-2.895-2.895v7.617a2.141,2.141,0,1,1-1.764-.062V12.3a2.146,2.146,0,0,1-1.165-2.814L10.911,6.314" style="fill:#fff" /></svg>`, 
+            description: 'Git is a distributed version control system that tracks changes in source code during software development.' 
+        },
+                {
+            name: 'npm',
+            svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 165"><path fill="#C12127" d="M157.538 164.103h65.641v-32.82h65.642V0H157.538zM223.18 32.82H256v65.64h-32.82zM315.077 0v131.282h65.64V32.821h32.821v98.461h32.821V32.821h32.82v98.461H512V0zM0 131.282h65.641V32.821h32.82v98.461h32.821V0H0z" /></svg>`,
+            description: 'npm (Node Package Manager) is the default package manager for Node.js. It hosts over 1 million packages of reusable code and provides dependency management for JavaScript projects.'
+        },
+                {
+            name: 'pip',
+            svg: `<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><linearGradient id="linear-gradient" x1="17.649" y1="8.845" x2="28.104" y2="19.301" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#387eb8" /><stop offset="1" stop-color="#366994" /></linearGradient><linearGradient id="linear-gradient-2" x1="10.011" y1="22.109" x2="20.363" y2="11.758" gradientTransform="matrix(1, 0, 0, -1, 0, 32.257)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffe052" /><stop offset="1" stop-color="#ffc331" /></linearGradient><linearGradient id="linear-gradient-3" x1="-0.155" y1="8.846" x2="10.301" y2="19.301" xlink:href="#linear-gradient" /></defs><title>file_type_pip</title><path d="M24.989,7.936l-.028-.009c-5.58,0-5.15,2.794-5.15,2.794V21.326s-.006,2.749,2.562,2.749h.018c2.513,0,2.51-2.747,2.51-2.747V16.52h2.972C30,16.52,30,15.159,30,15.159V10.246S30.333,7.936,24.989,7.936Zm3.7,2.541h0a.914.914,0,1,1-.89-.936h0l-.024.007a.914.914,0,0,1,.914.914v.015Z" style="fill:url(#linear-gradient)" /><path d="M16.01,24.073h-.017c-2.561,0-2.561-3.585-2.561-3.585v-8.78s-.007-3.531,2.561-3.524h.018c2.51,0,2.51,3.524,2.51,3.524v8.78S18.521,24.072,16.01,24.073Zm.947-2.3h0a.914.914,0,1,0-.89.937l-.024-.007h0a.914.914,0,0,0,.914-.914Z" style="fill:url(#linear-gradient-2)" /><path d="M7.186,7.936l-.028-.012c-5.58,0-5.15,2.794-5.15,2.794V21.326S2,24.076,4.568,24.076h.018c2.513,0,2.51-2.747,2.51-2.747V16.52h2.971c2.129,0,2.124-1.361,2.124-1.361V10.246S12.526,7.936,7.186,7.936Zm3.7,2.541h0A.914.914,0,1,1,10,9.54h0l-.024.007a.914.914,0,0,1,.914.914v.015Z" style="fill:url(#linear-gradient-3)" /></svg>`,
+            description: "pip is the standard package installer for Python. It allows you to install and manage additional libraries and dependencies that aren't distributed as part of the standard library."
+        },
+
+                {
+            name: 'TypeScript',
+            svg: `<svg width="256px" height="256px" viewBox="0 0 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid"><g><polygon fill="#007ACC" transform="translate(128.000000, 128.000000) scale(1, -1) translate(-128.000000, -128.000000) " points="0 128 0 0 128 0 256 0 256 128 256 256 128 256 0 256"></polygon><path d="M146.658132,223.436863 L146.739401,212.953054 L130.079084,212.953054 L113.418767,212.953054 L113.418767,165.613371 L113.418767,118.273689 L101.63464,118.273689 L89.8505126,118.273689 L89.8505126,165.613371 L89.8505126,212.953054 L73.1901951,212.953054 L56.5298776,212.953054 L56.5298776,223.233689 C56.5298776,228.922577 56.6517824,233.676863 56.8143221,233.798768 C56.9362269,233.961308 77.2130522,234.042577 101.797179,234.001943 L146.536227,233.880038 L146.658132,223.436863 Z" fill="#FFFFFF" transform="translate(101.634640, 176.142993) rotate(-180.000000) translate(-101.634640, -176.142993) "></path><path d="M206.566631,234.272145 C213.068219,232.646748 218.025679,229.761668 222.57679,225.048018 C224.933616,222.528653 228.428219,217.936907 228.712663,216.839764 C228.793933,216.514684 217.659965,209.037859 210.914568,204.852462 C210.670758,204.689922 209.69552,205.74643 208.598377,207.371827 C205.306949,212.166748 201.852981,214.239129 196.570441,214.604843 C188.809171,215.133097 183.811076,211.069605 183.851711,204.283573 C183.851711,202.292462 184.136155,201.114049 184.948854,199.488653 C186.65552,195.953414 189.825044,193.840399 199.7806,189.533097 C218.106949,181.649922 225.949489,176.448653 230.825679,169.053097 C236.270758,160.804208 237.489806,147.638494 233.792028,137.845478 C229.728536,127.199129 219.651076,119.966113 205.469489,117.568653 C201.080917,116.796589 190.678377,116.918494 185.964727,117.771827 C175.684092,119.600399 165.931711,124.679764 159.917743,131.343891 C157.560917,133.944526 152.969171,140.730557 153.253616,141.218176 C153.37552,141.380716 154.432028,142.030875 155.610441,142.721668 C156.748219,143.371827 161.05552,145.850557 165.119012,148.207383 L172.473933,152.474049 L174.01806,150.198494 C176.171711,146.907065 180.885362,142.396589 183.729806,140.893097 C191.897425,136.585795 203.112663,137.195319 208.639012,142.15278 C210.995838,144.30643 211.971076,146.541351 211.971076,149.83278 C211.971076,152.799129 211.605362,154.099446 210.061235,156.334367 C208.070123,159.178811 204.006631,161.576272 192.466314,166.574367 C179.259965,172.263256 173.571076,175.798494 168.369806,181.406113 C165.362822,184.656907 162.518377,189.858176 161.339965,194.206113 C160.364727,197.822621 160.120917,206.884208 160.892981,210.541351 C163.61552,223.300716 173.245996,232.199764 187.143139,234.841034 C191.653616,235.694367 202.137425,235.369287 206.566631,234.272145 Z" fill="#FFFFFF" transform="translate(194.578507, 176.190240) scale(1, -1) translate(-194.578507, -176.190240) "></path></g></svg>`,
+            description: 'TypeScript is a high-level programming language that adds static typing with optional type annotations to JavaScript. It is designed for developing large applications and transpiles to JavaScript.'
+        },
+        {
+            name: 'PHP',
+            svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 135"><defs><radialGradient id="SVGJUxgBb3l" cx=".837" cy="-125.811" r="363.057" gradientTransform="translate(76.464 81.918)scale(.463)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FFF" /><stop offset=".5" stop-color="#4C6B97" /><stop offset="1" stop-color="#231F20" /></radialGradient></defs><ellipse cx="128" cy="67.3" fill="url(#SVGJUxgBb3l)" rx="128" ry="67.3" /><ellipse cx="128" cy="67.3" fill="#6181B6" rx="123" ry="62.3" /><path fill="#FFF" d="m152.9 87.5l6.1-31.4c1.4-7.1.2-12.4-3.4-15.7c-3.5-3.2-9.5-4.8-18.3-4.8h-10.6l3-15.6c.1-.6 0-1.2-.4-1.7s-.9-.7-1.5-.7h-14.6c-1 0-1.8.7-2 1.6l-6.5 33.3c-.6-3.8-2-7-4.4-9.6c-4.3-4.9-11-7.4-20.1-7.4H52.1c-1 0-1.8.7-2 1.6L37 104.7c-.1.6 0 1.2.4 1.7s.9.7 1.5.7h14.7c1 0 1.8-.7 2-1.6l3.2-16.3h10.9c5.7 0 10.6-.6 14.3-1.8q5.85-1.95 10.5-6.3c2.5-2.3 4.6-4.9 6.2-7.7l-2.6 13.5c-.1.6 0 1.2.4 1.7s.9.7 1.5.7h14.6c1 0 1.8-.7 2-1.6l7.2-37h10c4.3 0 5.5.8 5.9 1.2c.3.3.9 1.5.2 5.2L134.1 87c-.1.6 0 1.2.4 1.7s.9.7 1.5.7h15c.9-.3 1.7-1 1.9-1.9m-67.6-26c-.9 4.7-2.6 8.1-5.1 10s-6.6 2.9-12 2.9h-6.5l4.7-24.2h8.4c6.2 0 8.7 1.3 9.7 2.4c1.3 1.6 1.6 4.7.8 8.9m130-18.6c-4.3-4.9-11-7.4-20.1-7.4h-28.3c-1 0-1.8.7-2 1.6l-13.1 67.5c-.1.6 0 1.2.4 1.7s.9.7 1.5.7h14.7c1 0 1.8-.7 2-1.6l3.2-16.3h10.9c5.7 0 10.6-.6 14.3-1.8q5.85-1.95 10.5-6.3c2.6-2.4 4.8-5.1 6.4-8s2.8-6.1 3.5-9.6c1.7-8.7.4-15.5-3.9-20.5M200 61.5c-.9 4.7-2.6 8.1-5.1 10s-6.6 2.9-12 2.9h-6.5l4.7-24.2h8.4c6.2 0 8.7 1.3 9.7 2.4c1.4 1.6 1.7 4.7.8 8.9" /><path fill="#000004" d="M74.8 48.2c5.6 0 9.3 1 11.2 3.1s2.3 5.6 1.3 10.6c-1 5.2-3 9-5.9 11.2q-4.35 3.3-13.2 3.3h-8.9l5.5-28.2zM39 105h14.7l3.5-17.9h12.6c5.6 0 10.1-.6 13.7-1.8s6.8-3.1 9.8-5.9q3.75-3.45 6-7.5c1.5-2.7 2.6-5.7 3.2-9c1.6-8 .4-14.2-3.5-18.7s-10.1-6.7-18.6-6.7H52.1zm74.3-85.4h14.6l-3.5 17.9h13c8.2 0 13.8 1.4 16.9 4.3s4 7.5 2.8 13.9L151 87.1h-14.8l5.8-29.9c.7-3.4.4-5.7-.7-6.9s-3.6-1.9-7.3-1.9h-11.7l-7.5 38.7h-14.6zm76.2 28.6c5.6 0 9.3 1 11.2 3.1s2.3 5.6 1.3 10.6c-1 5.2-3 9-5.9 11.2q-4.35 3.3-13.2 3.3H174l5.5-28.2zM153.7 105h14.7l3.5-17.9h12.6c5.6 0 10.1-.6 13.7-1.8s6.8-3.1 9.8-5.9q3.75-3.45 6-7.5c1.5-2.7 2.6-5.7 3.2-9c1.6-8 .4-14.2-3.5-18.7s-10.1-6.7-18.6-6.7h-28.3z" /></svg>`,
+            description: 'PHP is a server-side scripting language designed for web development. It powers dynamic content, database interactions, and session tracking, and is the foundation of platforms like WordPress.'
+        },
+        {
+            name: 'Bootstrap',
+            svg: `<svg viewBox="0 0 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid"><g><path d="M0,222.991225 C0,241.223474 14.7785318,256 33.0087747,256 L222.991225,256 C241.223474,256 256,241.221468 256,222.991225 L256,33.0087747 C256,14.7765263 241.221468,0 222.991225,0 L33.0087747,0 C14.7765263,0 0,14.7785318 0,33.0087747 L0,222.991225 Z" fill="#563D7C"></path><path d="M106.157563,113.238095 L106.157563,76.9845938 L138.069328,76.9845938 C141.108559,76.9845938 144.039202,77.2378593 146.861345,77.7443978 C149.683488,78.2509362 152.179961,79.1554557 154.35084,80.4579832 C156.52172,81.7605107 158.258397,83.5695496 159.560924,85.8851541 C160.863452,88.2007585 161.514706,91.1675823 161.514706,94.7857143 C161.514706,101.298352 159.560944,106.001853 155.653361,108.896359 C151.745779,111.790864 146.752832,113.238095 140.67437,113.238095 L106.157563,113.238095 L106.157563,113.238095 Z M72.07493,50.5 L72.07493,205.5 L147.186975,205.5 C154.133788,205.5 160.899594,204.631661 167.484594,202.894958 C174.069594,201.158255 179.93088,198.480877 185.068627,194.862745 C190.206375,191.244613 194.294803,186.577293 197.334034,180.860644 C200.373264,175.143996 201.892857,168.37819 201.892857,160.563025 C201.892857,150.866431 199.541107,142.581033 194.837535,135.706583 C190.133963,128.832132 183.00635,124.020088 173.454482,121.270308 C180.401295,117.941627 185.647508,113.672295 189.193277,108.462185 C192.739047,103.252075 194.511905,96.7395349 194.511905,88.9243697 C194.511905,81.6881057 193.317939,75.6097352 190.929972,70.6890756 C188.542005,65.7684161 185.177193,61.8247114 180.835434,58.8578431 C176.493676,55.8909749 171.283644,53.756309 165.205182,52.4537815 C159.12672,51.151254 152.397096,50.5 145.016106,50.5 L72.07493,50.5 L72.07493,50.5 Z M106.157563,179.015406 L106.157563,136.466387 L143.279412,136.466387 C150.660401,136.466387 156.594049,138.166883 161.080532,141.567927 C165.567016,144.968971 167.810224,150.649353 167.810224,158.609244 C167.810224,162.661552 167.122789,165.990183 165.747899,168.595238 C164.373009,171.200293 162.527789,173.262597 160.212185,174.782213 C157.89658,176.301828 155.219203,177.387252 152.179972,178.038515 C149.140741,178.689779 145.956833,179.015406 142.628151,179.015406 L106.157563,179.015406 L106.157563,179.015406 Z" fill="#FFFFFF"></path></g></svg>`,
+            description: 'Bootstrap is a free, open-source CSS framework directed at responsive, mobile-first front-end web development. It contains HTML, CSS, and JavaScript-based design templates for typography, forms, buttons, and navigation.'
+        },
+                {
+            name: 'Tailwind',
+            svg: `<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><title>file_type_tailwind</title><path d="M9,13.7q1.4-5.6,7-5.6c5.6,0,6.3,4.2,9.1,4.9q2.8.7,4.9-2.1-1.4,5.6-7,5.6c-5.6,0-6.3-4.2-9.1-4.9Q11.1,10.9,9,13.7ZM2,22.1q1.4-5.6,7-5.6c5.6,0,6.3,4.2,9.1,4.9q2.8.7,4.9-2.1-1.4,5.6-7,5.6c-5.6,0-6.3-4.2-9.1-4.9Q4.1,19.3,2,22.1Z" style="fill:#44a8b3" /></svg>`,
+            description: 'Tailwind CSS is a utility-first CSS framework for rapidly building custom user interfaces. It provides low-level utility classes to build designs directly in markup without writing custom CSS.'
+        },
+        {
+            name: 'Canva',
+            svg: `<svg viewBox="0 0 80 80" fill="none"><g clip-path="url(#canva__a)"><path d="M40 80C62.0914 80 80 62.0914 80 40C80 17.9086 62.0914 0 40 0C17.9086 0 0 17.9086 0 40C0 62.0914 17.9086 80 40 80Z" fill="#7D2AE7" /><path d="M40 80C62.0914 80 80 62.0914 80 40C80 17.9086 62.0914 0 40 0C17.9086 0 0 17.9086 0 40C0 62.0914 17.9086 80 40 80Z" fill="url(#canva__b)" /><path d="M40 80C62.0914 80 80 62.0914 80 40C80 17.9086 62.0914 0 40 0C17.9086 0 0 17.9086 0 40C0 62.0914 17.9086 80 40 80Z" fill="url(#canva__c)" /><path d="M40 80C62.0914 80 80 62.0914 80 40C80 17.9086 62.0914 0 40 0C17.9086 0 0 17.9086 0 40C0 62.0914 17.9086 80 40 80Z" fill="url(#canva__d)" /><path d="M40 80C62.0914 80 80 62.0914 80 40C80 17.9086 62.0914 0 40 0C17.9086 0 0 17.9086 0 40C0 62.0914 17.9086 80 40 80Z" fill="url(#canva__e)" /><path d="M57.2691 48.2052C56.939 48.2052 56.6485 48.484 56.3462 49.0928C52.9323 56.0153 47.0358 60.9134 40.2125 60.9134C32.3228 60.9134 27.437 53.7913 27.437 43.9522C27.437 27.2855 36.7232 17.6491 44.8796 17.6491C48.691 17.6491 51.0186 20.0443 51.0186 23.8559C51.0186 28.3796 48.4485 30.7748 48.4485 32.3702C48.4485 33.0864 48.8939 33.5201 49.7773 33.5201C53.3264 33.5201 57.4918 29.4419 57.4918 23.6808C57.4918 18.0947 52.63 13.9888 44.4737 13.9888C30.994 13.9888 19.0142 26.4858 19.0142 43.777C19.0142 57.1614 26.6572 66.0061 38.45 66.0061C50.9668 66.0061 58.2043 53.5526 58.2043 49.5105C58.2043 48.6153 57.7466 48.2052 57.2691 48.2052Z" fill="white" /></g></svg>`,
+            description: 'Canva is a graphic design platform that allows users to create social media graphics, presentations, posters, documents, and other visual content using drag-and-drop features and templates.'
+        },
+        {
+            name: 'ChatGPT',
+            svg: `<svg viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg"><title>OpenAI icon</title><path d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.142.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zM2.3408 7.8956a4.485 4.485 0 0 1 2.3655-1.9728V11.6a.7664.7664 0 0 0 .3879.6765l5.8144 3.3543-2.0201 1.1685a.0757.0757 0 0 1-.071 0l-4.8303-2.7865A4.504 4.504 0 0 1 2.3408 7.872zm16.5963 3.8558L13.1038 8.364 15.1192 7.2a.0757.0757 0 0 1 .071 0l4.8303 2.7913a4.4944 4.4944 0 0 1-.6765 8.1042v-5.6772a.79.79 0 0 0-.407-.667zm2.0107-3.0231l-.142-.0852-4.7735-2.7818a.7759.7759 0 0 0-.7854 0L9.409 9.2297V6.8974a.0662.0662 0 0 1 .0284-.0615l4.8303-2.7866a4.4992 4.4992 0 0 1 6.6802 4.66zM8.3065 12.863l-2.02-1.1638a.0804.0804 0 0 1-.038-.0567V6.0742a4.4992 4.4992 0 0 1 7.3757-3.4537l-.142.0805L8.704 5.459a.7948.7948 0 0 0-.3927.6813zm1.0976-2.3654l2.602-1.4998 2.6069 1.4998v2.9994l-2.5974 1.4997-2.6067-1.4997Z" fill="#FFFFFF" /></svg>`,
+            description: 'ChatGPT is an AI language model developed by OpenAI that generates human-like text responses. It assists with coding, content creation, problem-solving, and learning through conversational interaction.'
+        },
+                {
+            name: 'Gemini',
+            svg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32"><defs><filter id="SVGF5C8ndqs" width="39.274" height="43.217" x="-19.824" y="13.152" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_10859_4895" stdDeviation="2.46"/></filter><filter id="SVGBJufWdKO" width="84.868" height="85.688" x="-15.001" y="-40.257" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_10859_4895" stdDeviation="11.891"/></filter><filter id="SVGtc72nbkE" width="79.454" height="90.917" x="-20.776" y="11.927" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_10859_4895" stdDeviation="10.109"/></filter><filter id="SVGR3mqWgjY" width="79.731" height="81.505" x="-19.845" y="15.459" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_10859_4895" stdDeviation="10.109"/></filter><filter id="SVG4c5Aq83K" width="75.117" height="73.758" x="29.832" y="-11.552" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_10859_4895" stdDeviation="9.606"/></filter><filter id="SVGWe2xQeHM" width="78.135" height="78.758" x="-38.583" y="-16.253" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_10859_4895" stdDeviation="8.706"/></filter><filter id="SVGOt0ACb6l" width="78.877" height="77.539" x="8.107" y="-5.966" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_10859_4895" stdDeviation="7.775"/></filter><filter id="SVGdegYDeln" width="56.272" height="51.81" x="13.587" y="-18.488" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_10859_4895" stdDeviation="6.957"/></filter><filter id="SVGvZYPCM4f" width="70.856" height="69.306" x="-15.526" y="-31.297" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_10859_4895" stdDeviation="5.876"/></filter><filter id="SVGyupusctv" width="55.501" height="51.571" x="-14.168" y="20.964" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_10859_4895" stdDeviation="7.273"/></filter><linearGradient id="SVGgn6htdIO" x1="18.447" x2="52.153" y1="43.42" y2="15.004" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#4893FC"/><stop offset=".27" stop-color="#4893FC"/><stop offset=".777" stop-color="#969DFF"/><stop offset="1" stop-color="#BD99FE"/></linearGradient><mask id="SVG79hnTcsL" width="65" height="65" x="0" y="0" maskUnits="userSpaceOnUse"><path d="M32.447 0c.68 0 1.272.465 1.438 1.125a39 39 0 0 0 2 5.905q3.23 7.5 8.854 13.125q5.626 5.626 13.125 8.855a39 39 0 0 0 5.905 1.999c.66.166 1.125.758 1.125 1.438s-.464 1.273-1.125 1.439a39 39 0 0 0-5.905 1.999q-7.5 3.23-13.125 8.854q-5.625 5.627-8.854 13.125a39 39 0 0 0-2 5.906a1.485 1.485 0 0 1-1.438 1.124c-.68 0-1.272-.464-1.438-1.125a39 39 0 0 0-2-5.905q-3.228-7.5-8.854-13.125T7.03 35.885a39 39 0 0 0-5.905-2A1.485 1.485 0 0 1 0 32.448c0-.68.465-1.272 1.125-1.438a39 39 0 0 0 5.905-2q7.5-3.229 13.125-8.854C25.78 14.53 26.857 12.03 29.01 7.03a39 39 0 0 0 1.999-5.905A1.485 1.485 0 0 1 32.447 0"/><path fill="url(#SVGgn6htdIO)" d="M32.447 0c.68 0 1.272.465 1.438 1.125a39 39 0 0 0 2 5.905q3.23 7.5 8.854 13.125q5.626 5.626 13.125 8.855a39 39 0 0 0 5.905 1.999c.66.166 1.125.758 1.125 1.438s-.464 1.273-1.125 1.439a39 39 0 0 0-5.905 1.999q-7.5 3.23-13.125 8.854q-5.625 5.627-8.854 13.125a39 39 0 0 0-2 5.906a1.485 1.485 0 0 1-1.438 1.124c-.68 0-1.272-.464-1.438-1.125a39 39 0 0 0-2-5.905q-3.228-7.5-8.854-13.125T7.03 35.885a39 39 0 0 0-5.905-2A1.485 1.485 0 0 1 0 32.448c0-.68.465-1.272 1.125-1.438a39 39 0 0 0 5.905-2q7.5-3.229 13.125-8.854C25.78 14.53 26.857 12.03 29.01 7.03a39 39 0 0 0 1.999-5.905A1.485 1.485 0 0 1 32.447 0"/></mask></defs><g mask="url(#SVG79hnTcsL)" transform="translate(2.15 2.15)scale(.42687)"><g filter="url(#SVGF5C8ndqs)"><ellipse cx="14.407" cy="16.95" fill="#ffe432" rx="14.407" ry="16.95" transform="rotate(19.552 -44.575 -16.496)"/></g><g filter="url(#SVGBJufWdKO)"><ellipse cx="27.433" cy="2.587" fill="#fc413d" rx="18.652" ry="19.062"/></g><g filter="url(#SVGtc72nbkE)"><ellipse cx="18.951" cy="57.386" fill="#00b95c" rx="19.493" ry="25.253" transform="rotate(-2.799 18.951 57.386)"/></g><g filter="url(#SVGtc72nbkE)"><ellipse cx="18.951" cy="57.386" fill="#00b95c" rx="19.493" ry="25.253" transform="rotate(-2.799 18.951 57.386)"/></g><g filter="url(#SVGR3mqWgjY)"><ellipse cx="20.02" cy="56.211" fill="#00b95c" rx="19.107" ry="21.034" transform="rotate(-31.318 20.02 56.211)"/></g><g filter="url(#SVG4c5Aq83K)"><ellipse cx="67.391" cy="25.327" fill="#3186ff" rx="18.346" ry="17.667"/></g><g filter="url(#SVGWe2xQeHM)"><ellipse cx="21.222" cy="22.384" fill="#fbbc04" rx="21.222" ry="22.384" transform="rotate(37.252 9.752 -8.009)skewX(.001)"/></g><g filter="url(#SVGOt0ACb6l)"><ellipse cx="24.469" cy="22.604" fill="#3186ff" rx="24.469" ry="22.604" transform="rotate(34.51 19.587 64.852)"/></g><g filter="url(#SVGdegYDeln)"><path fill="#749bff" d="M54.984-2.336c2.833 3.852-.807 11.34-8.13 16.728c-7.325 5.386-15.558 6.63-18.39 2.779c-2.834-3.852.806-11.341 8.13-16.728c7.323-5.387 15.557-6.631 18.39-2.78z"/></g><g filter="url(#SVGvZYPCM4f)"><ellipse cx="19.902" cy="3.356" fill="#fc413d" rx="27.971" ry="17.388" transform="rotate(-42.848 19.902 3.356)"/></g><g filter="url(#SVGyupusctv)"><ellipse cx="13.583" cy="46.75" fill="#ffee48" rx="14.989" ry="8.717" transform="rotate(35.592 13.583 46.75)"/></g></g></svg>`,
+            description: 'Gemini is Google large language model LLM. More broadly, its a family of multimodal AI models designed to process multiple modalities or types of data, including audio, images, software code, text and video.'
+        },
+                {
+            name: 'Grok',
+            svg: `<svg viewBox="0 0 1024 1024" fill="none"><path d="M395.479 633.828L735.91 381.105C752.599 368.715 776.454 373.548 784.406 392.792C826.26 494.285 807.561 616.253 724.288 699.996C641.016 783.739 525.151 802.104 419.247 760.277L303.556 814.143C469.49 928.202 670.987 899.995 796.901 773.282C896.776 672.843 927.708 535.937 898.785 412.476L899.047 412.739C857.105 231.37 909.358 158.874 1016.4 10.6326C1018.93 7.11771 1021.47 3.60279 1024 0L883.144 141.651V141.212L395.392 633.916" fill="white" /><path d="M325.226 695.251C206.128 580.84 226.662 403.776 328.285 301.668C403.431 226.097 526.549 195.254 634.026 240.596L749.454 186.994C728.657 171.88 702.007 155.623 671.424 144.2C533.19 86.9942 367.693 115.465 255.323 228.382C147.234 337.081 113.244 504.215 171.613 646.833C215.216 753.423 143.739 828.818 71.7385 904.916C46.2237 931.893 20.6216 958.87 0 987.429L325.139 695.339" fill="white" /></svg>`,
+            description: "Grok is an AI chatbot developed by xAI (Elon Musk's team) that provides answers with a witty, rebellious personality. It integrates with real-time data from the X platform (formerly Twitter)."
+        },
+                {
+            name: 'DeepSeek',
+            svg: `<svg style="flex:none;line-height:1" viewBox="0 0 24 24"><path fill="#4D6BFE" d="M23.748 4.482c-.254-.124-.364.113-.512.234-.051.039-.094.09-.137.136-.372.397-.806.657-1.373.626-.829-.046-1.537.214-2.163.848-.133-.782-.575-1.248-1.247-1.548-.352-.156-.708-.311-.955-.65-.172-.241-.219-.51-.305-.774-.055-.16-.11-.323-.293-.35-.2-.031-.278.136-.356.276-.313.572-.434 1.202-.422 1.84.027 1.436.633 2.58 1.838 3.393.137.093.172.187.129.323-.082.28-.18.552-.266.833-.055.179-.137.217-.329.14a5.526 5.526 0 0 1-1.736-1.18c-.857-.828-1.631-1.742-2.597-2.458a11.365 11.365 0 0 0-.689-.471c-.985-.957.13-1.743.388-1.836.27-.098.093-.432-.779-.428-.872.004-1.67.295-2.687.684a3.055 3.055 0 0 1-.465.137 9.597 9.597 0 0 0-2.883-.102c-1.885.21-3.39 1.102-4.497 2.623C.082 8.606-.231 10.684.152 12.85c.403 2.284 1.569 4.175 3.36 5.653 1.858 1.533 3.997 2.284 6.438 2.14 1.482-.085 3.133-.284 4.994-1.86.47.234.962.327 1.78.397.63.059 1.236-.03 1.705-.128.735-.156.684-.837.419-.961-2.155-1.004-1.682-.595-2.113-.926 1.096-1.296 2.746-2.642 3.392-7.003.05-.347.007-.565 0-.845-.004-.17.035-.237.23-.256a4.173 4.173 0 0 0 1.545-.475c1.396-.763 1.96-2.015 2.093-3.517.02-.23-.004-.467-.247-.588zM11.581 18c-2.089-1.642-3.102-2.183-3.52-2.16-.392.024-.321.471-.235.763.09.288.207.486.371.739.114.167.192.416-.113.603-.673.416-1.842-.14-1.897-.167-1.361-.802-2.5-1.86-3.301-3.307-.774-1.393-1.224-2.887-1.298-4.482-.02-.386.093-.522.477-.592a4.696 4.696 0 0 1 1.529-.039c2.132.312 3.946 1.265 5.468 2.774.868.86 1.525 1.887 2.202 2.891.72 1.066 1.494 2.082 2.48 2.914.348.292.625.514.891.677-.802.09-2.14.11-3.054-.614zm1-6.44a.306.306 0 0 1 .415-.287.302.302 0 0 1 .2.288.306.306 0 0 1-.31.307.303.303 0 0 1-.304-.308zm3.11 1.596c-.2.081-.399.151-.59.16a1.245 1.245 0 0 1-.798-.254c-.274-.23-.47-.358-.552-.758a1.73 1.73 0 0 1 .016-.588c.07-.327-.008-.537-.239-.727-.187-.156-.426-.199-.688-.199a.559.559 0 0 1-.254-.078.253.253 0 0 1-.114-.358c.028-.054.16-.186.192-.21.356-.202.767-.136 1.146.016.352.144.618.408 1.001.782.391.451.462.576.685.914.176.265.336.537.445.848.067.195-.019.354-.25.452z" /></svg>`,
+            description: 'DeepSeek is an AI coding assistant that understands and generates code in multiple programming languages. It provides intelligent code completion, debugging help, and documentation explanations.'
+        },
+        {
+            name: 'Copilot',
+            svg: `<svg preserveAspectRatio="xMidYMid" viewBox="0 0 256 208"><path fill="#fff" d="M205.3 31.4c14 14.8 20 35.2 22.5 63.6 6.6 0 12.8 1.5 17 7.2l7.8 10.6c2.2 3 3.4 6.6 3.4 10.4v28.7a12 12 0 0 1-4.8 9.5C215.9 187.2 172.3 208 128 208c-49 0-98.2-28.3-123.2-46.6a12 12 0 0 1-4.8-9.5v-28.7c0-3.8 1.2-7.4 3.4-10.5l7.8-10.5c4.2-5.7 10.4-7.2 17-7.2 2.5-28.4 8.4-48.8 22.5-63.6C77.3 3.2 112.6 0 127.6 0h.4c14.7 0 50.4 2.9 77.3 31.4ZM128 78.7c-3 0-6.5.2-10.3.6a27.1 27.1 0 0 1-6 12.1 45 45 0 0 1-32 13c-6.8 0-13.9-1.5-19.7-5.2-5.5 1.9-10.8 4.5-11.2 11-.5 12.2-.6 24.5-.6 36.8 0 6.1 0 12.3-.2 18.5 0 3.6 2.2 6.9 5.5 8.4C79.9 185.9 105 192 128 192s48-6 74.5-18.1a9.4 9.4 0 0 0 5.5-8.4c.3-18.4 0-37-.8-55.3-.4-6.6-5.7-9.1-11.2-11-5.8 3.7-13 5.1-19.7 5.1a45 45 0 0 1-32-12.9 27.1 27.1 0 0 1-6-12.1c-3.4-.4-6.9-.5-10.3-.6Zm-27 44c5.8 0 10.5 4.6 10.5 10.4v19.2a10.4 10.4 0 0 1-20.8 0V133c0-5.8 4.6-10.4 10.4-10.4Zm53.4 0c5.8 0 10.4 4.6 10.4 10.4v19.2a10.4 10.4 0 0 1-20.8 0V133c0-5.8 4.7-10.4 10.4-10.4Zm-73-94.4c-11.2 1.1-20.6 4.8-25.4 10-10.4 11.3-8.2 40.1-2.2 46.2A31.2 31.2 0 0 0 75 91.7c6.8 0 19.6-1.5 30.1-12.2 4.7-4.5 7.5-15.7 7.2-27-.3-9.1-2.9-16.7-6.7-19.9-4.2-3.6-13.6-5.2-24.2-4.3Zm69 4.3c-3.8 3.2-6.4 10.8-6.7 19.9-.3 11.3 2.5 22.5 7.2 27a41.7 41.7 0 0 0 30 12.2c8.9 0 17-2.9 21.3-7.2 6-6.1 8.2-34.9-2.2-46.3-4.8-5-14.2-8.8-25.4-9.9-10.6-1-20 .7-24.2 4.3ZM128 56c-2.6 0-5.6.2-9 .5.4 1.7.5 3.7.7 5.7 0 1.5 0 3-.2 4.5 3.2-.3 6-.3 8.5-.3 2.6 0 5.3 0 8.5.3-.2-1.6-.2-3-.2-4.5.2-2 .3-4 .7-5.7-3.4-.3-6.4-.5-9-.5Z" /></svg>`,
+            description: 'GitHub Copilot is an AI pair programmer that suggests code and entire functions in real-time right from your editor. It helps developers write code faster and with less work.'
+        },
+        {
+            name: 'Perplexity',
+            svg: `<svg viewBox="0 0 48 48"><path fill="none" stroke="#20808d" stroke-linecap="round" stroke-linejoin="round" d="M24 4.5v39M13.73 16.573v-9.99L24 16.573m0 14.5L13.73 41.417V27.01L24 16.573m0 0l10.27-9.99v9.99" /><path fill="none" stroke="#20808d" stroke-linecap="round" stroke-linejoin="round" d="M13.73 31.396H9.44V16.573h29.12v14.823h-4.29" /><path fill="none" stroke="#20808d" stroke-linecap="round" stroke-linejoin="round" d="M24 16.573L34.27 27.01v14.407L24 31.073" /></svg>`,
+            description: 'Perplexity AI is an answer engine that provides precise answers with cited sources. It combines large language models with real-time web search for accurate, up-to-date information.'
+        },
+        {
+            name: 'Hugging Face',
+            svg: `<svg viewBox="0 0 95 88" xmlns:xlink="http://www.w3.org/1999/xlink"><g fill="none" fill-rule="evenodd"><g><g><g><g><g><path d="M93.7930402,70.08 C94.5430402,72.24 94.3630402,74.54 93.3630402,76.54 C92.6430402,78 91.6130402,79.13 90.3530402,80.14 C88.8330402,81.34 86.9430402,82.36 84.6630402,83.34 C81.9430402,84.5 78.6230402,85.59 77.1030402,85.99 C73.2130402,87 69.4730402,87.64 65.6830402,87.67 C60.2630402,87.72 55.5930402,86.44 52.2730402,83.17 C50.5530402,83.38 48.8130402,83.5 47.0630402,83.5 C45.4030402,83.5 43.7630402,83.4 42.1330402,83.2 C38.8030402,86.45 34.1530402,87.72 28.7530402,87.67 C24.9630402,87.64 21.2230402,87 17.3230402,85.99 C15.8130402,85.59 12.4930402,84.5 9.77304019,83.34 C7.49304019,82.36 5.60304019,81.34 4.09304019,80.14 C2.82304019,79.13 1.79304019,78 1.07304019,76.54 C0.0830401858,74.54 -0.106959814,72.24 0.653040186,70.08 C-0.0469598142,68.43 -0.226959814,66.54 0.323040186,64.45 C0.573040186,63.5 0.983040186,62.62 1.50304019,61.84 C1.39304019,61.43 1.30304019,61.01 1.24304019,60.55 C0.863040186,57.81 1.81304019,55.31 3.60304019,53.37 C4.48304019,52.4 5.43304019,51.73 6.42304019,51.3 C5.69304019,48.2 5.31304019,45.01 5.31304019,41.75 C5.31304019,18.69 24.0030402,0 47.0630402,0 C54.9830402,0 62.3930402,2.2 68.7130402,6.04 C69.8530402,6.74 70.9730402,7.49 72.0430402,8.29 C72.5730402,8.69 73.1030402,9.1 73.6130402,9.53 C74.1330402,9.95 74.6430402,10.39 75.1330402,10.84 C76.6130402,12.19 78.0030402,13.64 79.2730402,15.19 C79.7030402,15.7 80.1130402,16.23 80.5130402,16.77 C81.3230402,17.84 82.0730402,18.95 82.7630402,20.1 C83.8130402,21.82 84.7330402,23.62 85.5330402,25.49 C86.0630402,26.74 86.5230402,28.02 86.9330402,29.33 C87.5430402,31.29 88.0130402,33.31 88.3330402,35.39 C88.4330402,36.08 88.5230402,36.78 88.5930402,37.48 C88.7330402,38.88 88.8130402,40.3 88.8130402,41.75 C88.8130402,44.97 88.4330402,48.13 87.7230402,51.18 C88.8230402,51.61 89.8630402,52.31 90.8330402,53.37 C92.6230402,55.31 93.5730402,57.82 93.1930402,60.56 C93.1330402,61.01 93.0430402,61.43 92.9330402,61.84 C93.4530402,62.62 93.8630402,63.5 94.1130402,64.45 C94.6630402,66.54 94.4830402,68.43 93.7930402,70.08" fill="#FFFFFF" fill-rule="nonzero" /><circle fill="#FFD21E" fill-rule="nonzero" cx="46.75" cy="41.75" r="34.75" /><path d="M81.5,41.75 C81.5,22.5581049 65.9418951,7 46.75,7 C27.5581049,7 12,22.5581049 12,41.75 C12,60.9418951 27.5581049,76.5 46.75,76.5 C65.9418951,76.5 81.5,60.9418951 81.5,41.75 Z M8,41.75 C8,20.3489659 25.3489659,3 46.75,3 C68.1510341,3 85.5,20.3489659 85.5,41.75 C85.5,63.1510341 68.1510341,80.5 46.75,80.5 C25.3489659,80.5 8,63.1510341 8,41.75 Z" fill="#FFAC03" fill-rule="nonzero" /><path d="M57.1723547,31.7151181 C58.0863134,32.7107502 57.3040427,35.2620959 58.7620957,35.2620959 C61.5235194,35.2620959 63.7620957,33.0235196 63.7620957,30.2620959 C63.7620957,27.5006721 61.5235194,25.2620959 58.7620957,25.2620959 C56.0006719,25.2620959 53.7620957,27.5006721 53.7620957,30.2620959 C53.7620957,31.5654666 56.3553563,30.8251108 57.1723547,31.7151181 Z" fill="#3A3B45" fill-rule="nonzero" transform="translate(58.762096, 30.262096) rotate(-28.000000) translate(-58.762096, -30.262096)" /><path d="M32.1723553,31.7151181 C33.086314,32.7107502 32.3040433,35.2620959 33.7620963,35.2620959 C36.52352,35.2620959 38.7620963,33.0235196 38.7620963,30.2620959 C38.7620963,27.5006721 36.52352,25.2620959 33.7620963,25.2620959 C31.0006725,25.2620959 28.7620963,27.5006721 28.7620963,30.2620959 C28.7620963,31.5654666 31.3553569,30.8251108 32.1723553,31.7151181 Z" fill="#3A3B45" fill-rule="nonzero" transform="translate(33.762096, 30.262096) scale(-1, 1) rotate(-28.000000) translate(-33.762096, -30.262096)" /><g transform="translate(33.500000, 41.500000)"><g fill-rule="nonzero" fill="#3A3B45"><path d="M13,14.7890193 C22.8284801,14.7890193 26,6.02605902 26,1.5261751 C26,-0.812484109 24.4279133,-0.0763570998 21.9099482,1.17020987 C19.5830216,2.32219957 16.4482998,3.91011313 13,3.91011313 C5.82029825,3.91011313 0,-2.97370882 0,1.5261751 C0,6.02605902 3.17151989,14.7890193 13,14.7890193 Z" /></g><g><g /><path d="M13.25,25 C18.0399291,25 21.9229338,21.1169953 21.9229338,16.3270662 C21.9229338,12.5962324 19.5672252,9.41560375 16.2620987,8.19147116 C16.1404592,8.14641904 16.0175337,8.10401696 15.8933923,8.06433503 C15.0599892,7.79793679 14.1717882,10.6623144 13.25,10.6623144 C12.3886883,10.6623144 11.5567012,7.77968641 10.7713426,8.01349068 C7.18916268,9.07991937 4.57706621,12.3984489 4.57706621,16.3270662 C4.57706621,21.1169953 8.46007093,25 13.25,25 Z" fill="#EF4E4E" fill-rule="nonzero" mask="url(#hugging_face__b)" /></g></g><circle fill="#FFD21E" fill-rule="nonzero" style="mix-blend-mode:multiply" cx="70.25" cy="33.75" r="3.25" /><circle fill="#FFD21E" fill-rule="nonzero" style="mix-blend-mode:multiply" cx="23.75" cy="33.75" r="3.25" /></g></g></g><g transform="translate(3.000000, 48.000000)" fill-rule="nonzero"><path d="M14.0619453,0 L14.0619453,0 C12.4429453,0 10.9959453,0.665 9.98694534,1.871 C9.36294534,2.618 8.71094534,3.822 8.65794534,5.625 C7.97894534,5.43 7.32594534,5.321 6.71594534,5.321 C5.16594534,5.321 3.76594534,5.915 2.77594534,6.994 C1.50394534,8.379 0.938945345,10.081 1.18494534,11.784 C1.30194534,12.595 1.57294534,13.322 1.97794534,13.995 C1.12394534,14.686 0.494945345,15.648 0.190945345,16.805 C-0.0470546551,17.712 -0.291054655,19.601 0.982945345,21.547 C0.901945345,21.674 0.825945345,21.806 0.754945345,21.941 C-0.0110546551,23.395 -0.0600546551,25.038 0.615945345,26.568 C1.64094534,28.887 4.18794534,30.714 9.13394534,32.675 C12.2109453,33.895 15.0259453,34.675 15.0509453,34.682 C19.1189453,35.737 22.7979453,36.273 25.9829453,36.273 C31.8369453,36.273 36.0279453,34.48 38.4399453,30.944 C42.3219453,25.25 41.7669453,20.042 36.7439453,15.022 C33.9639453,12.244 32.1159453,8.148 31.7309453,7.249 C30.9549453,4.587 28.9029453,1.628 25.4919453,1.628 L25.4909453,1.628 C25.2039453,1.628 24.9139453,1.651 24.6279453,1.696 C23.1339453,1.931 21.8279453,2.791 20.8949453,4.085 C19.8879453,2.833 18.9099453,1.837 18.0249453,1.275 C16.6909453,0.429 15.3579453,0 14.0619453,0 M14.0619453,4 C14.5719453,4 15.1949453,4.217 15.8819453,4.653 C18.0149453,6.006 22.1309453,13.081 23.6379453,15.833 C24.1429453,16.755 25.0059453,17.145 25.7829453,17.145 C27.3249453,17.145 28.5289453,15.612 25.9239453,13.664 C22.0069453,10.733 23.3809453,5.942 25.2509453,5.647 C25.3329453,5.634 25.4139453,5.628 25.4919453,5.628 C27.1919453,5.628 27.9419453,8.558 27.9419453,8.558 C27.9419453,8.558 30.1399453,14.078 33.9159453,17.851 C37.6919453,21.625 37.8869453,24.654 35.1349453,28.69 C33.2579453,31.442 29.6649453,32.273 25.9829453,32.273 C22.1639453,32.273 18.2489453,31.379 16.0549453,30.81 C15.9469453,30.782 2.60394534,27.013 4.29394534,23.805 C4.57794534,23.266 5.04594534,23.05 5.63494534,23.05 C8.01494534,23.05 12.3439453,26.592 14.2049453,26.592 C14.6209453,26.592 14.9139453,26.415 15.0339453,25.983 C15.8269453,23.138 2.97694534,21.942 4.05994534,17.821 C4.25094534,17.092 4.76894534,16.796 5.49694534,16.797 C8.64194534,16.797 15.6979453,22.328 17.1769453,22.328 C17.2899453,22.328 17.3709453,22.295 17.4149453,22.225 C18.1559453,21.029 17.7499453,20.194 12.5269453,17.033 C7.30394534,13.871 3.63794534,11.969 5.72294534,9.699 C5.96294534,9.437 6.30294534,9.321 6.71594534,9.321 C9.88694534,9.322 17.3789453,16.14 17.3789453,16.14 C17.3789453,16.14 19.4009453,18.243 20.6239453,18.243 C20.9049453,18.243 21.1439453,18.132 21.3059453,17.858 C22.1729453,16.396 13.2529453,9.636 12.7499453,6.847 C12.4089453,4.957 12.9889453,4 14.0619453,4" fill="#FFAC03" /><path d="M35.1348,28.6899 C37.8868,24.6539 37.6918,21.6249 33.9158,17.8509 C30.1398,14.0779 27.9418,8.5579 27.9418,8.5579 C27.9418,8.5579 27.1208,5.3519 25.2508,5.6469 C23.3808,5.9419 22.0078,10.7329 25.9248,13.6639 C29.8418,16.5939 25.1448,18.5849 23.6378,15.8329 C22.1308,13.0809 18.0158,6.0059 15.8818,4.6529 C13.7488,3.2999 12.2468,4.0579 12.7498,6.8469 C13.2528,9.6359 22.1738,16.3959 21.3058,17.8589 C20.4378,19.3209 17.3788,16.1399 17.3788,16.1399 C17.3788,16.1399 7.8068,7.4289 5.7228,9.6989 C3.6388,11.9689 7.3038,13.8709 12.5268,17.0329 C17.7508,20.1939 18.1558,21.0289 17.4148,22.2249 C16.6728,23.4209 5.1428,13.6999 4.0598,17.8209 C2.9778,21.9419 15.8268,23.1379 15.0338,25.9829 C14.2408,28.8289 5.9828,20.5979 4.2938,23.8049 C2.6038,27.0129 15.9468,30.7819 16.0548,30.8099 C20.3648,31.9279 31.3108,34.2969 35.1348,28.6899" fill="#FFD21E" /></g><g transform="translate(70.500000, 66.500000) scale(-1, 1) translate(-70.500000, -66.500000) translate(50.000000, 48.000000)" fill-rule="nonzero"><path d="M14.0619453,0 L14.0619453,0 C12.4429453,0 10.9959453,0.665 9.98694534,1.871 C9.36294534,2.618 8.71094534,3.822 8.65794534,5.625 C7.97894534,5.43 7.32594534,5.321 6.71594534,5.321 C5.16594534,5.321 3.76594534,5.915 2.77594534,6.994 C1.50394534,8.379 0.938945345,10.081 1.18494534,11.784 C1.30194534,12.595 1.57294534,13.322 1.97794534,13.995 C1.12394534,14.686 0.494945345,15.648 0.190945345,16.805 C-0.0470546551,17.712 -0.291054655,19.601 0.982945345,21.547 C0.901945345,21.674 0.825945345,21.806 0.754945345,21.941 C-0.0110546551,23.395 -0.0600546551,25.038 0.615945345,26.568 C1.64094534,28.887 4.18794534,30.714 9.13394534,32.675 C12.2109453,33.895 15.0259453,34.675 15.0509453,34.682 C19.1189453,35.737 22.7979453,36.273 25.9829453,36.273 C31.8369453,36.273 36.0279453,34.48 38.4399453,30.944 C42.3219453,25.25 41.7669453,20.042 36.7439453,15.022 C33.9639453,12.244 32.1159453,8.148 31.7309453,7.249 C30.9549453,4.587 28.9029453,1.628 25.4919453,1.628 L25.4909453,1.628 C25.2039453,1.628 24.9139453,1.651 24.6279453,1.696 C23.1339453,1.931 21.8279453,2.791 20.8949453,4.085 C19.8879453,2.833 18.9099453,1.837 18.0249453,1.275 C16.6909453,0.429 15.3579453,0 14.0619453,0 M14.0619453,4 C14.5719453,4 15.1949453,4.217 15.8819453,4.653 C18.0149453,6.006 22.1309453,13.081 23.6379453,15.833 C24.1429453,16.755 25.0059453,17.145 25.7829453,17.145 C27.3249453,17.145 28.5289453,15.612 25.9239453,13.664 C22.0069453,10.733 23.3809453,5.942 25.2509453,5.647 C25.3329453,5.634 25.4139453,5.628 25.4919453,5.628 C27.1919453,5.628 27.9419453,8.558 27.9419453,8.558 C27.9419453,8.558 30.1399453,14.078 33.9159453,17.851 C37.6919453,21.625 37.8869453,24.654 35.1349453,28.69 C33.2579453,31.442 29.6649453,32.273 25.9829453,32.273 C22.1639453,32.273 18.2489453,31.379 16.0549453,30.81 C15.9469453,30.782 2.60394534,27.013 4.29394534,23.805 C4.57794534,23.266 5.04594534,23.05 5.63494534,23.05 C8.01494534,23.05 12.3439453,26.592 14.2049453,26.592 C14.6209453,26.592 14.9139453,26.415 15.0339453,25.983 C15.8269453,23.138 2.97694534,21.942 4.05994534,17.821 C4.25094534,17.092 4.76894534,16.796 5.49694534,16.797 C8.64194534,16.797 15.6979453,22.328 17.1769453,22.328 C17.2899453,22.328 17.3709453,22.295 17.4149453,22.225 C18.1559453,21.029 17.7499453,20.194 12.5269453,17.033 C7.30394534,13.871 3.63794534,11.969 5.72294534,9.699 C5.96294534,9.437 6.30294534,9.321 6.71594534,9.321 C9.88694534,9.322 17.3789453,16.14 17.3789453,16.14 C17.3789453,16.14 19.4009453,18.243 20.6239453,18.243 C20.9049453,18.243 21.1439453,18.132 21.3059453,17.858 C22.1729453,16.396 13.2529453,9.636 12.7499453,6.847 C12.4089453,4.957 12.9889453,4 14.0619453,4" fill="#FFAC03" /><path d="M35.1348,28.6899 C37.8868,24.6539 37.6918,21.6249 33.9158,17.8509 C30.1398,14.0779 27.9418,8.5579 27.9418,8.5579 C27.9418,8.5579 27.1208,5.3519 25.2508,5.6469 C23.3808,5.9419 22.0078,10.7329 25.9248,13.6639 C29.8418,16.5939 25.1448,18.5849 23.6378,15.8329 C22.1308,13.0809 18.0158,6.0059 15.8818,4.6529 C13.7488,3.2999 12.2468,4.0579 12.7498,6.8469 C13.2528,9.6359 22.1738,16.3959 21.3058,17.8589 C20.4378,19.3209 17.3788,16.1399 17.3788,16.1399 C17.3788,16.1399 7.8068,7.4289 5.7228,9.6989 C3.6388,11.9689 7.3038,13.8709 12.5268,17.0329 C17.7508,20.1939 18.1558,21.0289 17.4148,22.2249 C16.6728,23.4209 5.1428,13.6999 4.0598,17.8209 C2.9778,21.9419 15.8268,23.1379 15.0338,25.9829 C14.2408,28.8289 5.9828,20.5979 4.2938,23.8049 C2.6038,27.0129 15.9468,30.7819 16.0548,30.8099 C20.3648,31.9279 31.3108,34.2969 35.1348,28.6899" fill="#FFD21E" /></g></g></g></g></svg>`,
+            description: 'Hugging Face is an AI community and platform that provides tools for building, training, and deploying machine learning models. It hosts thousands of pre-trained models and datasets for NLP and computer vision.'
+        },
+        { 
+            name: 'Claude', 
+            svg: `<svg preserveAspectRatio="xMidYMid" viewBox="0 0 256 257"><path fill="#D97757" d="m50.228 170.321 50.357-28.257.843-2.463-.843-1.361h-2.462l-8.426-.518-28.775-.778-24.952-1.037-24.175-1.296-6.092-1.297L0 125.796l.583-3.759 5.12-3.434 7.324.648 16.202 1.101 24.304 1.685 17.629 1.037 26.118 2.722h4.148l.583-1.685-1.426-1.037-1.101-1.037-25.147-17.045-27.22-18.017-14.258-10.37-7.713-5.25-3.888-4.925-1.685-10.758 7-7.713 9.397.649 2.398.648 9.527 7.323 20.35 15.75L94.817 91.9l3.889 3.24 1.555-1.102.195-.777-1.75-2.917-14.453-26.118-15.425-26.572-6.87-11.018-1.814-6.61c-.648-2.723-1.102-4.991-1.102-7.778l7.972-10.823L71.42 0 82.05 1.426l4.472 3.888 6.61 15.101 10.694 23.786 16.591 32.34 4.861 9.592 2.592 8.879.973 2.722h1.685v-1.556l1.36-18.211 2.528-22.36 2.463-28.776.843-8.1 4.018-9.722 7.971-5.25 6.222 2.981 5.12 7.324-.713 4.73-3.046 19.768-5.962 30.98-3.889 20.739h2.268l2.593-2.593 10.499-13.934 17.628-22.036 7.778-8.749 9.073-9.657 5.833-4.601h11.018l8.1 12.055-3.628 12.443-11.342 14.388-9.398 12.184-13.48 18.147-8.426 14.518.778 1.166 2.01-.194 30.46-6.481 16.462-2.982 19.637-3.37 8.88 4.148.971 4.213-3.5 8.62-20.998 5.184-24.628 4.926-36.682 8.685-.454.324.519.648 16.526 1.555 7.065.389h17.304l32.21 2.398 8.426 5.574 5.055 6.805-.843 5.184-12.962 6.611-17.498-4.148-40.83-9.721-14-3.5h-1.944v1.167l11.666 11.406 21.387 19.314 26.767 24.887 1.36 6.157-3.434 4.86-3.63-.518-23.526-17.693-9.073-7.972-20.545-17.304h-1.36v1.814l4.73 6.935 25.017 37.59 1.296 11.536-1.814 3.76-6.481 2.268-7.13-1.297-14.647-20.544-15.1-23.138-12.185-20.739-1.49.843-7.194 77.448-3.37 3.953-7.778 2.981-6.48-4.925-3.436-7.972 3.435-15.749 4.148-20.544 3.37-16.333 3.046-20.285 1.815-6.74-.13-.454-1.49.194-15.295 20.999-23.267 31.433-18.406 19.702-4.407 1.75-7.648-3.954.713-7.064 4.277-6.286 25.47-32.405 15.36-20.092 9.917-11.6-.065-1.686h-.583L44.07 198.125l-12.055 1.555-5.185-4.86.648-7.972 2.463-2.593 20.35-13.999-.064.065Z" /></svg>`, 
+            description: 'Claude is an AI assistant developed by Anthropic that excels at reasoning, analysis, and safe interactions. It handles complex tasks like document summarization, coding, and strategic planning.' 
+        }
+];
+
+export default skillsData;
+</file>
+
+<file path="vite.config.js">
+// vite.config.js
+
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  // BEFORE:
+  // base: "/portfolio/", 
+  
+  // AFTER:
+  base: "/", 
+
+  plugins: [react()],
+})
+</file>
+
+<file path="src/data/projectsData.js">
+// Import each project image at the top of the file
+import toolsForDevsSeosImage from "../assets/images/tools-for-devs-seos.jpg";
+import urlPathSeparatorImage from "../assets/images/url-path-separator.jpg";
+import multiFormatLinkConverterImage from "../assets/images/multi-format-link-converter.jpg";
+import guestbookExtractorImage from "../assets/images/guestbook-extractor.jpg";
+import allAboutCodingImage from "../assets/images/all-about-coding.jpg";
+import domainCheckerImage from "../assets/images/domain-checker.jpg";
+import shaFabricsImage from "../assets/images/sha-fabrics.jpg";
+import codeChunker from "../assets/images/code-chunker.jpg";
+import metaScraper from "../assets/images/meta-scraper.jpg";
+import devSeoTools from "../assets/images/devseo-tools.jpg";
+import liveCssEditor from "../assets/images/live-css-editor.jpg";
+import LinkBuildingAutomator from "../assets/images/link-building-automator.jpg";
+import LinkBuildingExecutionGenerator from "../assets/images/link-building-execution-generator.jpg";
+import CinemaDownloader from "../assets/images/cinema-downloader.jpg";
+import DevTube from "../assets/images/dev-tube.jpg";
+
+const projectsData = [
+  {
+    name: "Meta Scraper",
+    description:
+      "Easily bulk scrape meta titles and descriptions from a list of URLs. Paste your list to get instant results, then export to TXT, DOCX, or Excel (.xlsx). A fast, free tool for SEOs and marketers.",
+    image: metaScraper,
+    link: "https://meta-scraper-three.vercel.app/",
+    code: "https://github.com/shakeeb-sa/meta-scraper",
+    slug: "meta-scraper",
+    type: "Personal Project",
+    totalLines: "345",
+    category: "Full-Stack",
+    languages: [
+      // 2. ADD "lines" property to each language
+      { name: "HTML", percentage: 9.3, lines: "35" },
+      { name: "CSS", percentage: 16.2, lines: "124" },
+      { name: "JavaScript", percentage: 74.5, lines: "186" },
+    ],
+  },
+  {
+    name: "DevSeo Tools",
+    description:
+      "A free and simple SEO analysis tool. Get an instant on-page report covering your meta tags, headings, word count, image SEO, and structured data in seconds.",
+    image: devSeoTools,
+    link: "https://devseo-tools-fresh.vercel.app/",
+    code: "https://github.com/shakeeb-sa/devseo-tools",
+    slug: "devseo-tools",
+    type: "Personal Project",
+    totalLines: "345",
+    category: "Full-Stack",
+    languages: [
+      // 2. ADD "lines" property to each language
+      { name: "HTML", percentage: 45.7, lines: "35" },
+      { name: "CSS", percentage: 25.3, lines: "124" },
+      { name: "JavaScript", percentage: 29.0, lines: "186" },
+    ],
+  },
+  {
+    name: "Guestbook Extractor Chrome Extension",
+    description:
+      "A Chrome extension that automates scrolling through guest books, downloads backlinks, and removes duplicates for efficient link building.",
+    image: guestbookExtractorImage,
+    link: "https://github.com/shakeeb-sa/guestbook-extractor-extension",
+    code: "https://github.com/shakeeb-sa/guestbook-extractor-extension",
+    slug: "guestbook-extractor",
+    type: "Personal Project",
+    totalLines: "362",
+    category: "Chrome Extension",
+    languages: [
+      // 2. ADD "lines" property to each language
+      { name: "HTML", percentage: 11.5, lines: "66" },
+      { name: "CSS", percentage: 0, lines: "0" },
+      { name: "JavaScript", percentage: 88.5, lines: "336" },
+    ],
+  },
+  {
+    name: "Live CSS Editor",
+    description:
+      "A live CSS editor for Chrome. Visually edit any webpage by clicking and resizing elements. Instantly generates the required CSS with unique selectors, ready to copy with one click.",
+    image: liveCssEditor,
+    link: "https://github.com/shakeeb-sa/Live-css-editor",
+    code: "https://github.com/shakeeb-sa/Live-css-editor",
+    slug: "live-css-editor",
+    type: "Personal Project",
+    totalLines: "362",
+    category: "Chrome Extension",
+    languages: [
+      // 2. ADD "lines" property to each language
+      { name: "HTML", percentage: 11.3, lines: "66" },
+      { name: "CSS", percentage: 11.9, lines: "0" },
+      { name: "JavaScript", percentage: 76.8, lines: "336" },
+    ],
+  },
+  {
+    name: "Link Building Automator",
+    description:
+      "Lightning LinkBuilder is a Chrome extension that automates form-filling, profile creation, and outreach for link builders using smart data injection and AI-powered field detection. It supports real/fake data, intelligent dropdown sequencing, one-click submissions, and domain collision alerts via its Watchtower feature.",
+    image: LinkBuildingAutomator,
+    link: "https://github.com/shakeeb-sa/link-building-automator",
+    code: "https://github.com/shakeeb-sa/link-building-automator",
+    slug: "link-building-automator",
+    type: "Personal Project",
+    totalLines: "7169",
+    category: "Chrome Extension",
+    languages: [
+      // 2. ADD "lines" property to each language
+      { name: "HTML", percentage: 13.2, lines: "1060" },
+      { name: "CSS", percentage: 0.4, lines: "41 " },
+      { name: "JavaScript", percentage: 86.4, lines: "6068" },
+    ],
+  },
+  {
+    name: "Cinema Downloader",
+    description:
+      "Can't download that video? This extension sniffs out hidden streams, grabs the source, and reassembles the video file for you. Includes a 'Force Scan' mode for stubborn players.",
+    image: CinemaDownloader,
+    link: "https://github.com/shakeeb-sa/cinema-downloader/",
+    code: "https://github.com/shakeeb-sa/cinema-downloader/",
+    slug: "cinema-downloader",
+    type: "Personal Project",
+    totalLines: "1066",
+    category: "Chrome Extension",
+    languages: [
+      // 2. ADD "lines" property to each language
+      { name: "HTML", percentage: 21.3, lines: "182" },
+      { name: "CSS", percentage: 0, lines: "0 " },
+      { name: "JavaScript", percentage: 78.7, lines: "884" },
+    ],
+  },
+  {
+    name: "Dev Tube",
+    description:
+      "Discover a comprehensive collection of coding tutorials, videos, and resources from YouTube. Your go-to site for all things coding—learn, explore, and master programming today!",
+    image: DevTube,
+    link: "https://shakeeb-sa.github.io/dev-tube/",
+    code: "https://github.com/shakeeb-sa/dev-tube",
+    slug: "dev-tube",
+    type: "Personal Project",
+    totalLines: "1702",
+    category: "Frontend",
+    languages: [
+      // 2. ADD "lines" property to each language
+      { name: "HTML", percentage: 0, lines: "0" },
+      { name: "CSS", percentage: 0, lines: "0 " },
+      { name: "JavaScript", percentage: 98.6, lines: "1702" },
+    ],
+  },
+  {
+    name: "Sha Fabrics",
+    description:
+      "SHA Fabrics is an e-commerce site offering high-quality fabrics, bedsheets, and stylish clothing for men and women. With a user-friendly design, it provides trendy, premium products to refresh your home or wardrobe effortlessly.",
+    image: shaFabricsImage,
+    link: "http://sha-fabrics.github.io/",
+    code: "https://github.com/sha-fabrics/sha-fabrics.github.io",
+    slug: "sha-fabrics",
+    type: "Personal Project",
+    totalLines: "5812",
+    category: "Frontend",
+    languages: [
+      // 2. ADD "lines" property to each language
+      { name: "HTML", percentage: 26.8, lines: "2122" },
+      { name: "CSS", percentage: 14.5, lines: "1499 " },
+      { name: "JavaScript", percentage: 58.7, lines: "2191" },
+    ],
+  },
+  {
+    name: "Multi Format Link Converter",
+    description:
+      "Easily convert all types of links, including BBCode, HTML, and plain URLs.",
+    image: multiFormatLinkConverterImage,
+    link: "https://shakeeb-sa.github.io/multi-format-link-converter/",
+    code: "https://github.com/shakeeb-sa/multi-format-link-converter",
+    slug: "link-converter",
+    type: "Personal Project",
+    totalLines: "1970",
+    category: "Frontend",
+    languages: [
+      // 2. ADD "lines" property to each language
+      { name: "HTML", percentage: 21.3, lines: "472" },
+      { name: "CSS", percentage: 35.4, lines: "636 " },
+      { name: "JavaScript", percentage: 43.3, lines: "862" },
+    ],
+  },
+  {
+    name: "Link Building Execution Generator",
+    description:
+      "Link Building Execution Generator is a web-based tool that transforms raw outreach data from Excel into a prioritized, ready-to-execute link-building plan. It intelligently categorizes activities like Guest Blogging, Web 2.0, DA 50+, and Classifieds, then sorts them by strategic importance.",
+    image: LinkBuildingExecutionGenerator,
+    link: "https://shakeeb-sa.github.io/link-building-execution-generator/",
+    code: "https://github.com/shakeeb-sa/link-building-execution-generator",
+    slug: "link-building-execution-generator",
+    type: "Personal Project",
+    totalLines: "525",
+    category: "Frontend",
+    languages: [
+      // 2. ADD "lines" property to each language
+      { name: "HTML", percentage: 20, lines: "97" },
+      { name: "CSS", percentage: 30, lines: "104 " },
+      { name: "JavaScript", percentage: 60, lines: "324" },
+    ],
+  },
+  {
+    name: "Tools for Developers & SEOs",
+    description:
+      "A curated collection of free, powerful tools for developers and SEOs to streamline workflows and boost productivity.",
+    image: toolsForDevsSeosImage,
+    link: "https://shakeeb-sa.github.io/tools/",
+    code: "https://github.com/shakeeb-sa/tools",
+    slug: "tools-for-devs",
+    type: "Personal Project",
+    totalLines: "305",
+    category: "Frontend",
+    languages: [
+      // 2. ADD "lines" property to each language
+      { name: "HTML", percentage: 35.3, lines: "101" },
+      { name: "CSS", percentage: 46.4, lines: "122 " },
+      { name: "JavaScript", percentage: 18.3, lines: "82" },
+    ],
+  },
+  {
+    name: "URL Path Separator",
+    description:
+      "It's a handy tool that simplifies splitting and managing URL paths by accurately identifying and separating each segment, making navigation more efficient.",
+    image: urlPathSeparatorImage,
+    link: "https://shakeeb-sa.github.io/url-path-separator/",
+    code: "https://github.com/shakeeb-sa/url-path-separator",
+    slug: "url-separator",
+    type: "Personal Project",
+    totalLines: "1130",
+    category: "Frontend",
+    languages: [
+      // 2. ADD "lines" property to each language
+      { name: "HTML", percentage: 21.3, lines: "182" },
+      { name: "CSS", percentage: 35.4, lines: "466 " },
+      { name: "JavaScript", percentage: 43.3, lines: "482" },
+    ],
+  },
+  {
+    name: "Domain Checker",
+    description:
+      "A web tool that compares two URL lists, identifies unique and matching domains, and creates a detailed report. It streamlines URL data analysis efficiently.",
+    image: domainCheckerImage,
+    link: "https://shakeeb-sa.github.io/domain-checker/",
+    code: "https://github.com/shakeeb-sa/domain-checker",
+    slug: "domain-checker",
+    type: "Personal Project",
+    totalLines: "484",
+    category: "Frontend",
+    languages: [
+      // 2. ADD "lines" property to each language
+      { name: "HTML", percentage: 15.3, lines: "64" },
+      { name: "CSS", percentage: 42.3, lines: "242 " },
+      { name: "JavaScript", percentage: 42.4, lines: "178" },
+    ],
+  },
+  {
+    name: "Code Chunker",
+    description:
+      "Paste your large code file below. Choose how you want to split it, and get copy-paste-ready chunks for your AI assistant.",
+    image: codeChunker,
+    link: "https://shakeeb-sa.github.io/code-chunker/",
+    code: "https://github.com/shakeeb-sa/code-chunker/",
+    slug: "code-chunker",
+    type: "Personal Project",
+    totalLines: "795",
+    category: "Frontend",
+    languages: [
+      // 2. ADD "lines" property to each language
+      { name: "HTML", percentage: 35, lines: "209" },
+      { name: "CSS", percentage: 35, lines: "204 " },
+      { name: "JavaScript", percentage: 30, lines: "150" },
+    ],
+  },
+];
+
+export default projectsData;
+</file>
+
+</files>
