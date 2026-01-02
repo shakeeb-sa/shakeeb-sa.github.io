@@ -44,7 +44,7 @@ The content is organized as follows:
 eslint.config.js
 index.html
 package.json
-public/vite.svg
+public/favicon.svg
 README.md
 src/App.jsx
 src/assets/images/all-about-coding.jpg
@@ -150,24 +150,8 @@ export default defineConfig([
 ])
 </file>
 
-<file path="index.html">
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>vite-project</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
-</html>
-</file>
-
-<file path="public/vite.svg">
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--logos" width="31.88" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 257"><defs><linearGradient id="IconifyId1813088fe1fbc01fb466" x1="-.828%" x2="57.636%" y1="7.652%" y2="78.411%"><stop offset="0%" stop-color="#41D1FF"></stop><stop offset="100%" stop-color="#BD34FE"></stop></linearGradient><linearGradient id="IconifyId1813088fe1fbc01fb467" x1="43.376%" x2="50.316%" y1="2.242%" y2="89.03%"><stop offset="0%" stop-color="#FFEA83"></stop><stop offset="8.333%" stop-color="#FFDD35"></stop><stop offset="100%" stop-color="#FFA800"></stop></linearGradient></defs><path fill="url(#IconifyId1813088fe1fbc01fb466)" d="M255.153 37.938L134.897 252.976c-2.483 4.44-8.862 4.466-11.382.048L.875 37.958c-2.746-4.814 1.371-10.646 6.827-9.67l120.385 21.517a6.537 6.537 0 0 0 2.322-.004l117.867-21.483c5.438-.991 9.574 4.796 6.877 9.62Z"></path><path fill="url(#IconifyId1813088fe1fbc01fb467)" d="M185.432.063L96.44 17.501a3.268 3.268 0 0 0-2.634 3.014l-5.474 92.456a3.268 3.268 0 0 0 3.997 3.378l24.777-5.718c2.318-.535 4.413 1.507 3.936 3.838l-7.361 36.047c-.495 2.426 1.782 4.5 4.151 3.78l15.304-4.649c2.372-.72 4.652 1.36 4.15 3.788l-11.698 56.621c-.732 3.542 3.979 5.473 5.943 2.437l1.313-2.028l72.516-144.72c1.215-2.423-.88-5.186-3.54-4.672l-25.505 4.922c-2.396.462-4.435-1.77-3.759-4.114l16.646-57.705c.677-2.35-1.37-4.583-3.769-4.113Z"></path></svg>
+<file path="public/favicon.svg">
+<svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 512"><g fill-rule="nonzero"><path d="M256.002 0c70.69 0 134.688 28.658 181.017 74.981C483.343 121.311 512 185.309 512 255.998c0 70.69-28.657 134.694-74.981 181.018C390.693 483.342 326.692 512 256.002 512s-134.694-28.655-181.017-74.984C28.655 390.692 0 326.688 0 255.998c0-70.689 28.658-134.69 74.985-181.017C121.308 28.658 185.312 0 256.002 0z"/><path fill="#fff" d="M176.942 346.462l8.4-49.507c18.402 4.601 34.953 6.902 49.654 6.902 14.705 0 26.556-.601 35.557-1.799v-15.002l-27.003-2.403c-24.405-2.198-41.158-8.049-50.258-17.551-9.1-9.5-13.65-23.552-13.65-42.155 0-25.604 5.55-43.206 16.651-52.805 11.1-9.601 29.955-14.404 56.555-14.404 26.604 0 50.607 2.502 72.012 7.503l-7.503 48.005c-18.603-3-33.502-4.499-44.705-4.499-11.202 0-20.702.498-28.504 1.499v14.701l21.603 2.099c26.204 2.601 44.305 8.854 54.306 18.753 10.001 9.902 15.002 23.655 15.002 41.257 0 12.602-1.7 23.252-5.1 31.953-3.4 8.7-7.451 15.302-12.151 19.804-4.7 4.499-11.353 7.949-19.952 10.349-8.601 2.4-16.151 3.851-22.654 4.352-6.499.499-15.151.751-25.951.751-26.004 0-50.108-2.601-72.309-7.803z"/></g></svg>
 </file>
 
 <file path="README.md">
@@ -276,113 +260,6 @@ function Footer() {
 }
 
 export default Footer;
-</file>
-
-<file path="src/components/GsapAnimations/GsapAnimations.jsx">
-// src/components/GsapAnimations/GsapAnimations.jsx
-
-import { useEffect } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-// This component doesn't render anything. It just runs the GSAP animations.
-function GsapAnimations({ isIntroComplete }) {
-  useEffect(() => {
-    // Don't run animations if the intro isn't complete
-    if (!isIntroComplete) return;
-
-    // Register the plugin
-    gsap.registerPlugin(ScrollTrigger);
-
-    const mm = gsap.matchMedia();
-    const breakPoint = 768;
-
-    mm.add(
-      {
-        isDesktop: `(min-width: ${breakPoint}px)`,
-        isMobile: `(max-width: ${breakPoint - 1}px)`,
-        reduceMotion: "(prefers-reduced-motion: reduce)",
-      },
-      (context) => {
-        const { isDesktop, reduceMotion } = context.conditions;
-
-        // --- Initial Page-Load Animations (after intro) ---
-        if (!reduceMotion) {
-          const introTl = gsap.timeline({ delay: 0.2 }); // Small delay after intro
-          introTl
-            .from("#title", { duration: 0.5, y: 100, opacity: 0, ease: "power3.out" })
-            .from("#portraitContainer", { duration: 0.5, y: 100, opacity: 0, ease: "power3.out" }, "-=0.3")
-            .from("#jobTitle", { duration: 0.5, y: 100, opacity: 0, ease: "power3.out" }, "-=0.3")
-            .from("#aboutContainer", { duration: 0.5, y: 100, opacity: 0, ease: "power3.out" }, "-=0.3");
-        }
-
-        // --- Scroll-Triggered Animations ---
-        if (!reduceMotion) {
-          // Animate Skills Section
-          gsap.from(".skill-item", {
-            scrollTrigger: {
-              trigger: ".my-skills",
-              start: "top 85%",
-              once: true,
-            },
-            opacity: 0,
-            y: 20,
-            duration: 0.6,
-            stagger: 0.1,
-            ease: "power3.out",
-          });
-
-          // Animate Projects Section
-          const projects = gsap.utils.toArray(".project-listing");
-          
-          projects.forEach((project) => {
-            const tlProject = gsap.timeline({
-              scrollTrigger: {
-                trigger: project,
-                start: isDesktop ? "top bottom" : "top 80%",
-                end: "center center",
-                scrub: 1,
-              },
-            });
-            const projectImage = project.querySelector(".project-image");
-            const projectInfo = project.querySelector("#projectInfo");
-
-            if (isDesktop) {
-              tlProject.from(projectImage, { x: -300, opacity: 0 }).from(projectInfo, { x: 300, opacity: 0 }, "<");
-            } else {
-              tlProject.from(projectImage, { y: 100, opacity: 0 }).from(projectInfo, { y: 100, opacity: 0 }, "<");
-            }
-          });
-
-          // Animate Footer Section
-          const tlFooter = gsap.timeline({
-            scrollTrigger: {
-              trigger: "footer",
-              start: "top center",
-              end: "top top",
-              scrub: 1,
-            },
-          });
-
-          tlFooter
-            .from("footer h2", { y: 100, opacity: 0, duration: 0.6 })
-            .from("footer #footerLinks", { y: 100, opacity: 0, duration: 0.6 }, "<");
-        }
-        
-        // Return a cleanup function
-        return () => {
-          // This kills all animations and ScrollTriggers created in this context
-          gsap.killTweensOf(".skill-item, .project-listing, footer h2, footer #footerLinks, #title, #portraitContainer, #jobTitle, #aboutContainer");
-        }
-      }
-    );
-
-  }, [isIntroComplete]); // This effect depends on the intro being complete
-
-  return null; // This component renders nothing
-}
-
-export default GsapAnimations;
 </file>
 
 <file path="src/components/Header/Header.css">
@@ -918,65 +795,21 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 );
 </file>
 
-<file path="src/App.jsx">
-// src/App.jsx
+<file path="index.html">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-import React, { useState } from 'react';
-
-// Hooks and Components
-import useSmoothScroll from './hooks/useSmoothScroll';
-import Header from './components/Header/Header';
-import Hero from './components/Hero/Hero';
-import About from './components/About/About';
-import Skills from './components/Skills/Skills';
-import Projects from './components/Projects/Projects';
-import Footer from './components/Footer/Footer';
-import IntroOverlay from './components/IntroOverlay/IntroOverlay';
-import GsapAnimations from './components/GsapAnimations/GsapAnimations';
-
-const hasIntroBeenPlayed = sessionStorage.getItem('introPlayed');
-
-function App() {
-  const [isIntroComplete, setIntroComplete] = useState(!!hasIntroBeenPlayed);
-
-  // Call the custom hook to enable smooth scrolling
-  useSmoothScroll();
-
-  const handleIntroComplete = () => {
-    setIntroComplete(true);
-    sessionStorage.setItem('introPlayed', 'true');
-  };
-
-  return (
-    <>
-      {/* Conditionally render the IntroOverlay */}
-      {!isIntroComplete && <IntroOverlay onComplete={handleIntroComplete} />}
-      
-      {/* Pass the state to the animations component */}
-      <GsapAnimations isIntroComplete={isIntroComplete} />
-
-      <div 
-        id="afterAnimation" 
-        style={{ opacity: isIntroComplete ? 1 : 0 }}
-      >
-        <Header />
-        <main>
-          <Hero />
-          <About />
-          <Skills />
-          <Projects />
-        </main>
-
-        {/* SPACER DIV – PUSHES FOOTER DOWN */}
-        <div className="footer-spacer"></div>
-
-        <Footer />
-      </div>
-    </>
-  );
-}
-
-export default App;
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shakeeb Ahmed</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
 </file>
 
 <file path="src/components/about/About.jsx">
@@ -1000,87 +833,115 @@ function About() {
 export default About;
 </file>
 
-<file path="src/components/Footer/Footer.css">
-/* src/components/Footer/Footer.css */
+<file path="src/components/GsapAnimations/GsapAnimations.jsx">
+// src/components/GsapAnimations/GsapAnimations.jsx
 
-footer {
-    min-height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;     /* Only vertical centering */
-    padding: 2rem 0;
-    margin-top: 4rem;            /* Fallback gap */
-    text-align: center;
+import { useEffect } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+function GsapAnimations({ isIntroComplete }) {
+  useEffect(() => {
+    if (!isIntroComplete) return;
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    const mm = gsap.matchMedia();
+    const breakPoint = 768;
+
+    mm.add(
+      {
+        isDesktop: `(min-width: ${breakPoint}px)`,
+        isMobile: `(max-width: ${breakPoint - 1}px)`,
+        reduceMotion: "(prefers-reduced-motion: reduce)",
+      },
+      (context) => {
+        const { isDesktop, reduceMotion } = context.conditions;
+
+        if (!reduceMotion) {
+          // Intro Animations
+          const introTl = gsap.timeline({ delay: 0.2 });
+          introTl
+            .from("#title", { duration: 0.5, y: 100, opacity: 0, ease: "power3.out" })
+            .from("#portraitContainer", { duration: 0.5, y: 100, opacity: 0, ease: "power3.out" }, "-=0.3")
+            .from("#jobTitle", { duration: 0.5, y: 100, opacity: 0, ease: "power3.out" }, "-=0.3")
+            .from("#aboutContainer", { duration: 0.5, y: 100, opacity: 0, ease: "power3.out" }, "-=0.3");
+        }
+
+        if (!reduceMotion) {
+          // Skills
+          gsap.from(".skill-item", {
+            scrollTrigger: {
+              trigger: ".my-skills",
+              start: "top 85%",
+              once: true,
+            },
+            opacity: 0,
+            y: 20,
+            duration: 0.6,
+            stagger: 0.1,
+            ease: "power3.out",
+          });
+
+          // Projects
+          const projects = gsap.utils.toArray(".project-listing");
+          projects.forEach((project) => {
+            const tlProject = gsap.timeline({
+              scrollTrigger: {
+                trigger: project,
+                start: isDesktop ? "top bottom" : "top 80%",
+                end: "center center",
+                scrub: 1,
+              },
+            });
+            const projectImage = project.querySelector(".project-image");
+            const projectInfo = project.querySelector("#projectInfo");
+
+            if (isDesktop) {
+              tlProject.from(projectImage, { x: -300, opacity: 0 }).from(projectInfo, { x: 300, opacity: 0 }, "<");
+            } else {
+              tlProject.from(projectImage, { y: 100, opacity: 0 }).from(projectInfo, { y: 100, opacity: 0 }, "<");
+            }
+          });
+
+          // --- FIXED FOOTER ANIMATION ---
+          // 1. Removed scrub (prevents it from sticking to scrollbar)
+          // 2. Changed start to "top 75%" (triggers when footer is mostly in view)
+          const tlFooter = gsap.timeline({
+            scrollTrigger: {
+              trigger: "footer",
+              start: "top 75%", 
+              toggleActions: "play none none reverse",
+            },
+          });
+
+          tlFooter
+            .from("footer h2", { 
+                y: 50, 
+                opacity: 0, 
+                duration: 0.8, 
+                ease: "power3.out" 
+            })
+            .from("footer #footerLinks", { 
+                y: 50, 
+                opacity: 0, 
+                duration: 0.8, 
+                ease: "power3.out" 
+            }, "-=0.6");
+        }
+        
+        return () => {
+          gsap.killTweensOf(".skill-item, .project-listing, footer h2, footer #footerLinks, #title, #portraitContainer, #jobTitle, #aboutContainer");
+        }
+      }
+    );
+
+  }, [isIntroComplete]);
+
+  return null;
 }
 
-footer h2 {
-    color: var(--white);
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 2rem;
-}
-
-.footer-links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-
-.footer-links li {
-    padding: 0 8px;
-}
-
-.footer-links li a {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--white);
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1rem;
-    text-underline-offset: 0.25rem;
-}
-
-.footer-links li a:hover,
-.footer-links li a:focus {
-    text-decoration: underline;
-}
-
-.footer-links li a svg {
-    font-size: 1.5rem;
-}
-
-/* Responsive */
-@media (min-width: 768px) {
-    footer {
-        min-height: 100vh;
-        margin-top: 6rem;
-    }
-
-    footer h2 {
-        font-size: 4rem;
-    }
-
-    .footer-links {
-        flex-wrap: nowrap;
-    }
-
-    .footer-links li {
-        padding: 0 32px;
-    }
-
-    .footer-links li a {
-        font-size: 1.5rem;
-    }
-
-    .footer-links li a svg {
-        font-size: 2rem;
-    }
-}
+export default GsapAnimations;
 </file>
 
 <file path="src/components/Skills/Skills.css">
@@ -1257,108 +1118,6 @@ function Skills() {
 export default Skills;
 </file>
 
-<file path="src/styles/global.css">
-/* src/styles/global.css */
-
-/* --- Google Fonts Import --- */
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
-
-/* --- Meyer's Reset + Josh W Comeau's CSS Reset --- */
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
-article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { display: block; }
-body { line-height: 1; }
-ol,ul { list-style: none; }
-blockquote,q { quotes: none; }
-blockquote:before,blockquote:after,q:before,q:after { content: ''; content: none; }
-table { border-collapse: collapse; border-spacing: 0; }
-*,*::before,*::after { box-sizing: border-box; }
-* { margin: 0; }
-body { -webkit-font-smoothing: antialiased; }
-img,picture,video,canvas,svg { display: block; max-width: 100%; }
-input,button,textarea,select { font: inherit; }
-p,h1,h2,h3,h4,h5,h6 { overflow-wrap: break-word; }
-#root,#__next { isolation: isolate; }
-
-/* --- Global Variables and Styles --- */
-:root {
-    --black: #121212;
-    --white: #fff;
-    --font: 'Raleway', sans-serif;
-}
-
-body, html {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    background: var(--black);
-    color: var(--white);
-    font-family: var(--font);
-    overflow-x: hidden;
-    width: 100%;
-}
-
-*::selection {
-    color: black;
-    background-color: white;
-}
-
-/* --- Common Utility Styles --- */
-.hidden-text {
-    clip: rect(1px, 1px, 1px, 1px);
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-}
-.hidden-text:focus {
-    clip: auto;
-    height: auto;
-    overflow: auto;
-    position: absolute;
-    width: auto;
-}
-.playful {
-    transition: all 0.4s cubic-bezier(0.15, 0.75, 0.45, 0.95) 0s;
-    animation: 10s ease 0s infinite alternate none running rainbow;
-}
-.playful-hover {
-    transition: all 0.4s cubic-bezier(0.15, 0.75, 0.45, 0.95) 0s;
-}
-.playful-hover:hover, .playful-hover:focus {
-    animation: 10s ease 0s infinite alternate none running rainbow;
-}
-
-@keyframes rainbow {
-    0% { color: rgb(240, 77, 255); }
-    25% { color: rgb(255, 77, 77); }
-    50% { color: rgb(255, 197, 77); }
-    75% { color: rgb(106, 237, 118); }
-    100% { color: rgb(0, 153, 255); }
-}
-
-/* --- THE CONFLICTING create-react-app STYLES HAVE BEEN REMOVED --- */
-/* Add this to src/components/Footer/Footer.css or your global CSS */
-
-.footer-spacer {
-  height: 4rem;
-  background: transparent;
-}
-
-@media (min-width: 768px) {
-  .footer-spacer {
-    height: 6rem;
-  }
-}
-</file>
-
 <file path="package.json">
 {
   "name": "vite-project",
@@ -1392,6 +1151,143 @@ body, html {
     "globals": "^16.4.0",
     "vite": "^7.1.7"
   }
+}
+</file>
+
+<file path="src/App.jsx">
+// src/App.jsx
+
+import React, { useState } from 'react';
+
+// Hooks and Components
+import useSmoothScroll from './hooks/useSmoothScroll';
+import Header from './components/Header/Header';
+import Hero from './components/Hero/Hero';
+import About from './components/About/About';
+import Skills from './components/Skills/Skills';
+import Projects from './components/Projects/Projects';
+import Footer from './components/Footer/Footer';
+import IntroOverlay from './components/IntroOverlay/IntroOverlay';
+import GsapAnimations from './components/GsapAnimations/GsapAnimations';
+
+const hasIntroBeenPlayed = sessionStorage.getItem('introPlayed');
+
+function App() {
+  const [isIntroComplete, setIntroComplete] = useState(!!hasIntroBeenPlayed);
+
+  // Call the custom hook to enable smooth scrolling
+  useSmoothScroll();
+
+  const handleIntroComplete = () => {
+    setIntroComplete(true);
+    sessionStorage.setItem('introPlayed', 'true');
+  };
+
+  return (
+    <>
+      {/* Conditionally render the IntroOverlay */}
+      {!isIntroComplete && <IntroOverlay onComplete={handleIntroComplete} />}
+      
+      {/* Pass the state to the animations component */}
+      <GsapAnimations isIntroComplete={isIntroComplete} />
+
+      <div 
+        id="afterAnimation" 
+        style={{ opacity: isIntroComplete ? 1 : 0 }}
+      >
+        <Header />
+        <main>
+          <Hero />
+          <About />
+          <Skills />
+          <Projects />
+        </main>
+
+        {/* --- SPACER REMOVED! --- */}
+
+        <Footer />
+      </div>
+    </>
+  );
+}
+
+export default App;
+</file>
+
+<file path="src/components/Footer/Footer.css">
+/* src/components/Footer/Footer.css */
+
+footer {
+    /* Full screen black background */
+    height: 100vh !important;
+    min-height: 100vh !important;
+    width: 100%;
+    
+    /* Center content */
+    display: grid !important;
+    place-content: center !important;
+    place-items: center !important;
+    
+    background: var(--black);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    /* --- THE FIX: Lift content up --- */
+    /* This pushes the center point up by 15% of the screen height */
+    padding-bottom: 15vh !important; 
+    margin: 0 !important;
+}
+
+footer h2 {
+    color: var(--white);
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0 0 3rem 0;
+    line-height: 1;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    width: 100%;
+}
+
+.footer-links li a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.footer-links li a:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+    transform: translateY(-3px);
+}
+
+/* Desktop Scaling */
+@media (min-width: 768px) {
+    footer h2 {
+        font-size: 6rem;
+        margin-bottom: 4rem;
+    }
+    .footer-links {
+        gap: 4rem;
+    }
+    .footer-links li a {
+        font-size: 1.5rem;
+    }
 }
 </file>
 
@@ -2067,6 +1963,104 @@ const skillsData = [
 ];
 
 export default skillsData;
+</file>
+
+<file path="src/styles/global.css">
+/* src/styles/global.css */
+
+/* --- Google Fonts Import --- */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+/* --- Meyer's Reset + Josh W Comeau's CSS Reset --- */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { display: block; }
+body { line-height: 1; }
+ol,ul { list-style: none; }
+blockquote,q { quotes: none; }
+blockquote:before,blockquote:after,q:before,q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+*,*::before,*::after { box-sizing: border-box; }
+* { margin: 0; }
+body { -webkit-font-smoothing: antialiased; }
+img,picture,video,canvas,svg { display: block; max-width: 100%; }
+input,button,textarea,select { font: inherit; }
+p,h1,h2,h3,h4,h5,h6 { overflow-wrap: break-word; }
+#root,#__next { isolation: isolate; }
+
+/* --- Global Variables and Styles --- */
+:root {
+    --black: #121212;
+    --white: #fff;
+    --font: 'Raleway', sans-serif;
+}
+
+body, html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background: var(--black);
+    color: var(--white);
+    font-family: var(--font);
+    overflow-x: hidden;
+    width: 100%;
+}
+
+*::selection {
+    color: black;
+    background-color: white;
+}
+
+/* --- Common Utility Styles --- */
+.hidden-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+.hidden-text:focus {
+    clip: auto;
+    height: auto;
+    overflow: auto;
+    position: absolute;
+    width: auto;
+}
+.playful {
+    transition: all 0.4s cubic-bezier(0.15, 0.75, 0.45, 0.95) 0s;
+    animation: 10s ease 0s infinite alternate none running rainbow;
+}
+.playful-hover {
+    transition: all 0.4s cubic-bezier(0.15, 0.75, 0.45, 0.95) 0s;
+}
+.playful-hover:hover, .playful-hover:focus {
+    animation: 10s ease 0s infinite alternate none running rainbow;
+}
+
+@keyframes rainbow {
+    0% { color: rgb(240, 77, 255); }
+    25% { color: rgb(255, 77, 77); }
+    50% { color: rgb(255, 197, 77); }
+    75% { color: rgb(106, 237, 118); }
+    100% { color: rgb(0, 153, 255); }
+}
+
+/* --- THE CONFLICTING create-react-app STYLES HAVE BEEN REMOVED --- */
+/* Add this to src/components/Footer/Footer.css or your global CSS */
+
+
+@media (min-width: 768px) {
+  .footer-spacer {
+    height: 6rem;
+  }
+}
 </file>
 
 <file path="vite.config.js">

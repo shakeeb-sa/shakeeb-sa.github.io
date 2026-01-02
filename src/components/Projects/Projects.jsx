@@ -4,12 +4,51 @@ import React from 'react';
 import projectsData from '../../data/projectsData';
 import './Projects.css';
 
-// Helper component to avoid repeating the project listing code
-import CodeCounter from './CodeCounter'; // Import the new component
+// Import Icons
+import reactLogo from '../../assets/react.svg';
+import nodeLogo from '../../assets/nodejs.svg';
+import chromeLogo from '../../assets/chrome.svg';
 
 const ProjectItem = ({ project }) => {
   const primaryLink = project.link ?? project.code;
   const linkTitle = project.link ? `Open site for ${project.name}` : `View code for ${project.name}`;
+
+  // Determine Logo Content & Label based on category
+  let BadgeContent;
+
+  if (project.category === 'Full-Stack') {
+    // React JS + Node JS (Swapped order)
+    BadgeContent = (
+      <>
+        <div className="logo-row">
+            <img src={reactLogo} alt="React JS" className="tech-logo spin" />
+            <img src={nodeLogo} alt="Node JS" className="tech-logo" />
+        </div>
+        <span className="tech-label">Based on React JS & Node JS</span>
+      </>
+    );
+  } else if (project.category === 'Chrome Extension') {
+    // Chrome + React JS
+    BadgeContent = (
+      <>
+        <div className="logo-row">
+            <img src={chromeLogo} alt="Chrome" className="tech-logo" />
+            <img src={reactLogo} alt="React JS" className="tech-logo spin" />
+        </div>
+        <span className="tech-label">Based on React JS</span>
+      </>
+    );
+  } else {
+    // Frontend (Just React JS)
+    BadgeContent = (
+      <>
+        <div className="logo-row">
+            <img src={reactLogo} alt="React JS" className="tech-logo spin" />
+        </div>
+        <span className="tech-label">Based on React JS</span>
+      </>
+    );
+  }
 
   return (
     <div className="project-listing" id={project.slug}>
@@ -20,7 +59,7 @@ const ProjectItem = ({ project }) => {
 
         <div id="projectInfo" className="project-info">
           
-          {/* 1. Header Row: Title on Left, Circle on Right */}
+          {/* Header Row */}
           <div className="project-header-row">
             <div>
                 <a href={primaryLink} title={linkTitle} target="_blank" rel="noopener noreferrer">
@@ -29,48 +68,13 @@ const ProjectItem = ({ project }) => {
                 <p style={{marginTop: '0.5rem'}}>{project.type}</p>
             </div>
             
-            {/* 2. The Animated Circle (Only shows if totalLines exists) */}
-{/* OLD LINE: */}
-{/* {project.totalLines && <CodeCounter totalLines={project.totalLines} />} */}
-
-{/* NEW LINE: Pass both totalLines AND languages */}
-{project.totalLines && (
-  <CodeCounter 
-    totalLines={project.totalLines} 
-    languages={project.languages} 
-  />
-)}
+            {/* Dynamic Badge */}
+            <div className="tech-badge">
+                {BadgeContent}
+            </div>
           </div>
 
           <p style={{marginTop: '1rem'}}>{project.description}</p>
-
-          {/* 3. Updated Languages Section with Line Counts */}
-          {project.languages && project.languages.length > 0 && (
-            <div className="project-languages">
-              <h4>Complexity Breakdown</h4>
-              {project.languages.map(lang => (
-                <div key={lang.name} className="language-item">
-                  
-                  {/* Text Header: "HTML" ........ "395 Lines" */}
-                  <div className="language-header">
-                    <span className="language-name-text">{lang.name}</span>
-                    <span className="language-lines-text">
-                        {lang.lines ? `${lang.lines} lines` : `${lang.percentage}%`}
-                    </span>
-                  </div>
-
-                  {/* The Colored Bar */}
-                  <div className="language-bar-container">
-                    <div
-                      className={`language-bar lang-${lang.name.toLowerCase().replace(/\s+/g, '-')}`}
-                      style={{ width: `${lang.percentage}%` }}
-                    ></div>
-                  </div>
-                  
-                </div>
-              ))}
-            </div>
-          )}
 
           <div className="project-btns">
             {project.link && (
@@ -91,7 +95,6 @@ const ProjectItem = ({ project }) => {
 };
 
 function Projects() {
-  // Filter projects into three separate arrays based on the category
   const fullStackProjects = projectsData.filter(p => p.category === 'Full-Stack');
   const chromeExtensionProjects = projectsData.filter(p => p.category === 'Chrome Extension');
   const frontendProjects = projectsData.filter(p => p.category === 'Frontend');

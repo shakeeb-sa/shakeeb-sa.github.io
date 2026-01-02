@@ -165,8 +165,8 @@ const projectsData = [
     description:
       "Easily convert all types of links, including BBCode, HTML, and plain URLs.",
     image: multiFormatLinkConverterImage,
-    link: "https://shakeeb-sa.github.io/multi-format-link-converter/",
-    code: "https://github.com/shakeeb-sa/multi-format-link-converter",
+    link: "https://shakeeb-sa.github.io/link-converter/",
+    code: "https://github.com/shakeeb-sa/link-converter",
     slug: "link-converter",
     type: "Personal Project",
     totalLines: "1970",
