@@ -14,6 +14,8 @@ import LinkBuildingAutomator from "../assets/images/link-building-automator.jpg"
 import LinkBuildingExecutionGenerator from "../assets/images/link-building-execution-generator.jpg";
 import CinemaDownloader from "../assets/images/cinema-downloader.jpg";
 import DevTube from "../assets/images/dev-tube.jpg";
+import DragScroller from "../assets/images/drag-scroller.jpg";
+
 
 const projectsData = [
   {
@@ -68,6 +70,24 @@ const projectsData = [
       { name: "HTML", percentage: 11.5, lines: "66" },
       { name: "CSS", percentage: 0, lines: "0" },
       { name: "JavaScript", percentage: 88.5, lines: "336" },
+    ],
+  },
+    {
+    name: "Drag Scroller",
+    description:
+      "This Chrome extension adds an intuitive, mouse-activated scrolling feature. Right-click and drag vertically to scroll smoothly with adjustable speed, toggle the extension on or off with a keyboard shortcut, and receive visual feedback on the current status and speed. It enhances browsing by providing seamless, customizable navigation.",
+    image: DragScroller,
+    link: "https://github.com/shakeeb-sa/drag-scroller",
+    code: "https://github.com/shakeeb-sa/drag-scroller",
+    slug: "drag-scroller",
+    type: "Personal Project",
+    totalLines: "362",
+    category: "Chrome Extension",
+    languages: [
+      // 2. ADD "lines" property to each language
+      { name: "HTML", percentage: 11.3, lines: "66" },
+      { name: "CSS", percentage: 11.9, lines: "0" },
+      { name: "JavaScript", percentage: 76.8, lines: "336" },
     ],
   },
   {
@@ -143,24 +163,6 @@ const projectsData = [
     ],
   },
   {
-    name: "Sha Fabrics",
-    description:
-      "SHA Fabrics is an e-commerce site offering high-quality fabrics, bedsheets, and stylish clothing for men and women. With a user-friendly design, it provides trendy, premium products to refresh your home or wardrobe effortlessly.",
-    image: shaFabricsImage,
-    link: "http://sha-fabrics.github.io/",
-    code: "https://github.com/sha-fabrics/sha-fabrics.github.io",
-    slug: "sha-fabrics",
-    type: "Personal Project",
-    totalLines: "5812",
-    category: "Frontend",
-    languages: [
-      // 2. ADD "lines" property to each language
-      { name: "HTML", percentage: 26.8, lines: "2122" },
-      { name: "CSS", percentage: 14.5, lines: "1499 " },
-      { name: "JavaScript", percentage: 58.7, lines: "2191" },
-    ],
-  },
-  {
     name: "Multi Format Link Converter",
     description:
       "Easily convert all types of links, including BBCode, HTML, and plain URLs.",
@@ -194,24 +196,6 @@ const projectsData = [
       { name: "HTML", percentage: 20, lines: "97" },
       { name: "CSS", percentage: 30, lines: "104 " },
       { name: "JavaScript", percentage: 60, lines: "324" },
-    ],
-  },
-  {
-    name: "Tools for Developers & SEOs",
-    description:
-      "A curated collection of free, powerful tools for developers and SEOs to streamline workflows and boost productivity.",
-    image: toolsForDevsSeosImage,
-    link: "https://shakeeb-sa.github.io/tools/",
-    code: "https://github.com/shakeeb-sa/tools",
-    slug: "tools-for-devs",
-    type: "Personal Project",
-    totalLines: "305",
-    category: "Frontend",
-    languages: [
-      // 2. ADD "lines" property to each language
-      { name: "HTML", percentage: 35.3, lines: "101" },
-      { name: "CSS", percentage: 46.4, lines: "122 " },
-      { name: "JavaScript", percentage: 18.3, lines: "82" },
     ],
   },
   {
@@ -266,6 +250,24 @@ const projectsData = [
       { name: "HTML", percentage: 35, lines: "209" },
       { name: "CSS", percentage: 35, lines: "204 " },
       { name: "JavaScript", percentage: 30, lines: "150" },
+    ],
+  },
+    {
+    name: "Sha Fabrics",
+    description:
+      "SHA Fabrics is an e-commerce site offering high-quality fabrics, bedsheets, and stylish clothing for men and women. With a user-friendly design, it provides trendy, premium products to refresh your home or wardrobe effortlessly.",
+    image: shaFabricsImage,
+    link: "http://sha-fabrics.github.io/",
+    code: "https://github.com/sha-fabrics/sha-fabrics.github.io",
+    slug: "sha-fabrics",
+    type: "Personal Project",
+    totalLines: "5812",
+    category: "Frontend",
+    languages: [
+      // 2. ADD "lines" property to each language
+      { name: "HTML", percentage: 26.8, lines: "2122" },
+      { name: "CSS", percentage: 14.5, lines: "1499 " },
+      { name: "JavaScript", percentage: 58.7, lines: "2191" },
     ],
   },
 ];
