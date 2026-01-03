@@ -7,7 +7,7 @@ import allAboutCodingImage from "../assets/images/all-about-coding.jpg";
 import domainCheckerImage from "../assets/images/domain-checker.jpg";
 import shaFabricsImage from "../assets/images/sha-fabrics.jpg";
 import codeChunker from "../assets/images/code-chunker.jpg";
-import metaScraper from "../assets/images/meta-scraper.jpg";
+import metaScraperReactJs from "../assets/images/meta-scraper-react-js.jpg";
 import devSeoTools from "../assets/images/devseo-tools.jpg";
 import liveCssEditor from "../assets/images/live-css-editor.jpg";
 import LinkBuildingAutomator from "../assets/images/link-building-automator.jpg";
@@ -22,9 +22,9 @@ const projectsData = [
     name: "Meta Scraper",
     description:
       "Easily bulk scrape meta titles and descriptions from a list of URLs. Paste your list to get instant results, then export to TXT, DOCX, or Excel (.xlsx). A fast, free tool for SEOs and marketers.",
-    image: metaScraper,
-    link: "https://meta-scraper-three.vercel.app/",
-    code: "https://github.com/shakeeb-sa/meta-scraper",
+    image: metaScraperReactJs,
+    link: "https://meta-scraper-react-js.vercel.app/",
+    code: "https://github.com/shakeeb-sa/meta-scraper-react-js",
     slug: "meta-scraper",
     type: "Personal Project",
     totalLines: "345",
