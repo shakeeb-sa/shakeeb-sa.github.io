@@ -15,9 +15,30 @@ import LinkBuildingExecutionGenerator from "../assets/images/link-building-execu
 import CinemaDownloader from "../assets/images/cinema-downloader.jpg";
 import DevTube from "../assets/images/dev-tube.jpg";
 import DragScroller from "../assets/images/drag-scroller.jpg";
+import ChessOnline from "../assets/images/chess-online.jpg";
+import LogoResizer from "../assets/images/logo-resizer.jpg";
+
+
 
 
 const projectsData = [
+
+    {
+    name: "Chess Online",
+    description: "A lightweight real-time chess platform. Create or join a private game using a room code, play validated moves, and chat during matches — all in the browser..",
+    image: ChessOnline, // Replace with your game screenshot import
+    link: "https://shakeeb-sa.github.io/chess-game/",
+    code: "https://github.com/shakeeb-sa/chess-game",
+    slug: "chess-online",
+    type: "Personal Project",
+    totalLines: "1000",
+    category: "Game", // <--- THIS IS THE KEY
+    languages: [
+      { name: "HTML", percentage: 20, lines: "200" },
+      { name: "CSS", percentage: 30, lines: "300" },
+      { name: "JavaScript", percentage: 50, lines: "500" },
+    ],
+  },
   {
     name: "Meta Scraper",
     description:
@@ -242,6 +263,24 @@ const projectsData = [
     link: "https://shakeeb-sa.github.io/code-chunker/",
     code: "https://github.com/shakeeb-sa/code-chunker/",
     slug: "code-chunker",
+    type: "Personal Project",
+    totalLines: "795",
+    category: "Frontend",
+    languages: [
+      // 2. ADD "lines" property to each language
+      { name: "HTML", percentage: 35, lines: "209" },
+      { name: "CSS", percentage: 35, lines: "204 " },
+      { name: "JavaScript", percentage: 30, lines: "150" },
+    ],
+  },
+    {
+    name: "Logo Resizer",
+    description:
+      "A fast, paste-and-go web tool: quickly paste multiple logos (Ctrl+V), set global dimensions, choose default backgrounds (solid colors or transparent), preview each one instantly with customizable per-logo backgrounds, and manage the queue with one-click remove or clear — ideal for preparing assets for social media, websites, or presentations.",
+    image: LogoResizer,
+    link: "https://shakeeb-sa.github.io/logo-resizer/",
+    code: "https://github.com/shakeeb-sa/logo-resizer",
+    slug: "logo-resizer",
     type: "Personal Project",
     totalLines: "795",
     category: "Frontend",

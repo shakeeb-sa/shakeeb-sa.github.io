@@ -17,7 +17,7 @@ const ProjectItem = ({ project }) => {
   let BadgeContent;
 
   if (project.category === 'Full-Stack') {
-    // React JS + Node JS (Swapped order)
+    // React JS + Node JS
     BadgeContent = (
       <>
         <div className="logo-row">
@@ -36,6 +36,17 @@ const ProjectItem = ({ project }) => {
             <img src={reactLogo} alt="React JS" className="tech-logo spin" />
         </div>
         <span className="tech-label">Based on React JS</span>
+      </>
+    );
+  } else if (project.category === 'Game') {
+    // Game Badge (Updated to match Full-Stack: React + Node)
+    BadgeContent = (
+      <>
+        <div className="logo-row">
+            <img src={reactLogo} alt="React JS" className="tech-logo spin" />
+            <img src={nodeLogo} alt="Node JS" className="tech-logo" />
+        </div>
+        <span className="tech-label">React JS & Node JS Game</span>
       </>
     );
   } else {
@@ -95,6 +106,7 @@ const ProjectItem = ({ project }) => {
 };
 
 function Projects() {
+  const gameProjects = projectsData.filter(p => p.category === 'Game');
   const fullStackProjects = projectsData.filter(p => p.category === 'Full-Stack');
   const chromeExtensionProjects = projectsData.filter(p => p.category === 'Chrome Extension');
   const frontendProjects = projectsData.filter(p => p.category === 'Frontend');
@@ -105,7 +117,19 @@ function Projects() {
         <h2>My Projects</h2>
       </div>
 
-      {/* Section 1: Full-Stack Projects */}
+      {/* Section 1: Games (At the top) */}
+      {gameProjects.length > 0 && (
+        <div className="project-category-section">
+          <h2 className="project-category-title">Games</h2>
+          <div className="project-listings-container">
+            {gameProjects.map(project => (
+              <ProjectItem key={project.slug} project={project} />
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Section 2: Full-Stack Projects */}
       {fullStackProjects.length > 0 && (
         <div className="project-category-section">
           <h2 className="project-category-title">Full-Stack Applications</h2>
@@ -117,7 +141,7 @@ function Projects() {
         </div>
       )}
 
-      {/* Section 2: Chrome Extensions */}
+      {/* Section 3: Chrome Extensions */}
       {chromeExtensionProjects.length > 0 && (
         <div className="project-category-section">
           <h2 className="project-category-title">Chrome Extensions</h2>
@@ -129,7 +153,7 @@ function Projects() {
         </div>
       )}
 
-      {/* Section 3: Frontend Projects */}
+      {/* Section 4: Frontend Projects */}
       {frontendProjects.length > 0 && (
         <div className="project-category-section">
           <h2 className="project-category-title">Frontend & UI Projects</h2>
