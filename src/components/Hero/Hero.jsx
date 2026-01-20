@@ -18,7 +18,7 @@ function Hero() {
           <img src={portraitImage} alt="Portrait of Shakeeb Ahmed" className="portrait" />
         </div>
       </div>
-      <p id="jobTitle" className="job-title">Self-Taught Web Developer</p>
+      <p id="jobTitle" className="job-title">Website Tools | Chrome Extensions | Online Games</p>
     </section>
   );
 }
