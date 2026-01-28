@@ -106,10 +106,12 @@ const ProjectItem = ({ project }) => {
 };
 
 function Projects() {
-  const gameProjects = projectsData.filter(p => p.category === 'Game');
-  const fullStackProjects = projectsData.filter(p => p.category === 'Full-Stack');
-  const chromeExtensionProjects = projectsData.filter(p => p.category === 'Chrome Extension');
-  const frontendProjects = projectsData.filter(p => p.category === 'Frontend');
+  const sections = [
+    { title: "Full stack website", key: "Full stack website" },
+    { title: "Software exe", key: "Software exe" },
+    { title: "Frontend", key: "Frontend" },
+    { title: "Chrome extensions", key: "Chrome extensions" }
+  ];
 
   return (
     <section className="project-container" id="projects">
@@ -117,53 +119,21 @@ function Projects() {
         <h2>My Projects</h2>
       </div>
 
-      {/* Section 1: Games (At the top) */}
-      {gameProjects.length > 0 && (
-        <div className="project-category-section">
-          <h2 className="project-category-title">Games</h2>
-          <div className="project-listings-container">
-            {gameProjects.map(project => (
-              <ProjectItem key={project.slug} project={project} />
-            ))}
-          </div>
-        </div>
-      )}
+      {sections.map(section => {
+        const filtered = projectsData.filter(p => p.category === section.key);
+        if (filtered.length === 0) return null;
 
-      {/* Section 2: Full-Stack Projects */}
-      {fullStackProjects.length > 0 && (
-        <div className="project-category-section">
-          <h2 className="project-category-title">Full-Stack Applications</h2>
-          <div className="project-listings-container">
-            {fullStackProjects.map(project => (
-              <ProjectItem key={project.slug} project={project} />
-            ))}
+        return (
+          <div key={section.key} className="project-category-section">
+            <h2 className="project-category-title">{section.title}</h2>
+            <div className="project-listings-container">
+              {filtered.map(project => (
+                <ProjectItem key={project.slug} project={project} />
+              ))}
+            </div>
           </div>
-        </div>
-      )}
-
-      {/* Section 3: Chrome Extensions */}
-      {chromeExtensionProjects.length > 0 && (
-        <div className="project-category-section">
-          <h2 className="project-category-title">Chrome Extensions</h2>
-          <div className="project-listings-container">
-            {chromeExtensionProjects.map(project => (
-              <ProjectItem key={project.slug} project={project} />
-            ))}
-          </div>
-        </div>
-      )}
-
-      {/* Section 4: Frontend Projects */}
-      {frontendProjects.length > 0 && (
-        <div className="project-category-section">
-          <h2 className="project-category-title">Frontend & UI Projects</h2>
-          <div className="project-listings-container">
-            {frontendProjects.map(project => (
-              <ProjectItem key={project.slug} project={project} />
-            ))}
-          </div>
-        </div>
-      )}
+        );
+      })}
     </section>
   );
 }

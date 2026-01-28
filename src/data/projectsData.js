@@ -32,7 +32,7 @@ const projectsData = [
     slug: "chess-online",
     type: "Personal Project",
     totalLines: "1000",
-    category: "Game", // <--- THIS IS THE KEY
+    category: "Full stack website", // <--- THIS IS THE KEY
     languages: [
       { name: "HTML", percentage: 20, lines: "200" },
       { name: "CSS", percentage: 30, lines: "300" },
@@ -49,7 +49,7 @@ const projectsData = [
     slug: "meta-scraper",
     type: "Personal Project",
     totalLines: "345",
-    category: "Full-Stack",
+    category: "Full stack website",
     languages: [
       // 2. ADD "lines" property to each language
       { name: "HTML", percentage: 9.3, lines: "35" },
@@ -67,7 +67,7 @@ const projectsData = [
     slug: "devseo-tools",
     type: "Personal Project",
     totalLines: "345",
-    category: "Full-Stack",
+    category: "Full stack website",
     languages: [
       // 2. ADD "lines" property to each language
       { name: "HTML", percentage: 45.7, lines: "35" },
@@ -85,7 +85,7 @@ const projectsData = [
     slug: "guestbook-extractor",
     type: "Personal Project",
     totalLines: "362",
-    category: "Chrome Extension",
+    category: "Chrome extensions",
     languages: [
       // 2. ADD "lines" property to each language
       { name: "HTML", percentage: 11.5, lines: "66" },
@@ -103,7 +103,7 @@ const projectsData = [
     slug: "drag-scroller",
     type: "Personal Project",
     totalLines: "362",
-    category: "Chrome Extension",
+    category: "Chrome extensions",
     languages: [
       // 2. ADD "lines" property to each language
       { name: "HTML", percentage: 11.3, lines: "66" },
@@ -121,7 +121,7 @@ const projectsData = [
     slug: "live-css-editor",
     type: "Personal Project",
     totalLines: "362",
-    category: "Chrome Extension",
+    category: "Chrome extensions",
     languages: [
       // 2. ADD "lines" property to each language
       { name: "HTML", percentage: 11.3, lines: "66" },
@@ -139,7 +139,7 @@ const projectsData = [
     slug: "link-building-automator",
     type: "Personal Project",
     totalLines: "7169",
-    category: "Chrome Extension",
+    category: "Chrome extensions",
     languages: [
       // 2. ADD "lines" property to each language
       { name: "HTML", percentage: 13.2, lines: "1060" },
@@ -157,7 +157,7 @@ const projectsData = [
     slug: "cinema-downloader",
     type: "Personal Project",
     totalLines: "1066",
-    category: "Chrome Extension",
+    category: "Chrome extensions",
     languages: [
       // 2. ADD "lines" property to each language
       { name: "HTML", percentage: 21.3, lines: "182" },
