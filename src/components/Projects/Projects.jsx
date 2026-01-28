@@ -1,104 +1,31 @@
-// src/components/Projects/Projects.jsx
-
 import React from 'react';
 import projectsData from '../../data/projectsData';
 import './Projects.css';
 
-// Import Icons
-import reactLogo from '../../assets/react.svg';
-import nodeLogo from '../../assets/nodejs.svg';
-import chromeLogo from '../../assets/chrome.svg';
-
-const ProjectItem = ({ project }) => {
-  const primaryLink = project.link ?? project.code;
-  const linkTitle = project.link ? `Open site for ${project.name}` : `View code for ${project.name}`;
-
-  // Determine Logo Content & Label based on category
-  let BadgeContent;
-
-  if (project.category === 'Full-Stack') {
-    // React JS + Node JS
-    BadgeContent = (
-      <>
-        <div className="logo-row">
-            <img src={reactLogo} alt="React JS" className="tech-logo spin" />
-            <img src={nodeLogo} alt="Node JS" className="tech-logo" />
-        </div>
-        <span className="tech-label">Based on React JS & Node JS</span>
-      </>
-    );
-  } else if (project.category === 'Chrome Extension') {
-    // Chrome + React JS
-    BadgeContent = (
-      <>
-        <div className="logo-row">
-            <img src={chromeLogo} alt="Chrome" className="tech-logo" />
-            <img src={reactLogo} alt="React JS" className="tech-logo spin" />
-        </div>
-        <span className="tech-label">Based on React JS</span>
-      </>
-    );
-  } else if (project.category === 'Game') {
-    // Game Badge (Updated to match Full-Stack: React + Node)
-    BadgeContent = (
-      <>
-        <div className="logo-row">
-            <img src={reactLogo} alt="React JS" className="tech-logo spin" />
-            <img src={nodeLogo} alt="Node JS" className="tech-logo" />
-        </div>
-        <span className="tech-label">React JS & Node JS Game</span>
-      </>
-    );
-  } else {
-    // Frontend (Just React JS)
-    BadgeContent = (
-      <>
-        <div className="logo-row">
-            <img src={reactLogo} alt="React JS" className="tech-logo spin" />
-        </div>
-        <span className="tech-label">Based on React JS</span>
-      </>
-    );
-  }
-
+const ProjectCard = ({ project }) => {
   return (
-    <div className="project-listing" id={project.slug}>
-      <div className="project-item-container">
-        <a href={primaryLink} title={linkTitle} target="_blank" rel="noopener noreferrer">
-          <img src={project.image} alt={project.name} className="project-image" />
-        </a>
-
-        <div id="projectInfo" className="project-info">
-          
-          {/* Header Row */}
-          <div className="project-header-row">
-            <div>
-                <a href={primaryLink} title={linkTitle} target="_blank" rel="noopener noreferrer">
-                <h3 className="playful-hover">{project.name}</h3>
-                </a>
-                <p style={{marginTop: '0.5rem'}}>{project.type}</p>
-            </div>
-            
-            {/* Dynamic Badge */}
-            <div className="tech-badge">
-                {BadgeContent}
-            </div>
-          </div>
-
-          <p style={{marginTop: '1rem'}}>{project.description}</p>
-
-          <div className="project-btns">
-            {project.link && (
-              <a href={project.link} title={`Open site for ${project.name}`} className="project-btn" target="_blank" rel="noopener noreferrer">
-                Open Site
-              </a>
-            )}
-            {project.code && (
-              <a href={project.code} title={`View code for ${project.name}`} className="project-btn" target="_blank" rel="noopener noreferrer">
-                View Code
-              </a>
-            )}
-          </div>
+    <div className="new-project-card">
+      <div className="project-image-wrapper">
+        <img src={project.image} alt={project.name} />
+        <div className="project-overlay">
+           {project.link && <a href={project.link} target="_blank" rel="noreferrer">Open Live</a>}
+           {project.code && <a href={project.code} target="_blank" rel="noreferrer">Source Code</a>}
+        </div>
+      </div>
+      
+      <div className="project-details">
+        <div className="project-meta-header">
+          <span className="type-pill">{project.type}</span>
+        </div>
+        
+        <h3 className="project-name-heading">{project.name}</h3>
+        <p className="project-desc-text">{project.description}</p>
+        
+        {/* Dynamic Tags replacing the footer icons */}
+        <div className="project-tags-container">
+            {project.tags && project.tags.map((tag, index) => (
+                <span key={index} className="skill-tag">{tag}</span>
+            ))}
         </div>
       </div>
     </div>
@@ -106,30 +33,25 @@ const ProjectItem = ({ project }) => {
 };
 
 function Projects() {
-  const sections = [
-    { title: "Full stack website", key: "Full stack website" },
-    { title: "Software exe", key: "Software exe" },
-    { title: "Frontend", key: "Frontend" },
-    { title: "Chrome extensions", key: "Chrome extensions" }
+  const groups = [
+    { title: "Web Tools & Applications", key: "Web Tool" },
+    { title: "Chrome Extensions", key: "Chrome Extension" },
+    { title: "Software & Desktop Exe", key: "Software Exe" }
   ];
 
   return (
-    <section className="project-container" id="projects">
-      <div className="project-title-container">
-        <h2>My Projects</h2>
-      </div>
-
-      {sections.map(section => {
-        const filtered = projectsData.filter(p => p.category === section.key);
-        if (filtered.length === 0) return null;
-
+    <section className="projects-grid-section" id="projects">
+      <h2 className="main-section-title">My Works</h2>
+      
+      {groups.map(group => {
+        const list = projectsData.filter(p => p.category === group.key);
+        if (list.length === 0) return null;
+        
         return (
-          <div key={section.key} className="project-category-section">
-            <h2 className="project-category-title">{section.title}</h2>
-            <div className="project-listings-container">
-              {filtered.map(project => (
-                <ProjectItem key={project.slug} project={project} />
-              ))}
+          <div key={group.key} className="project-group-container">
+            <h3 className="group-title">{group.title}</h3>
+            <div className="modern-projects-grid">
+              {list.map(p => <ProjectCard key={p.slug} project={p} />)}
             </div>
           </div>
         );

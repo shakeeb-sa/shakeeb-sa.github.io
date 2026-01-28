@@ -32,7 +32,8 @@ const projectsData = [
     slug: "chess-online",
     type: "Personal Project",
     totalLines: "1000",
-    category: "Full stack website", // <--- THIS IS THE KEY
+    category: "Web Tool", // <--- THIS IS THE KEY
+    tags: ["React", "Node.js", "Socket.io", "CSS"], // Add this line
     languages: [
       { name: "HTML", percentage: 20, lines: "200" },
       { name: "CSS", percentage: 30, lines: "300" },
@@ -49,7 +50,8 @@ const projectsData = [
     slug: "meta-scraper",
     type: "Personal Project",
     totalLines: "345",
-    category: "Full stack website",
+    category: "Web Tool",
+    tags: ["React", "Node.js", "Socket.io", "CSS"], // Add this line
     languages: [
       // 2. ADD "lines" property to each language
       { name: "HTML", percentage: 9.3, lines: "35" },
@@ -67,7 +69,8 @@ const projectsData = [
     slug: "devseo-tools",
     type: "Personal Project",
     totalLines: "345",
-    category: "Full stack website",
+    category: "Web Tool",
+    tags: ["React", "Node.js", "Socket.io", "CSS"], // Add this line
     languages: [
       // 2. ADD "lines" property to each language
       { name: "HTML", percentage: 45.7, lines: "35" },
@@ -85,7 +88,8 @@ const projectsData = [
     slug: "guestbook-extractor",
     type: "Personal Project",
     totalLines: "362",
-    category: "Chrome extensions",
+    category: "Chrome Extension",
+    tags: ["React", "Node.js", "Socket.io", "CSS"], // Add this line
     languages: [
       // 2. ADD "lines" property to each language
       { name: "HTML", percentage: 11.5, lines: "66" },
@@ -103,7 +107,8 @@ const projectsData = [
     slug: "drag-scroller",
     type: "Personal Project",
     totalLines: "362",
-    category: "Chrome extensions",
+    category: "Chrome Extension",
+    tags: ["React", "Node.js", "Socket.io", "CSS"], // Add this line
     languages: [
       // 2. ADD "lines" property to each language
       { name: "HTML", percentage: 11.3, lines: "66" },
@@ -121,7 +126,8 @@ const projectsData = [
     slug: "live-css-editor",
     type: "Personal Project",
     totalLines: "362",
-    category: "Chrome extensions",
+    category: "Chrome Extension",
+    tags: ["React", "Node.js", "Socket.io", "CSS"], // Add this line
     languages: [
       // 2. ADD "lines" property to each language
       { name: "HTML", percentage: 11.3, lines: "66" },
@@ -139,7 +145,8 @@ const projectsData = [
     slug: "link-building-automator",
     type: "Personal Project",
     totalLines: "7169",
-    category: "Chrome extensions",
+    category: "Chrome Extension",
+    tags: ["React", "Node.js", "Socket.io", "CSS"], // Add this line
     languages: [
       // 2. ADD "lines" property to each language
       { name: "HTML", percentage: 13.2, lines: "1060" },
@@ -157,7 +164,8 @@ const projectsData = [
     slug: "cinema-downloader",
     type: "Personal Project",
     totalLines: "1066",
-    category: "Chrome extensions",
+    category: "Chrome Extension",
+    tags: ["React", "Node.js", "Socket.io", "CSS"], // Add this line
     languages: [
       // 2. ADD "lines" property to each language
       { name: "HTML", percentage: 21.3, lines: "182" },
@@ -175,7 +183,8 @@ const projectsData = [
     slug: "dev-tube",
     type: "Personal Project",
     totalLines: "1702",
-    category: "Frontend",
+    category: "Web Tool",
+    tags: ["React", "Node.js", "Socket.io", "CSS"], // Add this line
     languages: [
       // 2. ADD "lines" property to each language
       { name: "HTML", percentage: 0, lines: "0" },
@@ -193,7 +202,8 @@ const projectsData = [
     slug: "link-converter",
     type: "Personal Project",
     totalLines: "1970",
-    category: "Frontend",
+    category: "Web Tool",
+    tags: ["React", "Node.js", "Socket.io", "CSS"], // Add this line
     languages: [
       // 2. ADD "lines" property to each language
       { name: "HTML", percentage: 21.3, lines: "472" },
@@ -211,7 +221,8 @@ const projectsData = [
     slug: "link-building-execution-generator",
     type: "Personal Project",
     totalLines: "525",
-    category: "Frontend",
+    category: "Web Tool",
+    tags: ["React", "Node.js", "Socket.io", "CSS"], // Add this line
     languages: [
       // 2. ADD "lines" property to each language
       { name: "HTML", percentage: 20, lines: "97" },
@@ -229,7 +240,8 @@ const projectsData = [
     slug: "url-separator",
     type: "Personal Project",
     totalLines: "1130",
-    category: "Frontend",
+    category: "Web Tool",
+    tags: ["React", "Node.js", "Socket.io", "CSS"], // Add this line
     languages: [
       // 2. ADD "lines" property to each language
       { name: "HTML", percentage: 21.3, lines: "182" },
@@ -247,7 +259,8 @@ const projectsData = [
     slug: "domain-checker",
     type: "Personal Project",
     totalLines: "484",
-    category: "Frontend",
+    category: "Web Tool",
+    tags: ["React", "Node.js", "Socket.io", "CSS"], // Add this line
     languages: [
       // 2. ADD "lines" property to each language
       { name: "HTML", percentage: 15.3, lines: "64" },
@@ -265,7 +278,8 @@ const projectsData = [
     slug: "code-chunker",
     type: "Personal Project",
     totalLines: "795",
-    category: "Frontend",
+    category: "Web Tool",
+    tags: ["React", "Node.js", "Socket.io", "CSS"], // Add this line
     languages: [
       // 2. ADD "lines" property to each language
       { name: "HTML", percentage: 35, lines: "209" },
@@ -283,7 +297,27 @@ const projectsData = [
     slug: "logo-resizer",
     type: "Personal Project",
     totalLines: "795",
-    category: "Frontend",
+    category: "Web Tool",
+    tags: ["React", "Node.js", "Socket.io", "CSS"], // Add this line
+    languages: [
+      // 2. ADD "lines" property to each language
+      { name: "HTML", percentage: 35, lines: "209" },
+      { name: "CSS", percentage: 35, lines: "204 " },
+      { name: "JavaScript", percentage: 30, lines: "150" },
+    ],
+  },
+      {
+    name: "Logo Resizer",
+    description:
+      "A fast, paste-and-go web tool: quickly paste multiple logos (Ctrl+V), set global dimensions, choose default backgrounds (solid colors or transparent), preview each one instantly with customizable per-logo backgrounds, and manage the queue with one-click remove or clear — ideal for preparing assets for social media, websites, or presentations.",
+    image: LogoResizer,
+    link: "https://shakeeb-sa.github.io/logo-resizer/",
+    code: "https://github.com/shakeeb-sa/logo-resizer",
+    slug: "logo-resizer",
+    type: "Personal Project",
+    totalLines: "795",
+    category: "Software Exe",
+    tags: ["React", "Node.js", "Socket.io", "CSS"], // Add this line
     languages: [
       // 2. ADD "lines" property to each language
       { name: "HTML", percentage: 35, lines: "209" },
@@ -301,7 +335,7 @@ const projectsData = [
     slug: "sha-fabrics",
     type: "Personal Project",
     totalLines: "5812",
-    category: "Frontend",
+    category: "Web Tool",
     languages: [
       // 2. ADD "lines" property to each language
       { name: "HTML", percentage: 26.8, lines: "2122" },
